@@ -1,0 +1,38 @@
+header.header
+    .header-bar
+      .hotel-miranda-title
+        .hotel-miranda-icon H
+        div
+          a.home-link(href='/')
+            .hotel-bold HOTEL
+            div MIRANDA
+      i#hamburger-button.fa.fa-bars.hamburger-button(aria-hidden='true')
+    #drop-down-box.drop-down-box
+      ul.drop-down-list
+        li.drop-down-element
+          a.link(href='/about-us')  About Us 
+        .space
+        li.drop-down-element
+          a.link(href='/room-list')  Rooms
+        .space
+        li.drop-down-element
+          a.link(href='/room-offers')  Offers 
+        .space
+        li.drop-down-element
+          a.link(href='/single-room')  News 
+        .space
+        li.drop-down-element
+          a.link(href='/contact')  Contact
+      .contact-and-icon-container
+        .contact-and-icon
+          div
+            .contact-text Phone Number
+            #phone-number.drop-down-contact
+              | +622 37 37 22
+          i.fa.fa-phone.drop-down-icon(aria-hidden='true')
+        .contact-and-icon
+          div
+            .contact-text Email Address
+            #contact-mail.drop-down-contact
+              | marinarsanisidro@gmail.com
+          i.fa.fa-envelope.drop-down-icon(aria-hidden='true')
