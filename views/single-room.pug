@@ -2,273 +2,272 @@ extends layout
 
 block content
     header.header
-    .header-bar
-        .hotel-miranda-title
-        .hotel-miranda-icon H
-        div
-            a.link(href='./index.html')
-            .hotel-bold HOTEL
-            div MIRANDA
-        i#hamburger-button.fa.fa-bars.hamburger-button(aria-hidden='true')
-    #drop-down-box.drop-down-box
-        ul.drop-down-list
-        li.drop-down-element
-            a.link(href='./about-us.html')  About Us 
-        .space
-        li.drop-down-element
-            a.link(href='./room-list.html')  Rooms
-        .space
-        li.drop-down-element
-            a.link(href='./room-offers.html')  Offers 
-        .space
-        li.drop-down-element
-            a.link(href='./single-room.html')  News 
-        .space
-        li.drop-down-element
-            a.link(href='./contact.html')  Contact
-        .contact-and-icon-container
-        .contact-and-icon
-            div
-            .contact-text Phone Number
-            #phone-number.drop-down-contact
-                | +622 37 37 22
-            i.fa.fa-phone.drop-down-icon(aria-hidden='true')
-        .contact-and-icon
-            div
-            .contact-text Email Address
-            #contact-mail.drop-down-contact
-                | marinarsanisidro@gmail.com
-            i.fa.fa-envelope.drop-down-icon(aria-hidden='true')
+        .header-bar
+            .hotel-miranda-title
+                .hotel-miranda-icon H
+                div
+                    a.link(href='/')
+                        .hotel-bold HOTEL
+                        div MIRANDA
+            i#hamburger-button.fa.fa-bars.hamburger-button(aria-hidden='true')
+        #drop-down-box.drop-down-box
+            ul.drop-down-list
+                li.drop-down-element
+                    a.link(href='/about-us')  About Us 
+                .space
+                li.drop-down-element
+                    a.link(href='/room-list')  Rooms
+                .space
+                li.drop-down-element
+                    a.link(href='/room-offers')  Offers 
+                .space
+                li.drop-down-element
+                    a.link(href='/single-room')  News 
+                .space
+                li.drop-down-element
+                    a.link(href='/contact')  Contact
+            .contact-and-icon-container
+                .contact-and-icon
+                    div
+                        .contact-text Phone Number
+                        #phone-number.drop-down-contact
+                            | +622 37 37 22
+                    i.fa.fa-phone.drop-down-icon(aria-hidden='true')
+                .contact-and-icon
+                    div
+                        .contact-text Email Address
+                        #contact-mail.drop-down-contact
+                            | marinarsanisidro@gmail.com
+                    i.fa.fa-envelope.drop-down-icon(aria-hidden='true')
     section#contact-main.home-main.ultimate-main.room-detail-main
-    div
-        .ultimate-header THE ULTIMATE LUXURY
-        .home-main-text.ultimate-main-text Room Details
-    .contact-navigator-container
-        #home-tag-contact.contact-navigator-tag Home
-        #about-tag-contact.contact-navigator-tag
-        | Room Details
-    section.main-body-content-room
-    .left-column
-        section.single-room-section
-        .room-background
-            .white-background
-            .section-header DOUBLE BED
-            .single-room-name-price
-                .single-room-name Luxury Double Bed
-                .single-room-price
-                .single-room-price-number $345
-                .single-room-price-night /Night
-        .check-availability-container
-            .check-availability-header Check Availability
-            .check-availability-form-container
-            .check-availability-check-in-container
-                .check-in-header Check In
-                input.check-in-input(type='date')
-            .check-availability-check-in-container
-                .check-in-header Check Out
-                input.check-in-input(type='date')
-            .center
-            button.wide-golden-button CHECK AVAILABILITY
-            p.check-availability-description
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            | nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            | reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            | nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            | sunt in culpa qui officia deserunt mollit anim id est laborum. Sed
-            | ut perspiciatis unde omnis iste natus error sit voluptatem
-            | accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            | quae ab illo inventore veritatis et quasi architecto beatae vitae
-            | dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            | aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            | eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
-            | est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-            | velit, sed quia non numquam eius modi tempora incidunt ut labore
-            | et dolore magnam aliquam quaerat voluptatem.
-        .single-room-amenities
-            .single-room-common-title Amenities
-            .divisor
-            .single-room-amenities-container
-            ul.amenities-list
-                li.amenities-individual
-                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                p.amenities-individual-name Air conditioner
-                li.amenities-individual
-                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                p.amenities-individual-name Air conditioner
-                li.amenities-individual
-                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                p.amenities-individual-name Air conditioner
-                li.amenities-individual
-                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                p.amenities-individual-name Air conditioner
-                li.amenities-individual
-                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                p.amenities-individual-name Air conditioner
-                li.amenities-individual
-                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                p.amenities-individual-name Air conditioner
-                li.amenities-individual
-                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                p.amenities-individual-name Air conditioner
-        p#availability-description-extra.check-availability-description
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            | ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            | aliquip ex ea commodo consequat. Duis aute irure dolor in
-            | reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            | pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            | culpa qui officia deserunt mollit anim id est laborum. Sed ut
-            | perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            | doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-            | inventore veritatis et quasi architecto beatae vitae dicta sunt
-            | explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-            | aut odit aut fugit, sed quia consequuntur magni dolores eos qui
-            | ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
-            | dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
-            | quia non numquam eius modi tempora incidunt ut labore et dolore
-            | magnam aliquam quaerat voluptatem.
-        section.testimonials-section
-        .section-header TESTIMONIALS
-        .section-body Client Feedback
-        .feedback-container
-            .feedback-card
-            img.feedback-image(src='./Images/stock person.jpg')
-            i.fa.fa-check.feedback-check(aria-hidden='true')
-            p.feedback-name Rosalina D. William
-            p.feedback-job FOUNDER, QUX CO.
-            p.feedback-description
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                | eiusmod tempor incididunt ut labore et dolore.
-            .feedback-card
-            img.feedback-image(src='./Images/stock person.jpg')
-            i.fa.fa-check.feedback-check(aria-hidden='true')
-            p.feedback-name Rosalina D. William
-            p.feedback-job FOUNDER, QUX CO.
-            p.feedback-description
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                | eiusmod tempor incididunt ut labore et dolore.
-        section.house-rules-section
-        .single-room-common-title House Rules
-        .divisor
-        ul.house-rules
-            li.house-individual-rule
-            i.fa.fa-check.house-rules-icon(aria-hidden='true')
-            p.house-rules-text No smoking, parties or events.
-            li.house-individual-rule
-            i.fa.fa-check.house-rules-icon(aria-hidden='true')
-            p.house-rules-text
-                | Check-in time from 2 PM, check-out by 10 AM.
-            li.house-individual-rule
-            i.fa.fa-check.house-rules-icon(aria-hidden='true')
-            p.house-rules-text Time to time car parking.
-            li.house-individual-rule
-            i.fa.fa-check.house-rules-icon(aria-hidden='true')
-            p.house-rules-text Download Our minimal app.
-            li.house-individual-rule
-            i.fa.fa-check.house-rules-icon(aria-hidden='true')
-            p.house-rules-text Browse regular our website.
-        section.cancellation-section
-        .single-room-common-title Cancellation
-        .divisor
-        p.cancellation-text
-            | Phasellus volutpat neque a tellus venenatis, a euismod augue
-            | facilisis. Fusce ut metus mattis, consequat metus nec, luctus
-            | lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to
-            | 14 days to get a full refund.
-        .location
-        section.related-rooms-section
-        #related-title-pc.section-body Related Rooms
-        .divisor
-        .related-room-list
-            .related-room-card
-            #image-1.related-room-image
-                .room-icon-bar
-                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-coffee(aria-hidden='true')
-                i.fa.fa-cutlery(aria-hidden='true')
-                i.fa.fa-diamond(aria-hidden='true')
-                i.fa.fa-asterisk(aria-hidden='true')
-            .room-list-card-content
-                .room-list-card-information
-                .room-list-card-title Minimal Duplex Room
-                p.room-list-card-text
-                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    | sed do eiusmod tempor.
-                .room-list-card-booking
-                .room-list-card-price
-                    .room-list-price-number $345
-                    .room-list-price-night /Night
-                .room-list-card-booking-text Booking Now
-            .related-room-card
-            #image-2.related-room-image
-                .room-icon-bar
-                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-coffee(aria-hidden='true')
-                i.fa.fa-cutlery(aria-hidden='true')
-                i.fa.fa-diamond(aria-hidden='true')
-                i.fa.fa-asterisk(aria-hidden='true')
-            .room-list-card-content
-                .room-list-card-information
-                .room-list-card-title Minimal Duplex Room
-                p.room-list-card-text
-                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    | sed do eiusmod tempor.
-                .room-list-card-booking
-                .room-list-card-price
-                    .room-list-price-number $345
-                    .room-list-price-night /Night
-                .room-list-card-booking-text Booking Now
-    section.check-availability-form-container
-        .check-availability-form-header Check Availability
-        .check-availability-form
-        .form-input-container
-            label.check-label Check In
-            input.check-availability-form-input(type='date')
-        .form-input-container
-            label.check-label Check Out
-            input.check-availability-form-input(type='date')
-        .form-input-container
-            label.check-label Full Name
-            input.check-availability-form-input(type='text')
-        .form-input-container
-            label.check-label Email
-            input.check-availability-form-input(type='text')
-        .form-input-container
-            label.check-label Phone
-            input.check-availability-form-input(type='text')
-        .form-input-container
-            label.check-label Message
-            textarea.check-availability-form-input(type='text')
-        .center
-        button.wide-golden-button CHECK AVAILABILITY
-    section.subscribe-section
-    .hotel-miranda-title
-        .hotel-miranda-icon H
         div
-        .hotel-bold HOTEL
-        div MIRANDA
-    p.subscribe-text
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doing
-        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        | minim veniam, quis nostrud exercitation ullamco laboris nisi.
-    .subscribe-form
-        input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
-        button.subscribe-button SUBSCRIBE
+            .ultimate-header THE ULTIMATE LUXURY
+            .home-main-text.ultimate-main-text Room Details
+        .contact-navigator-container
+            #home-tag-contact.contact-navigator-tag Home
+            #about-tag-contact.contact-navigator-tag
+                | Room Details
+    section.main-body-content-room
+        .left-column
+            section.single-room-section
+                .room-background
+                    .white-background
+                        .section-header DOUBLE BED
+                        .single-room-name-price
+                            .single-room-name Luxury Double Bed
+                            .single-room-price
+                                .single-room-price-number $345
+                                .single-room-price-night /Night
+                .check-availability-container
+                    .check-availability-header Check Availability
+                    .check-availability-form-container
+                        .check-availability-check-in-container
+                            .check-in-header Check In
+                            input.check-in-input(type='date')
+                        .check-availability-check-in-container
+                            .check-in-header Check Out
+                            input.check-in-input(type='date')
+                    .center
+                        button.wide-golden-button CHECK AVAILABILITY
+                    p.check-availability-description
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        | nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        | reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                        | nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        | sunt in culpa qui officia deserunt mollit anim id est laborum. Sed
+                        | ut perspiciatis unde omnis iste natus error sit voluptatem
+                        | accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                        | quae ab illo inventore veritatis et quasi architecto beatae vitae
+                        | dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                        | aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+                        | eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                        | est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                        | velit, sed quia non numquam eius modi tempora incidunt ut labore
+                        | et dolore magnam aliquam quaerat voluptatem.
+                .single-room-amenities
+                    .single-room-common-title Amenities
+                    .divisor
+                    .single-room-amenities-container
+                        ul.amenities-list
+                            li.amenities-individual
+                                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
+                                p.amenities-individual-name Air conditioner
+                            li.amenities-individual
+                                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
+                                p.amenities-individual-name Air conditioner
+                            li.amenities-individual
+                                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
+                                p.amenities-individual-name Air conditioner
+                            li.amenities-individual
+                                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
+                                p.amenities-individual-name Air conditioner
+                            li.amenities-individual
+                                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
+                                p.amenities-individual-name Air conditioner
+                            li.amenities-individual
+                                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
+                                p.amenities-individual-name Air conditioner
+                            li.amenities-individual
+                                i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
+                                p.amenities-individual-name Air conditioner
+                p#availability-description-extra.check-availability-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    | ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    | aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    | reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    | pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    | culpa qui officia deserunt mollit anim id est laborum. Sed ut
+                    | perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                    | doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                    | inventore veritatis et quasi architecto beatae vitae dicta sunt
+                    | explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+                    | aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                    | ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                    | dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+                    | quia non numquam eius modi tempora incidunt ut labore et dolore
+                    | magnam aliquam quaerat voluptatem.
+            section.testimonials-section
+                .section-header TESTIMONIALS
+                .section-body Client Feedback
+                .feedback-container
+                    .feedback-card
+                        img.feedback-image(src='./Images/stock person.jpg')
+                        i.fa.fa-check.feedback-check(aria-hidden='true')
+                        p.feedback-name Rosalina D. William
+                        p.feedback-job FOUNDER, QUX CO.
+                        p.feedback-description
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            | eiusmod tempor incididunt ut labore et dolore.
+                    .feedback-card
+                        img.feedback-image(src='./Images/stock person.jpg')
+                        i.fa.fa-check.feedback-check(aria-hidden='true')
+                        p.feedback-name Rosalina D. William
+                        p.feedback-job FOUNDER, QUX CO.
+                        p.feedback-description
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            | eiusmod tempor incididunt ut labore et dolore.
+            section.house-rules-section
+                .single-room-common-title House Rules
+                .divisor
+                ul.house-rules
+                    li.house-individual-rule
+                        i.fa.fa-check.house-rules-icon(aria-hidden='true')
+                        p.house-rules-text No smoking, parties or events.
+                    li.house-individual-rule
+                        i.fa.fa-check.house-rules-icon(aria-hidden='true')
+                        p.house-rules-text
+                            | Check-in time from 2 PM, check-out by 10 AM.
+                    li.house-individual-rule
+                        i.fa.fa-check.house-rules-icon(aria-hidden='true')
+                        p.house-rules-text Time to time car parking.
+                    li.house-individual-rule
+                        i.fa.fa-check.house-rules-icon(aria-hidden='true')
+                        p.house-rules-text Download Our minimal app.
+                    li.house-individual-rule
+                        i.fa.fa-check.house-rules-icon(aria-hidden='true')
+                        p.house-rules-text Browse regular our website.
+            section.cancellation-section
+                .single-room-common-title Cancellation
+                .divisor
+                p.cancellation-text
+                    | Phasellus volutpat neque a tellus venenatis, a euismod augue
+                    | facilisis. Fusce ut metus mattis, consequat metus nec, luctus
+                    | lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to
+                    | 14 days to get a full refund.
+            .location
+            section.related-rooms-section
+                #related-title-pc.section-body Related Rooms
+                .divisor
+                .related-room-list
+                    .related-room-card
+                        #image-1.related-room-image
+                            .room-icon-bar
+                                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-coffee(aria-hidden='true')
+                                i.fa.fa-cutlery(aria-hidden='true')
+                                i.fa.fa-diamond(aria-hidden='true')
+                                i.fa.fa-asterisk(aria-hidden='true')
+                        .room-list-card-content
+                            .room-list-card-information
+                                .room-list-card-title Minimal Duplex Room
+                                p.room-list-card-text
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    | sed do eiusmod tempor.
+                            .room-list-card-booking
+                                .room-list-card-price
+                                    .room-list-price-number $345
+                                    .room-list-price-night /Night
+                                .room-list-card-booking-text Booking Now
+                    .related-room-card
+                        #image-2.related-room-image
+                            .room-icon-bar
+                                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-coffee(aria-hidden='true')
+                                i.fa.fa-cutlery(aria-hidden='true')
+                                i.fa.fa-diamond(aria-hidden='true')
+                                i.fa.fa-asterisk(aria-hidden='true')
+                        .room-list-card-content
+                            .room-list-card-information
+                                .room-list-card-title Minimal Duplex Room
+                                p.room-list-card-text
+                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                    | sed do eiusmod tempor.
+                            .room-list-card-booking
+                                .room-list-card-price
+                                    .room-list-price-number $345
+                                    .room-list-price-night /Night
+                                .room-list-card-booking-text Booking Now
+        section.check-availability-form-container
+            .check-availability-form-header Check Availability
+            .check-availability-form
+                .form-input-container
+                    label.check-label Check In
+                    input.check-availability-form-input(type='date')
+                .form-input-container
+                    label.check-label Check Out
+                    input.check-availability-form-input(type='date')
+                .form-input-container
+                    label.check-label Full Name
+                    input.check-availability-form-input(type='text')
+                .form-input-container
+                    label.check-label Email
+                    input.check-availability-form-input(type='text')
+                .form-input-container
+                    label.check-label Phone
+                    input.check-availability-form-input(type='text')
+                .form-input-container
+                    label.check-label Message
+                    textarea.check-availability-form-input(type='text')
+            .center
+                button.wide-golden-button CHECK AVAILABILITY
+    section.subscribe-section
+        .hotel-miranda-title
+            .hotel-miranda-icon H
+            div
+                .hotel-bold HOTEL
+                div MIRANDA
+        p.subscribe-text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doing
+            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            | minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        .subscribe-form
+            input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
+            button.subscribe-button SUBSCRIBE
     footer
-    .copyright COPYRIGHT BY@EXAMPLE
-    .logo-line
-        i.fa.fa-facebook.copy-icon(aria-hidden='true')
-        i#twitter.fa.fa-twitter.copy-icon(aria-hidden='true')
-        i.fa.fa-behance.copy-icon(aria-hidden='true')
-        i.fa.fa-linkedin-square.copy-icon(aria-hidden='true')
-        i.fa.fa-youtube-play.copy-icon(aria-hidden='true')
+        .copyright COPYRIGHT BY@EXAMPLE
+        .logo-line
+            i.fa.fa-facebook.copy-icon(aria-hidden='true')
+            i#twitter.fa.fa-twitter.copy-icon(aria-hidden='true')
+            i.fa.fa-behance.copy-icon(aria-hidden='true')
+            i.fa.fa-linkedin-square.copy-icon(aria-hidden='true')
+            i.fa.fa-youtube-play.copy-icon(aria-hidden='true')
     script(src='js/vendor/modernizr-3.11.2.min.js')
     script(src='js/plugins.js')
-    script(src='js/main.js')
     script(src='js/main.js')
