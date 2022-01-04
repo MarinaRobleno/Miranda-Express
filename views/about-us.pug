@@ -1,0 +1,209 @@
+extends layout
+
+block content
+    header.header
+        .header-bar
+            .hotel-miranda-title
+                .hotel-miranda-icon H
+                div
+                    a.link(href='./index.html')
+                        .hotel-bold HOTEL
+                        div MIRANDA
+            i#hamburger-button.fa.fa-bars.hamburger-button(aria-hidden='true')
+        #drop-down-box.drop-down-box
+            ul.drop-down-list
+                li.drop-down-element
+                    a.link(href='./about-us.html')  About Us 
+                .space
+                li.drop-down-element
+                    a.link(href='./room-list.html')  Rooms
+                .space
+                li.drop-down-element
+                    a.link(href='./room-offers.html')  Offers 
+                .space
+                li.drop-down-element
+                    a.link(href='./single-room.html')  News 
+                .space
+                li.drop-down-element
+                    a.link(href='./contact.html')  Contact
+            .contact-and-icon-container
+                .contact-and-icon
+                    div
+                        .contact-text Phone Number
+                        #phone-number.drop-down-contact
+                            | +622 37 37 22
+                    i.fa.fa-phone.drop-down-icon(aria-hidden='true')
+                .contact-and-icon
+                    div
+                        .contact-text Email Address
+                        #contact-mail.drop-down-contact
+                            | marinarsanisidro@gmail.com
+                    i.fa.fa-envelope.drop-down-icon(aria-hidden='true')
+    section#about-us-main.home-main
+        div
+            .ultimate-header THE ULTIMATE LUXURY
+            .home-main-text About Us
+        .about-navigator-container
+            #home-tag-about.about-navigator-tag Home
+            #about-tag-about.about-navigator-tag About
+    section.about-us-intro-section
+        .inverted-container
+            .section-body-center(style='margin-top: 20px')
+                | Hello. Our hotel has been present for over 20 years. We make the best
+                | for all our customers.
+            .about-us-video
+        .services-grid
+            button.service-card
+                img.service-icon(src='./Images/icon-1.png')
+                p.service-card-text BREAKFAST
+            button.service-card-negative
+                img.service-icon(src='./Images/icon@2x.png')
+                p.service-card-text-negative AIRPORT PICKUP
+            button.service-card
+                i#luxury-icon.fa.fa-star-o.service-icon(aria-hidden='true')
+                p.service-card-text LUXURY ROOM
+            button#bbq-party.service-card
+                img.service-icon(src='./Images/icon(2).png')
+                p.service-card-text BBQ PARTY
+            button.service-card
+                img.service-icon(src='./Images/icon3.png')
+                p.service-card-text CITY GUIDE
+    section.facilities-section
+        #facilities.section-header FACILITIES
+        #core-features.section-body-center Core Features
+        #features-grid.services-grid
+            .service-card.features-card
+                .features-icon-row
+                    img.features-icon(src='./Images/icon-2.png')
+                    .features-number 01
+                .features-title Have High Rating
+                p.features-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore magna.
+            .service-card.features-card
+                .features-icon-row
+                    img.features-icon(src='./Images/icon-1(1).png')
+                    .features-number 02
+                .features-title Quiet Hours
+                p.features-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore magna.
+            .service-card.features-card
+                .features-icon-row
+                    img.features-icon(src='./Images/icon(1).png')
+                    .features-number 03
+                .features-title Free Cancellation
+                p.features-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore magna.
+            .service-card.features-card
+                .features-icon-row
+                    i.fa.fa-credit-card.features-icon(style='opacity: 0.8' aria-hidden='true')
+                    .features-number 04
+                .features-title Payment Options
+                p.features-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore magna.
+            #extra-card.service-card.features-card
+                .features-icon-row
+                    i.fa.fa-map-marker.features-icon(style='opacity: 0.8' aria-hidden='true')
+                    .features-number 05
+                .features-title Best Locations
+                p.features-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore magna.
+            #extra-card.service-card.features-card
+                .features-icon-row
+                    i.fa.fa-percent.features-icon(style='opacity: 0.8' aria-hidden='true')
+                    .features-number 06
+                .features-title Special Offers
+                p.features-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore magna.
+    section.counter-section
+        .section-header COUNTER
+        .section-body Some Fun Facts
+        .counter-container
+            .counter-card
+                i.fa.fa-user.counter-icon(aria-hidden='true')
+                .count-and-text
+                    .counter-number 8000
+                    .counter-text Happy Users
+                i.fa.fa-long-arrow-right.counter-arrow(aria-hidden='true')
+            .counter-card
+                i.fa.fa-thumbs-o-up.counter-icon(aria-hidden='true')
+                .count-and-text
+                    .counter-number 10M
+                    .counter-text Reviews & Appriciate
+                i.fa.fa-long-arrow-right.counter-arrow(aria-hidden='true')
+            .counter-card
+                i.fa.fa-globe.counter-icon(aria-hidden='true')
+                .count-and-text
+                    .counter-number 100
+                    .counter-text Country Coverage
+                i.fa.fa-long-arrow-right.counter-arrow(aria-hidden='true')
+        .counter-image-row
+            img.counter-image(src='./Images/pexels-max-vakhtbovych-6434631.jpg')
+            img.counter-image(src='./Images/pexels-max-vakhtbovych-6394711.jpg')
+    section#about-blog-section.blog-section
+        .section-header BLOG
+        .section-body-container
+            .section-body News Feeds
+            .blog-button-line
+                button#white-button.blog-button
+                    i.fa.fa-arrow-left.blog-arrow-left(aria-hidden='true')
+                button#golden-button.blog-button
+                    i.fa.fa-arrow-right.blog-arrow-right(aria-hidden='true')
+        .post-container
+            .post
+                img.post-image(src='./Images/news-feeds-photo-1.jpeg')
+                .post-data
+                    .post-card-data
+                        i.fa.fa-calendar.news-feeds-icon(aria-hidden='true')
+                        p.post-card-text 23rd March 2019
+                    .post-card-data
+                        i.fa.fa-user-o.news-feeds-icon(aria-hidden='true')
+                        p.post-card-text By Admin
+                .post-title
+                    | Each of our 8 double rooms has its own distinct.
+                .post-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore.
+            .post
+                img.post-image(src='./Images/news-feeds-photo-2.jpg')
+                .post-data
+                    .post-card-data
+                        i.fa.fa-calendar.news-feeds-icon(aria-hidden='true')
+                        p.post-card-text 23rd March 2019
+                    .post-card-data
+                        i.fa.fa-user-o.news-feeds-icon(aria-hidden='true')
+                        p.post-card-text By Admin
+                .post-title
+                    | Each of our 8 double rooms has its own distinct.
+                .post-description
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    | eiusmod tempor incididunt ut labore et dolore.
+    section.subscribe-section
+        .hotel-miranda-title
+            .hotel-miranda-icon H
+            div
+                .hotel-bold HOTEL
+                div MIRANDA
+        p.subscribe-text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doing
+            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            | minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        .subscribe-form
+            input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
+            button.subscribe-button SUBSCRIBE
+    footer
+        .copyright COPYRIGHT BY@EXAMPLE
+        .logo-line
+            i.fa.fa-facebook.copy-icon(aria-hidden='true')
+            i#twitter.fa.fa-twitter.copy-icon(aria-hidden='true')
+            i.fa.fa-behance.copy-icon(aria-hidden='true')
+            i.fa.fa-linkedin-square.copy-icon(aria-hidden='true')
+            i.fa.fa-youtube-play.copy-icon(aria-hidden='true')
+    script(src='js/vendor/modernizr-3.11.2.min.js')
+    script(src='js/plugins.js')
+    script(src='js/main.js')

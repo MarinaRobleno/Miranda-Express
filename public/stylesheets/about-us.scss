@@ -1,0 +1,118 @@
+.about-navigator-container{
+    display: none;
+}
+
+.about-us-video{
+    background-color: grey;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.facilities-section{
+    background: #222222 0% 0% no-repeat padding-box;
+    text-align: center;
+    margin: 20px 0;
+    #facilities{
+        padding-top: 20px;
+        font-size: 10px;
+        letter-spacing: 2.8px;
+        color: #C2C2C2;
+    }
+    #core-features{
+        color: white;
+        font-size: 35px;
+    }
+    #features-grid{
+        grid-gap: 10px 10px;
+        padding-bottom: 20px;
+        .features-card{
+            width: 170px;
+            height: 170px;
+            background: #292929 0% 0% no-repeat padding-box;
+            box-shadow: none;
+            .features-icon-row{
+                display: flex;
+                justify-content: space-between;
+                .features-icon{
+                    font-size: 35px;
+                    color: #BEAD8E;
+                    width: 40px;
+                    height: 40px;
+                    margin: 20px;
+                    margin-bottom: 0;
+                }
+                .features-number{
+                    font-weight: 700;
+                    font-size: 60px;
+                    margin-top: -12px;
+                    padding: 0;
+                    letter-spacing: 0px;
+                    color: #222222;
+                }
+            }
+            .features-title{
+                padding: 0 10px;
+                text-align: left;
+                padding-top: 15px;
+                color: white;
+                font-family: "Old Standard TT", serif;
+                font-size: 18px;
+                letter-spacing: -0.8;
+            }
+            .features-description{
+                padding: 0 10px;
+                text-align: left;
+                padding-top: 15px;
+                line-height: 13px;
+                color: #D4D4D4;
+                font-size: 9px;
+            }
+        }
+        #extra-card{
+            display: none;
+        }        
+    }
+}
+
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .counter-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 70px;
+        min-width: 280px;
+        align-items: center;
+        margin: 10px;
+        box-shadow: 0px 14px 24px #b8b8b81a;
+        .counter-icon{
+            padding: 20px;
+            color: #BEAD8E;
+            font-size: 30px;
+        }
+        .count-and-text{
+            padding: 20px;
+            text-align: center;
+            .counter-number{
+                font-family: "Old Standard TT", serif;
+                font-size: 30px;
+            }
+            .counter-text{
+                color: #777777;
+                font-size: 12px;
+            }
+        }
+        .counter-arrow{
+            padding: 20px;
+            color: #DCDCDC;
+            font-size: 25px;
+        }
+    }
+}
+.counter-image-row{
+    display: none;
+}
+
