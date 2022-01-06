@@ -10,7 +10,7 @@ router.get(
     '/',
     (req, res, next) => {
       res.json({
-        message: 'You made it to the secure route',
+        message: 'Private API route',
         user: req.user,
         token: req.query.secret_token
       })
