@@ -9,7 +9,7 @@ const bookingsController = {
         res.send('Stored data')
     },
     show: (req, res, next) => {
-        res.send('Show data')
+        return res.json(bookings[req.params.id-1])
     },
     update: (req, res, next) => {
         res.send('Update data')

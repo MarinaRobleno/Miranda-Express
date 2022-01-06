@@ -9,7 +9,7 @@ const usersController = {
         res.send('Stored data')
     },
     show: (req, res, next) => {
-        res.send('Show data')
+        return res.json(users[req.params.id-1])
     },
     update: (req, res, next) => {
         res.send('Update data')
