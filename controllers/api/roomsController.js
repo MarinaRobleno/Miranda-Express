@@ -1,7 +1,9 @@
+const rooms = require('../../json/rooms')
+
 const roomsController = {
     index: (req, res, next) => {
-        //return res.json(rooms)
-        res.send('Room index data')
+        return res.json(rooms)
+        //res.send('Room index data')
     },
     store: (req, res, next) => {
         res.send('Stored data')

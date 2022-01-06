@@ -1,7 +1,9 @@
+const bookings = require('../../json/booking')
+
 const bookingsController = {
     index: (req, res, next) => {
-        //return res.json(bookings)
-        res.send('Booking index data')
+        return res.json(bookings)
+        //res.send('Booking index data')
     },
     store: (req, res, next) => {
         res.send('Stored data')

@@ -1,7 +1,9 @@
+const users = require('../../json/users')
+
 const usersController = {
     index: (req, res, next) => {
-        //return res.json(users)
-        res.send('Users index data')
+        return res.json(users)
+        //res.send('Users index data')
     },
     store: (req, res, next) => {
         res.send('Stored data')

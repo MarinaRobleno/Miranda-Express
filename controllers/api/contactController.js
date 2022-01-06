@@ -1,7 +1,9 @@
+const contact = require('../../json/contact')
+
 const contactController = {
     index: (req, res, next) => {
-        //return res.json(contact)
-        res.send('Contact index data')
+        return res.json(contact)
+       // res.send('Contact index data')
     },
     store: (req, res, next) => {
         res.send('Stored data')
