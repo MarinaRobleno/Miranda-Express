@@ -27,7 +27,6 @@ for (let book of bookings){
         checkIn: book.checkIn,
         checkOut: book.checkOut,
         special: book.special,
-        roomNumber: book.room_number,
         status: book.status,
     }
     connection.query('INSERT INTO bookings SET?', toInsert, function (error, results, fields) {
@@ -43,7 +42,7 @@ CREATE TABLE ROOMS:
 CREATE TABLE IF NOT EXISTS rooms(
     roomId INT AUTO_INCREMENT PRIMARY KEY,
    photo MEDIUMTEXT,
-   roomNumber VARCHAR(255) NOT NULL,
+   roomNumber VARCHAR(255) NOT NULL PRIMARY KEY,
    roomType VARCHAR(255) NOT NULL,
     amenities VARCHAR(255),
     price INT NOT NULL,
@@ -53,11 +52,16 @@ CREATE TABLE IF NOT EXISTS rooms(
 
 CREATE TABLE IF NOT EXISTS bookings(
     bookId INT AUTO_INCREMENT PRIMARY KEY,
-   photo MEDIUMTEXT,
-   roomNumber VARCHAR(255) NOT NULL,
-   roomType VARCHAR(255) NOT NULL,
-    amenities VARCHAR(255),
-    price INT NOT NULL,
-    offer_price INT,
-    status BOOLEAN,
+    guest VARCHAR(255) NOT NULL,
+    orderDate DATE,
+    checkIn DATE,
+    checkOut DATE,
+    special TEXT,
+    status BOOLEAN
+    FOREIGN KEY (roomType)
+        REFERENCES rooms(roomType)
+    FOREIGN KEY (roomNumber)
+        REFERENCES rooms(roomNumber)
+        ON UPDATE CASCADE
+        ON DELETE SET NULL
 ) ENGINE=INNODB;
