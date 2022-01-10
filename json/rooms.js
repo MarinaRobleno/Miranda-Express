@@ -25,8 +25,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 03,
     roomType: "Double Bed",
     amenities: "Oil - Avocado",
@@ -35,8 +38,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 04,
     roomType: "Double Bed",
     amenities: "Lobster - Live",
@@ -45,8 +51,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 05,
     roomType: "Double Bed",
     amenities: "Roe - White Fish",
@@ -68,8 +77,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 07,
     roomType: "Double Bed",
     amenities: "Bagel - Plain",
@@ -143,8 +155,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 13,
     roomType: "Double Bed",
     amenities: "Oil - Avocado",
@@ -153,8 +168,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 14,
     roomType: "Double Bed",
     amenities: "Lobster - Live",
@@ -163,8 +181,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 15,
     roomType: "Double Bed",
     amenities: "Roe - White Fish",
@@ -186,8 +207,11 @@ const rooms = [
     status: 'available'
   },
   {
-    photo:
-      ["https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg"],
+    photo: [
+      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
+      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
+      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
+    ],
     roomNumber: 17,
     roomType: "Double Bed",
     amenities: "Bagel - Plain",
