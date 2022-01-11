@@ -1,15 +1,28 @@
+const { connection } = require('../../db')
 const users = require('../../json/users')
 
 const usersController = {
     index: (req, res, next) => {
-        return res.json(users)
-        //res.send('Users index data')
+        connection.connect(function(err){
+            if (err) console.log(err);
+            connection.query('SELECT * FROM users', function (err, usersData){
+                if (err) console.log(err)
+                return res.json(usersData);
+            })
+        })
     },
     store: (req, res, next) => {
         res.send('Stored data')
     },
     show: (req, res, next) => {
-        return res.json(users[req.params.id-1])
+        connection.connect(function(err){
+            if (err) console.log(err);
+            const parsedId = parseInt(req.params.id);
+            connection.query(`SELECT * FROM users WHERE users.id = ${parsedId}`, function (err, usersData){
+                if (err) console.log(err)
+                return res.json(usersData);
+            })
+        })
     },
     update: (req, res, next) => {
         res.send('Update data')

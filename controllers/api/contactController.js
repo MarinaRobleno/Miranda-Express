@@ -1,15 +1,28 @@
 const contact = require('../../json/contact')
+const { connection } = require('../../db')
 
 const contactController = {
     index: (req, res, next) => {
-        return res.json(contact)
-       // res.send('Contact index data')
+        connection.connect(function(err){
+            if (err) console.log(err);
+            connection.query('SELECT * FROM contact', function (err, contactData){
+                if (err) console.log(err)
+                return res.json(contactData);
+            })
+        })
     },
     store: (req, res, next) => {
         res.send('Stored data')
     },
     show: (req, res, next) => {
-        return res.json(contact[req.params.id-1])
+        connection.connect(function(err){
+            if (err) console.log(err);
+            const parsedId = parseInt(req.params.id);
+            connection.query(`SELECT * FROM contact WHERE contact.id = ${parsedId}`, function (err, contactData){
+                if (err) console.log(err)
+                return res.json(contactData);
+            })
+        })
     },
     update: (req, res, next) => {
         res.send('Update data')
