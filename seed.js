@@ -64,6 +64,7 @@ connection.connect(function (err) {
       }
     );
   }
+
   for (let book of bookings) {
     const toInsert = {
       guest: book.guest,
@@ -72,6 +73,7 @@ connection.connect(function (err) {
       checkOut: book.checkOut,
       special: book.special,
       status: book.status,
+
     };
     connection.query(
       "INSERT INTO bookings SET?",
@@ -81,11 +83,12 @@ connection.connect(function (err) {
         // Neat!
       }
     );
-  }*/
+  }
   for (let room of rooms) {
-    for (let photo of room.photo) {
+    for (let i = 0; i<room.photo.length; i++) {
       const toInsert = {
-        url: photo,
+        url: room.photo[i],
+        roomId: room.roomNumber
       };
       connection.query(
         "INSERT INTO roomphotos SET?",
@@ -96,5 +99,5 @@ connection.connect(function (err) {
         }
       );
     }
-  }
+  }*/
 });
