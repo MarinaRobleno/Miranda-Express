@@ -4,7 +4,6 @@ const roomsController = require('../controllers/api/roomsController');
 const bookingsController = require('../controllers/api/bookingsController');
 const usersController = require('../controllers/api/usersController');
 const contactController = require('../controllers/api/contactController');
-const dashboardController = require('../controllers/api/dashboardController');
 
 router.get(
     '/',
@@ -17,9 +16,6 @@ router.get(
     }
   );  
 
-//Dashboard
-router.route('/dashboard')
-    .get(dashboardController.index)
 //Rooms
 
 router.route("/rooms")

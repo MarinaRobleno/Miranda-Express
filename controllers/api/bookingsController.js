@@ -5,7 +5,7 @@ const bookingsController = {
     index: (req, res, next) => {
         connection.connect(function(err){
             if (err) console.log(err);
-            connection.query('SELECT * FROM bookings', function (err, bookingData){
+            connection.query('SELECT * FROM bookings INNER JOIN rooms ON bookings.roomID = rooms.id', function (err, bookingData){
                 if (err) console.log(err)
                 return res.json(bookingData);
             })
@@ -28,7 +28,15 @@ const bookingsController = {
         res.send('Update data')
     },
     delete: (req, res, next) => {
-        res.send('Delete data')
+        connection.connect(function(err){
+            if (err) console.log(err);
+            const parsedId = parseInt(req.params.id);
+            connection.query(`DELETE FROM bookings WHERE bookings.id = ${parsedId}`, function (err, bookingsData){
+                if (err) console.log(err)
+                res.send(`Book id ${parsedId} deleted`)
+                return res.json(bookingsData);
+            })
+        })
     }
 }
 

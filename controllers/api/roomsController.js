@@ -28,7 +28,15 @@ const roomsController = {
         res.send('Update data')
     },
     delete: (req, res, next) => {
-        res.send('Delete data')
+        connection.connect(function(err){
+            if (err) console.log(err);
+            const parsedId = parseInt(req.params.id);
+            connection.query(`DELETE FROM rooms WHERE rooms.id = ${parsedId}`, function (err, roomsData){
+                if (err) console.log(err)
+                res.send(`Room id ${parsedId} deleted`)
+                return res.json(roomsData);
+            })
+        })
     }
 }
 

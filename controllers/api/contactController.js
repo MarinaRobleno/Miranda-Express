@@ -28,7 +28,15 @@ const contactController = {
         res.send('Update data')
     },
     delete: (req, res, next) => {
-        res.send('Delete data')
+        connection.connect(function(err){
+            if (err) console.log(err);
+            const parsedId = parseInt(req.params.id);
+            connection.query(`DELETE FROM contact WHERE contact.id = ${parsedId}`, function (err, contactData){
+                if (err) console.log(err)
+                res.send(`Contact number ${parsedId} deleted`)
+                return res.json(contactData);
+            })
+        })
     }
 }
 
