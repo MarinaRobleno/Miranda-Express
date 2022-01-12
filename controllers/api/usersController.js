@@ -1,5 +1,16 @@
 const { connection } = require('../../db')
-const users = require('../../json/users')
+const Joi = require('joi');
+
+const usersSchema = Joi.object({
+    photo: Joi.string().required(),
+    name: Joi.string().required(),
+    mail: Joi.string().required(),
+    job: Joi.string().required(),
+    phone: Joi.string().required(),
+    status: Joi.string().required(),
+    startDate: Joi.string().required(),
+    endDate: Joi.string().required(),
+});
 
 const usersController = {
     index: (req, res, next) => {
@@ -28,7 +39,15 @@ const usersController = {
         res.send('Update data')
     },
     delete: (req, res, next) => {
-        res.send('Delete data')
+        connection.connect(function(err){
+            if (err) console.log(err);
+            const parsedId = parseInt(req.params.id);
+            connection.query(`DELETE FROM users WHERE users.id = ${parsedId}`, function (err, usersData){
+                if (err) console.log(err)
+                console.log(`User id ${parsedId} deleted`)
+                return res.json(usersData);
+            })
+        })
     }
 }
 

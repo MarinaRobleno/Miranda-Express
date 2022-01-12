@@ -1,5 +1,15 @@
-const bookings = require('../../json/booking')
 const { connection } = require('../../db')
+const Joi = require('joi');
+
+const bookSchema = Joi.object({
+    guest: Joi.string().required(),
+    orderDate: Joi.string().required(),
+    checkIn: Joi.string().required(),
+    checkOut: Joi.string().required(),
+    special: Joi.string(),
+    status: Joi.string().required(),
+    roomId: Joi.number().required(),
+});
 
 const bookingsController = {
     index: (req, res, next) => {
@@ -33,7 +43,7 @@ const bookingsController = {
             const parsedId = parseInt(req.params.id);
             connection.query(`DELETE FROM bookings WHERE bookings.id = ${parsedId}`, function (err, bookingsData){
                 if (err) console.log(err)
-                res.send(`Book id ${parsedId} deleted`)
+                console.log(`Book id ${parsedId} deleted`)
                 return res.json(bookingsData);
             })
         })

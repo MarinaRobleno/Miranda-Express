@@ -1,4 +1,3 @@
-const contact = require('../../json/contact')
 const { connection } = require('../../db')
 
 const contactController = {
@@ -33,7 +32,7 @@ const contactController = {
             const parsedId = parseInt(req.params.id);
             connection.query(`DELETE FROM contact WHERE contact.id = ${parsedId}`, function (err, contactData){
                 if (err) console.log(err)
-                res.send(`Contact number ${parsedId} deleted`)
+                console.log(`Contact number ${parsedId} deleted`)
                 return res.json(contactData);
             })
         })
