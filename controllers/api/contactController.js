@@ -1,42 +1,52 @@
-const { connection } = require('../../db')
+const { connection, connectdb } = require("../../db");
+var mysql = require("mysql2/promise");
 
 const contactController = {
-    index: (req, res, next) => {
-        connection.connect(function(err){
-            if (err) console.log(err);
-            connection.query('SELECT * FROM contact', function (err, contactData){
-                if (err) console.log(err)
-                return res.json(contactData);
-            })
-        })
-    },
-    store: (req, res, next) => {
-        res.send('Stored data')
-    },
-    show: (req, res, next) => {
-        connection.connect(function(err){
-            if (err) console.log(err);
-            const parsedId = parseInt(req.params.id);
-            connection.query(`SELECT * FROM contact WHERE contact.id = ${parsedId}`, function (err, contactData){
-                if (err) console.log(err)
-                return res.json(contactData);
-            })
-        })
-    },
-    update: (req, res, next) => {
-        res.send('Update data')
-    },
-    delete: (req, res, next) => {
-        connection.connect(function(err){
-            if (err) console.log(err);
-            const parsedId = parseInt(req.params.id);
-            connection.query(`DELETE FROM contact WHERE contact.id = ${parsedId}`, function (err, contactData){
-                if (err) console.log(err)
-                console.log(`Contact number ${parsedId} deleted`)
-                return res.json(contactData);
-            })
-        })
-    }
-}
+  index: async (req, res, next) => {
+    const connection = await connectdb();
+    const [contactResults, contactFields] = await connection.execute(
+      "SELECT * FROM contact"
+    );
+    return res.json(contactResults);
+  },
+  store: async (req, res, next) => {
+    const connection = await connectdb();
+    const reqStructure = {
+      photo: req.body.photo,
+      date: req.body.date,
+      customer: req.body.customer,
+      mail: req.body.mail,
+      phone: req.body.phone,
+      subject: req.body.subject,
+      comment: req.body.comment,
+    };
+    const [contactResults, contactFields] = await connection.execute(
+      mysql.format(`INSERT INTO contact SET ?`, reqStructure)
+    );
+    return res.json(contactResults);
+  },
+  show: async (req, res, next) => {
+    const connection = await connectdb();
+    const parsedId = parseInt(req.params.id);
+    const [contactResults, contactFields] = await connection.execute(
+      `SELECT * FROM contact WHERE id = ?`,
+      [parsedId]
+    );
+    const contact = contactResults[0];
+    return res.json(contact)
+  },
+  update: (req, res, next) => {
+    res.send("Update data");
+  },
+  delete: async (req, res, next) => {
+    const connection = await connectdb();
+    const parsedId = parseInt(req.params.id);
+    const [contactResults, contactFields] = await connection.execute(
+      `DELETE FROM contact WHERE contact.id = ?`,
+      [parsedId]
+    );
+    return res.json(contactResults)
+  },
+};
 
 module.exports = contactController;

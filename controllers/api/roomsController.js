@@ -1,4 +1,4 @@
-const { connection, connectdb } = require("../../db");
+const { connectdb } = require("../../db");
 const Joi = require("joi");
 var mysql = require("mysql2/promise");
 
