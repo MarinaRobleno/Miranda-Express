@@ -22,7 +22,7 @@ const roomsController = {
     );
     for (let j = 0; j < roomResults.length; j++) {
       roomResults[j].photo = [];
-      let currentId = roomResults[j].insertId;
+      let currentId = roomResults[j].id;
       for (let k = 0; k < photoResults.length; k++) {
         if (photoResults[k].roomId === currentId) {
           roomResults[j].photo.push(photoResults[k].url);
