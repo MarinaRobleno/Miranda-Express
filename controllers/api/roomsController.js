@@ -68,9 +68,11 @@ const roomsController = {
       `SELECT * FROM roomphotos WHERE roomId = ?`,
       [parsedId]
     );
-    room.photo = [];
-    for (let i = 0; i < photoResults.length; i++) {
-      room.photo.push(photoResults[i].url);
+    if (room) {
+      room.photo = [];
+      for (let i = 0; i < photoResults.length; i++) {
+        room.photo.push(photoResults[i].url);
+      }
     }
     return res.json(room);
   },

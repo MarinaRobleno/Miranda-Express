@@ -1,4 +1,4 @@
-const { connection, connectdb } = require("../../db");
+const { connectdb } = require("../../db");
 var mysql = require("mysql2/promise");
 
 const contactController = {

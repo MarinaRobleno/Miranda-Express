@@ -8,7 +8,7 @@ const bookings = [
     special: "Special request number 1",
     roomType: "Double Bed",
     roomNumber: 01,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -24,7 +24,7 @@ const bookings = [
     special: "Special request number 2",
     roomType: "Double Bed",
     roomNumber: 02,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://st.hzcdn.com/simgs/pictures/bedrooms/cruelty-free-luxury-bedroom-dimare-design-img~7011347f07f3f5aa_9-8849-1-6e7db76.jpg",
       "https://images.squarespace-cdn.com/content/v1/53b5ae62e4b04291a7408706/1473854326018-6O01FR1QH8SSTOIG40AU/4+budget-friendly+master+bedroom+decorating+ideas?format=1000w",
@@ -39,7 +39,7 @@ const bookings = [
     special: "Special request number 3",
     roomType: "Double Bed",
     roomNumber: 03,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -55,7 +55,7 @@ const bookings = [
     special: "Special request number 4",
     roomType: "Double Bed",
     roomNumber: 04,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -71,7 +71,7 @@ const bookings = [
     special: "Special request number 5",
     roomType: "Double Bed",
     roomNumber: 05,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -87,7 +87,7 @@ const bookings = [
     special: "Special request number 6",
     roomType: "Double Bed",
     roomNumber: 06,
-    status: "progress",
+    bookStatus: "progress",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -103,7 +103,7 @@ const bookings = [
     special: "Special request number 7",
     roomType: "Double Bed",
     roomNumber: 07,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -119,7 +119,7 @@ const bookings = [
     special: "Special request number 8",
     roomType: "Double Bed",
     roomNumber: 08,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -135,7 +135,7 @@ const bookings = [
     special: "Special request number 9",
     roomType: "Double Bed",
     roomNumber: 09,
-    status: "progress",
+    bookStatus: "progress",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -151,7 +151,7 @@ const bookings = [
     special: null,
     roomType: "Double Bed",
     roomNumber: 10,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -167,7 +167,7 @@ const bookings = [
     special: "Special request number 1",
     roomType: "Double Bed",
     roomNumber: 11,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -183,7 +183,7 @@ const bookings = [
     special: "Special request number 2",
     roomType: "Double Bed",
     roomNumber: 12,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -199,7 +199,7 @@ const bookings = [
     special: "Special request number 3",
     roomType: "Double Bed",
     roomNumber: 13,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -215,7 +215,7 @@ const bookings = [
     special: "Special request number 4",
     roomType: "Double Bed",
     roomNumber: 14,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -231,7 +231,7 @@ const bookings = [
     special: "Special request number 5",
     roomType: "Double Bed",
     roomNumber: 15,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -247,7 +247,7 @@ const bookings = [
     special: "Special request number 6",
     roomType: "Double Bed",
     roomNumber: 16,
-    status: "progress",
+    bookStatus: "progress",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -263,7 +263,7 @@ const bookings = [
     special: "Special request number 7",
     roomType: "Double Bed",
     roomNumber: 17,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -279,7 +279,7 @@ const bookings = [
     special: "Special request number 8",
     roomType: "Double Bed",
     roomNumber: 18,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -295,7 +295,7 @@ const bookings = [
     special: "Special request number 9",
     roomType: "Double Bed",
     roomNumber: 19,
-    status: "progress",
+    bookStatus: "progress",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -311,7 +311,7 @@ const bookings = [
     special: null,
     roomType: "Double Bed",
     roomNumber: 20,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -327,7 +327,7 @@ const bookings = [
     special: "Special request number 1",
     roomType: "Double Bed",
     roomNumber: 21,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -343,7 +343,7 @@ const bookings = [
     special: "Special request number 2",
     roomType: "Double Bed",
     roomNumber: 22,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -359,7 +359,7 @@ const bookings = [
     special: "Special request number 3",
     roomType: "Double Bed",
     roomNumber: 23,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -375,7 +375,7 @@ const bookings = [
     special: "Special request number 4",
     roomType: "Double Bed",
     roomNumber: 24,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -391,7 +391,7 @@ const bookings = [
     special: "Special request number 5",
     roomType: "Double Bed",
     roomNumber: 25,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -407,7 +407,7 @@ const bookings = [
     special: "Special request number 6",
     roomType: "Double Bed",
     roomNumber: 26,
-    status: "progress",
+    bookStatus: "progress",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -423,7 +423,7 @@ const bookings = [
     special: "Special request number 7",
     roomType: "Double Bed",
     roomNumber: 27,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -439,7 +439,7 @@ const bookings = [
     special: "Special request number 8",
     roomType: "Double Bed",
     roomNumber: 28,
-    status: "in",
+    bookStatus: "in",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -455,7 +455,7 @@ const bookings = [
     special: "Special request number 9",
     roomType: "Double Bed",
     roomNumber: 29,
-    status: "progress",
+    bookStatus: "progress",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
@@ -471,7 +471,7 @@ const bookings = [
     special: null,
     roomType: "Double Bed",
     roomNumber: 30,
-    status: "out",
+    bookStatus: "out",
     photo: [
       "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
       "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
