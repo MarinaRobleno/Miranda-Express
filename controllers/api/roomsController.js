@@ -66,7 +66,11 @@ const roomsController = {
         `SELECT * FROM roomphotos WHERE roomId = ?`,
         [parsedId]
       );
-    return res.json(photoResults);
+    room.photo = [];
+    for (let i = 0; i<photoResults.length; i++){
+        room.photo.push(photoResults[i].url)
+    }
+    return res.json(room);
   },
   update: (req, res, next) => {
     res.send("Update data");
