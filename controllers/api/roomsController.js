@@ -1,6 +1,6 @@
 const { connection, connectdb } = require("../../db");
 const Joi = require("joi");
-var mysql = require('mysql2/promise')
+var mysql = require("mysql2/promise");
 
 const roomSchema = Joi.object({
   roomNumber: Joi.number().required(),
@@ -40,11 +40,20 @@ const roomsController = {
       price: req.body.price,
       offer_price: req.body.offer_price,
       status: req.body.status,
-    }
+    };
     const [roomResults, roomFields] = await connection.execute(
       mysql.format(`INSERT INTO rooms SET ?`, reqStructure)
       //LOOP insert id
     );
+    for (let m = 0; m < req.body.photo.length; m++) {
+      const [photoResults, photoFields] = await connection.execute(
+        mysql.format(`INSERT INTO roomphotos SET ?`, {
+          url: req.body.photo[m],
+          roomId: roomResults.insertId,
+        })
+      );
+    }
+
     return res.json(roomResults);
   },
   show: async (req, res, next) => {
