@@ -83,7 +83,7 @@ const roomsController = {
     const connection = await connectdb();
     const parsedId = parseInt(req.params.id);
     const [roomResults, roomFields] = await connection.execute(
-      `DELETE FROM rooms WHERE rooms.id = ?`,
+      `DELETE FROM rooms WHERE id = ?`,
       [parsedId]
     );
     const [photoResults, photoFields] = await connection.execute(

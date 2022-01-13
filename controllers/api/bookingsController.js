@@ -34,17 +34,6 @@ const bookingsController = {
   },
   store: async (req, res, next) => {
     const connection = await connectdb();
-    
-    /*const [roomResults, roomFields] = await connection.execute(
-      mysql.format(`INSERT INTO rooms SET ?`, {
-        roomNumber: req.body.roomNumber,
-        roomType: req.body.roomType,
-        amenities: req.body.amenities,
-        price: req.body.price,
-        offer_price: req.body.offer_price,
-        status: req.body.status,
-      })
-    );*/
     const [bookResults, bookFields] = await connection.execute(
         mysql.format(`INSERT INTO bookings SET ?`, {
           guest: req.body.guest,
@@ -55,15 +44,7 @@ const bookingsController = {
           bookStatus: req.body.bookStatus,
           roomId: req.body.roomId
         })
-      );/*
-    for (let m = 0; m < req.body.photo.length; m++) {
-      const [photoResults, photoFields] = await connection.execute(
-        mysql.format(`INSERT INTO roomphotos SET ?`, {
-          url: req.body.photo[m],
-          roomId: roomResults.insertId,
-        })
       );
-    }*/
     return res.json(bookResults);
   },
   show: async (req, res, next) => {
