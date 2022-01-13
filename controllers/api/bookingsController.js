@@ -69,16 +69,6 @@ const bookingsController = {
   },
   update: async (req, res, next) => {
     const connection = await connectdb();
-    const reqStructure = {
-      guest: req.body.guest,
-      orderDate: req.body.orderDate,
-      checkIn: req.body.checkIn,
-      checkOut: req.body.checkOut,
-      special: req.body.special,
-      bookStatus: req.body.bookStatus,
-      roomId: req.body.roomId,
-    };
-    const keys = Object.keys(reqStructure);
     const parsedId = parseInt(req.params.id);
     const [bookResults, bookFields] = await connection.execute(
       `UPDATE bookings SET guest = ?, orderDate = ?, checkIn = ?, checkOut = ?, special = ?, bookStatus = ?, roomId = ? WHERE id = ?`,

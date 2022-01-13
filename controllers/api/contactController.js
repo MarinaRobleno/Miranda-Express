@@ -35,8 +35,23 @@ const contactController = {
     const contact = contactResults[0];
     return res.json(contact)
   },
-  update: (req, res, next) => {
-    res.send("Update data");
+  update: async (req, res, next) => {
+    const connection = await connectdb();
+    const parsedId = parseInt(req.params.id);
+    const [contactResults, contactFields] = await connection.execute(
+      `UPDATE contact SET photo = ?, date = ?, customer = ?, mail = ?, phone = ?, subject = ?, comment = ? WHERE id = ?`,
+      [
+        req.body.photo,
+        req.body.date,
+        req.body.customer,
+        req.body.mail,
+        req.body.phone,
+        req.body.subject,
+        req.body.comment,
+        parsedId,
+      ]
+    );
+    return res.json(contactResults);
   },
   delete: async (req, res, next) => {
     const connection = await connectdb();
