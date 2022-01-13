@@ -35,16 +35,16 @@ const bookingsController = {
   store: async (req, res, next) => {
     const connection = await connectdb();
     const [bookResults, bookFields] = await connection.execute(
-        mysql.format(`INSERT INTO bookings SET ?`, {
-          guest: req.body.guest,
-          orderDate: req.body.orderDate,
-          checkIn: req.body.checkIn,
-          checkOut: req.body.checkOut,
-          special: req.body.special,
-          bookStatus: req.body.bookStatus,
-          roomId: req.body.roomId
-        })
-      );
+      mysql.format(`INSERT INTO bookings SET ?`, {
+        guest: req.body.guest,
+        orderDate: req.body.orderDate,
+        checkIn: req.body.checkIn,
+        checkOut: req.body.checkOut,
+        special: req.body.special,
+        bookStatus: req.body.bookStatus,
+        roomId: req.body.roomId,
+      })
+    );
     return res.json(bookResults);
   },
   show: async (req, res, next) => {
@@ -67,8 +67,33 @@ const bookingsController = {
 
     return res.json(book);
   },
-  update: (req, res, next) => {
-    res.send("Update data");
+  update: async (req, res, next) => {
+    const connection = await connectdb();
+    const reqStructure = {
+      guest: req.body.guest,
+      orderDate: req.body.orderDate,
+      checkIn: req.body.checkIn,
+      checkOut: req.body.checkOut,
+      special: req.body.special,
+      bookStatus: req.body.bookStatus,
+      roomId: req.body.roomId,
+    };
+    const keys = Object.keys(reqStructure);
+    const parsedId = parseInt(req.params.id);
+    const [bookResults, bookFields] = await connection.execute(
+      `UPDATE bookings SET guest = ?, orderDate = ?, checkIn = ?, checkOut = ?, special = ?, bookStatus = ?, roomId = ? WHERE id = ?`,
+      [
+        req.body.guest,
+        req.body.orderDate,
+        req.body.checkIn,
+        req.body.checkOut,
+        req.body.special,
+        req.body.bookStatus,
+        req.body.roomId,
+        parsedId,
+      ]
+    );
+    return res.json(bookResults);
   },
   delete: async (req, res, next) => {
     const connection = await connectdb();
