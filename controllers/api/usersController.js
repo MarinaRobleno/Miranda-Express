@@ -1,6 +1,7 @@
 const { connectdb } = require("../../db");
 const Joi = require("joi");
 var mysql = require("mysql2/promise");
+const bcrypt = require("bcrypt");
 
 const usersSchema = Joi.object({
   photo: Joi.string().required(),
@@ -11,6 +12,7 @@ const usersSchema = Joi.object({
   status: Joi.string().required(),
   startDate: Joi.string().required(),
   endDate: Joi.string().required(),
+  hash: Joi.string().required(),
 });
 
 const usersController = {
@@ -21,8 +23,24 @@ const usersController = {
     );
     return res.json(usersResults);
   },
-  store: (req, res, next) => {
-    res.send("Stored data");
+  store: async (req, res, next) => {
+    const connection = await connectdb();
+    const hash = await bcrypt.hash(req.body.password, 10);
+    const reqStructure = {
+      photo: req.body.photo,
+      name: req.body.name,
+      mail: req.body.mail,
+      job: req.body.job,
+      phone: req.body.phone,
+      status: req.body.status,
+      startDate: req.body.startDate,
+      endDate: req.body.endDate,
+      hash: hash,
+    };
+    const [usersResults, usersFields] = await connection.execute(
+      mysql.format(`INSERT INTO users SET ?`, reqStructure)
+    );
+    return res.json(usersResults);
   },
   show: async (req, res, next) => {
     const connection = await connectdb();
