@@ -4,6 +4,8 @@ const UserModel = require("../model/model");
 const JWTstrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
 const {authSecret} = require("../.env")
+const {connectdb} = require("../db");
+const bcrypt = require("bcrypt");
 
 passport.use(
   "signup",
@@ -33,20 +35,25 @@ passport.use(
     },
     async (email, password, done) => {
       try {
-        const user = await UserModel.findOne({ email });
-
-        if (!user) {
-          return done(null, false, { message: "User not found" });
+        //const user = await UserModel.findOne({ email });
+        const connection = await connectdb();
+        const [usersResults, usersFields] = await connection.execute(
+          `SELECT * FROM users WHERE mail = ?`, [email])
+        
+        //if (!user)
+        if (!usersResults.length) {
+          return done(null, false, { message: "Invalid user or password" });
         }
 
-        const validate = await user.isValidPassword(password);
+        const validate = await bcrypt.compare(password, usersResults[0].hash);
 
         if (!validate) {
-          return done(null, false, { message: "Wrong Password" });
+          return done(null, false, { message: "Invalid user or password" });
         }
 
-        return done(null, user, { message: "Logged in Successfully" });
+        return done(null, usersResults[0], { message: "Logged in Successfully" });
       } catch (error) {
+        console.log(error)
         return done(error);
       }
     }
