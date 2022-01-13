@@ -52,8 +52,26 @@ const usersController = {
     const user = usersResults[0];
     return res.json(user);
   },
-  update: (req, res, next) => {
-    res.send("Update data");
+  update: async (req, res, next) => {
+    const connection = await connectdb();
+    const parsedId = parseInt(req.params.id);
+    const hash = await bcrypt.hash(req.body.password, 10);
+    const [usersResults, usersFields] = await connection.execute(
+      `UPDATE users SET photo = ?, name = ?, mail = ?, job = ?, phone = ?, status = ?, startDate = ?, endDate = ?, hash = ? WHERE id = ?`,
+      [
+        req.body.photo,
+        req.body.name,
+        req.body.mail,
+        req.body.job,
+        req.body.phone,
+        req.body.status,
+        req.body.startDate,
+        req.body.endDate,
+        hash,
+        parsedId
+      ]
+    );
+    return res.json(usersResults);
   },
   delete: async (req, res, next) => {
     const connection = await connectdb();
