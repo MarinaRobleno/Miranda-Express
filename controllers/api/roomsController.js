@@ -76,8 +76,32 @@ const roomsController = {
     }
     return res.json(room);
   },
-  update: (req, res, next) => {
-    res.send("Update data");
+  update: async (req, res, next) => {
+    const connection = await connectdb();
+    const parsedId = parseInt(req.params.id);
+    const [roomResults, roomFields] = await connection.execute(
+      `UPDATE rooms SET roomNumber = ?, roomType = ?, amenities = ?, price = ?, offer_price = ?, status = ? WHERE id = ?`,
+      [
+        req.body.roomNumber,
+        req.body.roomType,
+        req.body.amenities,
+        req.body.price,
+        req.body.offer_price,
+        req.body.status,
+        parsedId,
+      ]
+    );
+    for (let o = 0; o < req.body.photo.length; o++) {
+      const [photoResults, photoFields] = await connection.execute(
+        `UPDATE roomphotos SET url = ? WHERE roomId = ?`,
+        [
+          req.body.photo[o],
+          parsedId,
+        ]
+      );
+    }
+
+    return res.json(roomResults);
   },
   delete: async (req, res, next) => {
     const connection = await connectdb();
