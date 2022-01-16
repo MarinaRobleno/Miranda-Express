@@ -26,21 +26,25 @@ const usersController = {
   store: async (req, res, next) => {
     const connection = await connectdb();
     const hash = await bcrypt.hash(req.body.password, 10);
-    const reqStructure = {
-      photo: req.body.photo,
-      name: req.body.name,
-      mail: req.body.mail,
-      job: req.body.job,
-      phone: req.body.phone,
-      status: req.body.status,
-      startDate: req.body.startDate,
-      endDate: req.body.endDate,
-      hash: hash,
-    };
-    const [usersResults, usersFields] = await connection.execute(
-      mysql.format(`INSERT INTO users SET ?`, reqStructure)
-    );
-    return res.json(usersResults);
+    try {
+      const validatedUsers = await usersSchema.validateAsync({
+        photo: req.body.photo,
+        name: req.body.name,
+        mail: req.body.mail,
+        job: req.body.job,
+        phone: req.body.phone,
+        status: req.body.status,
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
+        hash: hash,
+      });
+      const [usersResults, usersFields] = await connection.execute(
+        mysql.format(`INSERT INTO users SET ?`, validatedUsers)
+      );
+      return res.json(usersResults);
+    } catch (err) {
+      console.log(err);
+    }
   },
   show: async (req, res, next) => {
     const connection = await connectdb();
@@ -68,7 +72,7 @@ const usersController = {
         req.body.startDate,
         req.body.endDate,
         hash,
-        parsedId
+        parsedId,
       ]
     );
     return res.json(usersResults);

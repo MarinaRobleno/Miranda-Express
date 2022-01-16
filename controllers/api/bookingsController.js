@@ -34,8 +34,8 @@ const bookingsController = {
   },
   store: async (req, res, next) => {
     const connection = await connectdb();
-    const [bookResults, bookFields] = await connection.execute(
-      mysql.format(`INSERT INTO bookings SET ?`, {
+    try {
+      const validatedBookings = await bookSchema.validateAsync({
         guest: req.body.guest,
         orderDate: req.body.orderDate,
         checkIn: req.body.checkIn,
@@ -43,9 +43,14 @@ const bookingsController = {
         special: req.body.special,
         bookStatus: req.body.bookStatus,
         roomId: req.body.roomId,
-      })
-    );
-    return res.json(bookResults);
+      });
+      const [bookResults, bookFields] = await connection.execute(
+        mysql.format(`INSERT INTO bookings SET ?`, validatedBookings)
+      );
+      return res.json(bookResults);
+    } catch (err) {
+      console.log(err);
+    }
   },
   show: async (req, res, next) => {
     const connection = await connectdb();

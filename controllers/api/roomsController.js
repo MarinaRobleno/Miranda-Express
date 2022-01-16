@@ -33,28 +33,30 @@ const roomsController = {
   },
   store: async (req, res, next) => {
     const connection = await connectdb();
-    const reqStructure = {
-      roomNumber: req.body.roomNumber,
-      roomType: req.body.roomType,
-      amenities: req.body.amenities,
-      price: req.body.price,
-      offer_price: req.body.offer_price,
-      status: req.body.status,
-    };
-    const [roomResults, roomFields] = await connection.execute(
-      mysql.format(`INSERT INTO rooms SET ?`, reqStructure)
-      //LOOP insert id
-    );
-    for (let m = 0; m < req.body.photo.length; m++) {
-      const [photoResults, photoFields] = await connection.execute(
-        mysql.format(`INSERT INTO roomphotos SET ?`, {
-          url: req.body.photo[m],
-          roomId: roomResults.insertId,
-        })
+    try {
+      const validatedRoom = await roomSchema.validateAsync({
+        roomNumber: req.body.roomNumber,
+        roomType: req.body.roomType,
+        amenities: req.body.amenities,
+        price: req.body.price,
+        offer_price: req.body.offer_price,
+        status: req.body.status,
+      });
+      const [roomResults, roomFields] = await connection.execute(
+        mysql.format(`INSERT INTO rooms SET ?`, validatedRoom)
       );
+      for (let m = 0; m < req.body.photo.length; m++) {
+        const [photoResults, photoFields] = await connection.execute(
+          mysql.format(`INSERT INTO roomphotos SET ?`, {
+            url: req.body.photo[m],
+            roomId: roomResults.insertId,
+          })
+        );
+      }
+      return res.json(roomResults);
+    } catch (error) {
+      console.log(error);
     }
-
-    return res.json(roomResults);
   },
   show: async (req, res, next) => {
     const connection = await connectdb();
@@ -94,10 +96,7 @@ const roomsController = {
     for (let o = 0; o < req.body.photo.length; o++) {
       const [photoResults, photoFields] = await connection.execute(
         `UPDATE roomphotos SET url = ? WHERE roomId = ?`,
-        [
-          req.body.photo[o],
-          parsedId,
-        ]
+        [req.body.photo[o], parsedId]
       );
     }
 
