@@ -10,11 +10,13 @@ const bodyParser = require('body-parser');
 
 const UserModel = require('./model/model');
 
-mongoose.connect("mongodb://127.0.0.1:27017/passport-jwt", {
+mongoose.connect("mongodb://127.0.0.1:27017/miranda-db", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 mongoose.set("useCreateIndex", true);
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 require('./auth/auth');
 

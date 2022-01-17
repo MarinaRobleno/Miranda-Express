@@ -1,40 +1,25 @@
-const { connectdb } = require("../../db");
-const Joi = require("joi");
-var mysql = require("mysql2/promise");
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
-const roomSchema = Joi.object({
-  roomNumber: Joi.number().required(),
-  roomType: Joi.string().required(),
-  amenities: Joi.string(),
-  price: Joi.number().required(),
-  offer_price: Joi.number(),
-  status: Joi.string().required(),
+const roomSchema = new Schema({
+  photo: [String],
+  roomNumber: Number,
+  roomType: String,
+  amenities: String,
+  price: Number,
+  offer_price: Number,
+  status: String,  
 });
+
+const Room = mongoose.model("Room", roomSchema);
 
 const roomsController = {
   index: async (req, res, next) => {
-    const connection = await connectdb();
-    const [roomResults, roomFields] = await connection.execute(
-      `SELECT * FROM rooms`
-    );
-    const [photoResults, photoFields] = await connection.execute(
-      `SELECT * FROM roomphotos`
-    );
-    for (let j = 0; j < roomResults.length; j++) {
-      roomResults[j].photo = [];
-      let currentId = roomResults[j].id;
-      for (let k = 0; k < photoResults.length; k++) {
-        if (photoResults[k].roomId === currentId) {
-          roomResults[j].photo.push(photoResults[k].url);
-        }
-      }
-    }
-    return res.json(roomResults);
+    await Room.find({});
+    return res;
   },
   store: async (req, res, next) => {
-    const connection = await connectdb();
-    try {
-      const validatedRoom = await roomSchema.validateAsync({
+      const newRoom = new Room({
         roomNumber: req.body.roomNumber,
         roomType: req.body.roomType,
         amenities: req.body.amenities,
@@ -42,78 +27,18 @@ const roomsController = {
         offer_price: req.body.offer_price,
         status: req.body.status,
       });
-      const [roomResults, roomFields] = await connection.execute(
-        mysql.format(`INSERT INTO rooms SET ?`, validatedRoom)
-      );
-      for (let m = 0; m < req.body.photo.length; m++) {
-        const [photoResults, photoFields] = await connection.execute(
-          mysql.format(`INSERT INTO roomphotos SET ?`, {
-            url: req.body.photo[m],
-            roomId: roomResults.insertId,
-          })
-        );
-      }
-      return res.json(roomResults);
-    } catch (error) {
-      console.log(error);
-    }
+      await newRoom.save();
+      return res.json(newRoom);
   },
   show: async (req, res, next) => {
-    const connection = await connectdb();
-    const parsedId = parseInt(req.params.id);
-    const [roomResults, roomFields] = await connection.execute(
-      `SELECT * FROM rooms WHERE id = ?`,
-      [parsedId]
-    );
-    const room = roomResults[0];
-    const [photoResults, photoFields] = await connection.execute(
-      `SELECT * FROM roomphotos WHERE roomId = ?`,
-      [parsedId]
-    );
-    if (room) {
-      room.photo = [];
-      for (let i = 0; i < photoResults.length; i++) {
-        room.photo.push(photoResults[i].url);
-      }
-    }
-    return res.json(room);
+    await Room.findOne({_id: req.params.id}).exec();
   },
   update: async (req, res, next) => {
-    const connection = await connectdb();
-    const parsedId = parseInt(req.params.id);
-    const [roomResults, roomFields] = await connection.execute(
-      `UPDATE rooms SET roomNumber = ?, roomType = ?, amenities = ?, price = ?, offer_price = ?, status = ? WHERE id = ?`,
-      [
-        req.body.roomNumber,
-        req.body.roomType,
-        req.body.amenities,
-        req.body.price,
-        req.body.offer_price,
-        req.body.status,
-        parsedId,
-      ]
-    );
-    for (let o = 0; o < req.body.photo.length; o++) {
-      const [photoResults, photoFields] = await connection.execute(
-        `UPDATE roomphotos SET url = ? WHERE roomId = ?`,
-        [req.body.photo[o], parsedId]
-      );
-    }
-
-    return res.json(roomResults);
+    //
   },
   delete: async (req, res, next) => {
-    const connection = await connectdb();
-    const parsedId = parseInt(req.params.id);
-    const [roomResults, roomFields] = await connection.execute(
-      `DELETE FROM rooms WHERE id = ?`,
-      [parsedId]
-    );
-    const [photoResults, photoFields] = await connection.execute(
-      `DELETE FROM roomphotos WHERE roomId = ?`,
-      [parsedId]
-    );
-    return res.json(roomResults);
+    await Room.findOneAndDelete({ _id: req.params.id});
+    console.log('Deleted')
   },
 };
 

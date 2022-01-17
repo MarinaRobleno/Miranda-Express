@@ -1,90 +1,50 @@
-const { connectdb } = require("../../db");
-const Joi = require("joi");
-var mysql = require("mysql2/promise");
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 const bcrypt = require("bcrypt");
 
-const usersSchema = Joi.object({
-  photo: Joi.string().required(),
-  name: Joi.string().required(),
-  mail: Joi.string().required(),
-  job: Joi.string().required(),
-  phone: Joi.string().required(),
-  status: Joi.string().required(),
-  startDate: Joi.string().required(),
-  endDate: Joi.string().required(),
-  hash: Joi.string().required(),
+const usersSchema = new Schema({
+  photo: String,
+  name: String,
+  mail: String,
+  job: String,
+  phone: String,
+  status: String,
+  startDate: String,
+  endDate: String,
+  hash: String,
 });
+
+const User = mongoose.model("User", usersSchema);
 
 const usersController = {
   index: async (req, res, next) => {
-    const connection = await connectdb();
-    const [usersResults, usersFields] = await connection.execute(
-      "SELECT * FROM users"
-    );
-    return res.json(usersResults);
+    await User.find({});
   },
   store: async (req, res, next) => {
-    const connection = await connectdb();
     const hash = await bcrypt.hash(req.body.password, 10);
-    try {
-      const validatedUsers = await usersSchema.validateAsync({
-        photo: req.body.photo,
-        name: req.body.name,
-        mail: req.body.mail,
-        job: req.body.job,
-        phone: req.body.phone,
-        status: req.body.status,
-        startDate: req.body.startDate,
-        endDate: req.body.endDate,
-        hash: hash,
-      });
-      const [usersResults, usersFields] = await connection.execute(
-        mysql.format(`INSERT INTO users SET ?`, validatedUsers)
-      );
-      return res.json(usersResults);
-    } catch (err) {
-      console.log(err);
-    }
+    const newUser = new User({
+      photo: req.body.photo,
+      name: req.body.name,
+      mail: req.body.mail,
+      job: req.body.job,
+      phone: req.body.phone,
+      status: req.body.status,
+      startDate: req.body.startDate,
+      endDate: req.body.endDate,
+      hash: hash,
+    });
+    await newUser.save();
+    return res.json(newUser);
   },
   show: async (req, res, next) => {
-    const connection = await connectdb();
-    const parsedId = parseInt(req.params.id);
-    const [usersResults, usersFields] = await connection.execute(
-      `SELECT * FROM users WHERE id = ?`,
-      [parsedId]
-    );
-    const user = usersResults[0];
-    return res.json(user);
+    await User.findOne({_id: req.params.id}).exec();
   },
   update: async (req, res, next) => {
-    const connection = await connectdb();
-    const parsedId = parseInt(req.params.id);
-    const hash = await bcrypt.hash(req.body.password, 10);
-    const [usersResults, usersFields] = await connection.execute(
-      `UPDATE users SET photo = ?, name = ?, mail = ?, job = ?, phone = ?, status = ?, startDate = ?, endDate = ?, hash = ? WHERE id = ?`,
-      [
-        req.body.photo,
-        req.body.name,
-        req.body.mail,
-        req.body.job,
-        req.body.phone,
-        req.body.status,
-        req.body.startDate,
-        req.body.endDate,
-        hash,
-        parsedId,
-      ]
-    );
-    return res.json(usersResults);
+    //
   },
   delete: async (req, res, next) => {
-    const connection = await connectdb();
-    const parsedId = parseInt(req.params.id);
-    const [usersResults, usersFields] = await connection.execute(
-      `DELETE FROM users WHERE id = ?`,
-      [parsedId]
-    );
-    return res.json(usersResults);
+    await User.findOneAndDelete({ _id: req.params.id});
+    console.log()
   },
 };
 

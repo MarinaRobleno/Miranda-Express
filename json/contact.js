@@ -1,7 +1,6 @@
 const contact = [
   {
     photo: "https://robohash.org/dictaestqui.png?size=50x50&set=set1",
-    id: 1,
     date: "11-10-2021",
     customer: "Harmonie Bathowe",
     mail: "hbathowe0@ihg.com",
@@ -11,7 +10,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/reiciendismaximedolore.png?size=50x50&set=set1",
-    id: 2,
     date: "09-12-2021",
     customer: "Dominic Throssell",
     mail: "dthrossell1@wix.com",
@@ -21,7 +19,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/iustoaccusamussimilique.png?size=50x50&set=set1",
-    id: 3,
     date: "01-22-2021",
     customer: "Catarina Sudworth",
     mail: "csudworth2@flavors.me",
@@ -31,7 +28,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/laudantiumdoloresvoluptas.png?size=50x50&set=set1",
-    id: 4,
     date: "03-26-2021",
     customer: "Christalle Byrom",
     mail: "cbyrom3@studiopress.com",
@@ -41,7 +37,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/quiaadipiscicumque.png?size=50x50&set=set1",
-    id: 5,
     date: "01-08-2021",
     customer: "Constantine Dibben",
     mail: "cdibben4@abc.net.au",
@@ -51,7 +46,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/quodeaquedignissimos.png?size=50x50&set=set1",
-    id: 6,
     date: "02-13-2021",
     customer: "Joceline Lumb",
     mail: "jlumb5@nsw.gov.au",
@@ -61,7 +55,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/etquiut.png?size=50x50&set=set1",
-    id: 7,
     date: "10-02-2021",
     customer: "Haleigh McLukie",
     mail: "hmclukie6@sogou.com",
@@ -71,7 +64,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/dictaestqui.png?size=50x50&set=set1",
-    id: 8,
     date: "05-25-2021",
     customer: "Killy McNellis",
     mail: "kmcnellis7@amazon.co.uk",
@@ -81,7 +73,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/quaeseddolores.png?size=50x50&set=set1",
-    id: 9,
     date: "02-26-2021",
     customer: "Earl Ganford",
     mail: "eganford8@irs.gov",
@@ -91,7 +82,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/doloresinsint.png?size=50x50&set=set1",
-    id: 10,
     date: "08-31-2021",
     customer: "Haily Holsall",
     mail: "hholsall9@moonfruit.com",
@@ -101,7 +91,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/dictaestqui.png?size=50x50&set=set1",
-    id: 11,
     date: "11-10-2021",
     customer: "Harmonie Bathowe",
     mail: "hbathowe0@ihg.com",
@@ -111,7 +100,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/reiciendismaximedolore.png?size=50x50&set=set1",
-    id: 12,
     date: "09-12-2021",
     customer: "Dominic Throssell",
     mail: "dthrossell1@wix.com",
@@ -121,7 +109,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/iustoaccusamussimilique.png?size=50x50&set=set1",
-    id: 13,
     date: "01-22-2021",
     customer: "Catarina Sudworth",
     mail: "csudworth2@flavors.me",
@@ -131,7 +118,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/laudantiumdoloresvoluptas.png?size=50x50&set=set1",
-    id: 14,
     date: "03-26-2021",
     customer: "Christalle Byrom",
     mail: "cbyrom3@studiopress.com",
@@ -141,7 +127,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/quiaadipiscicumque.png?size=50x50&set=set1",
-    id: 15,
     date: "01-08-2021",
     customer: "Constantine Dibben",
     mail: "cdibben4@abc.net.au",
@@ -151,7 +136,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/quodeaquedignissimos.png?size=50x50&set=set1",
-    id: 16,
     date: "02-13-2021",
     customer: "Joceline Lumb",
     mail: "jlumb5@nsw.gov.au",
@@ -161,7 +145,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/etquiut.png?size=50x50&set=set1",
-    id: 17,
     date: "10-02-2021",
     customer: "Haleigh McLukie",
     mail: "hmclukie6@sogou.com",
@@ -171,7 +154,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/dictaestqui.png?size=50x50&set=set1",
-    id: 18,
     date: "05-25-2021",
     customer: "Killy McNellis",
     mail: "kmcnellis7@amazon.co.uk",
@@ -181,7 +163,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/quaeseddolores.png?size=50x50&set=set1",
-    id: 19,
     date: "02-26-2021",
     customer: "Earl Ganford",
     mail: "eganford8@irs.gov",
@@ -191,7 +172,6 @@ const contact = [
   },
   {
     photo: "https://robohash.org/doloresinsint.png?size=50x50&set=set1",
-    id: 20,
     date: "08-31-2021",
     customer: "Haily Holsall",
     mail: "hholsall9@moonfruit.com",

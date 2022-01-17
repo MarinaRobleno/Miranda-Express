@@ -10,7 +10,7 @@ router.get(
     (req, res, next) => {
       res.json({
         message: 'Private API route',
-        user: req.user,
+        user: req.body.mail,
         token: req.query.secret_token
       })
     }
@@ -39,10 +39,10 @@ router.route("/bookings/:id")
     .delete(bookingsController.delete);
 
 //Contact
-router.route("/contact")
+router.route("/contacts")
     .get(contactController.index)
     .post(contactController.store)
-router.route("/contact/:id")    
+router.route("/contacts/:id")    
     .get(contactController.show)
     .patch(contactController.update)
     .delete(contactController.delete);

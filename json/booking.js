@@ -1,6 +1,5 @@
 const bookings = [
   {
-    id: 1,
     guest: "Crissy Croisdall",
     orderDate: "09-22-2022",
     checkIn: "07-28-2022",
@@ -16,7 +15,6 @@ const bookings = [
     ],
   },
   {
-    id: 2,
     guest: "Guinna Edlington",
     orderDate: "03-25-2022",
     checkIn: "04-28-2022",
@@ -31,7 +29,6 @@ const bookings = [
     ],
   },
   {
-    id: 3,
     guest: "Evaleen Kernes",
     orderDate: "06-04-2022",
     checkIn: "09-29-2022",
@@ -47,7 +44,6 @@ const bookings = [
     ],
   },
   {
-    id: 4,
     guest: "Georgianne Lerego",
     orderDate: "05-16-2022",
     checkIn: "11-27-2022",
@@ -63,7 +59,6 @@ const bookings = [
     ],
   },
   {
-    id: 5,
     guest: "Judon Lyttle",
     orderDate: "04-22-2022",
     checkIn: "05-26-2022",
@@ -79,7 +74,6 @@ const bookings = [
     ],
   },
   {
-    id: 6,
     guest: "Eamon Yorke",
     orderDate: "12-04-2022",
     checkIn: "10-06-2022",
@@ -95,7 +89,6 @@ const bookings = [
     ],
   },
   {
-    id: 7,
     guest: "Farlie Kalb",
     orderDate: "01-13-2022",
     checkIn: "01-14-2022",
@@ -111,7 +104,6 @@ const bookings = [
     ],
   },
   {
-    id: 8,
     guest: "Kimberly Blazeby",
     orderDate: "08-11-2022",
     checkIn: "01-17-2022",
@@ -127,7 +119,6 @@ const bookings = [
     ],
   },
   {
-    id: 9,
     guest: "Bail Iacovielli",
     orderDate: "07-05-2022",
     checkIn: "03-23-2022",
@@ -143,7 +134,6 @@ const bookings = [
     ],
   },
   {
-    id: 10,
     guest: "Farris Beardsall",
     orderDate: "07-05-2022",
     checkIn: "03-26-2022",
@@ -159,7 +149,6 @@ const bookings = [
     ],
   },
   {
-    id: 11,
     guest: "Crissy Croisdall",
     orderDate: "09-22-2022",
     checkIn: "07-28-2022",
@@ -175,7 +164,6 @@ const bookings = [
     ],
   },
   {
-    id: 12,
     guest: "Guinna Edlington",
     orderDate: "03-25-2022",
     checkIn: "04-28-2022",
@@ -191,7 +179,6 @@ const bookings = [
     ],
   },
   {
-    id: 13,
     guest: "Evaleen Kernes",
     orderDate: "06-04-2022",
     checkIn: "09-29-2022",
@@ -207,7 +194,6 @@ const bookings = [
     ],
   },
   {
-    id: 14,
     guest: "Georgianne Lerego",
     orderDate: "05-16-2022",
     checkIn: "11-27-2022",
@@ -223,7 +209,6 @@ const bookings = [
     ],
   },
   {
-    id: 15,
     guest: "Judon Lyttle",
     orderDate: "04-22-2022",
     checkIn: "05-26-2022",
@@ -239,7 +224,6 @@ const bookings = [
     ],
   },
   {
-    id: 16,
     guest: "Eamon Yorke",
     orderDate: "12-04-2022",
     checkIn: "10-06-2022",
@@ -255,7 +239,6 @@ const bookings = [
     ],
   },
   {
-    id: 17,
     guest: "Farlie Kalb",
     orderDate: "01-13-2022",
     checkIn: "01-14-2022",
@@ -271,7 +254,6 @@ const bookings = [
     ],
   },
   {
-    id: 18,
     guest: "Kimberly Blazeby",
     orderDate: "08-11-2022",
     checkIn: "01-17-2022",
@@ -287,7 +269,6 @@ const bookings = [
     ],
   },
   {
-    id: 19,
     guest: "Bail Iacovielli",
     orderDate: "07-05-2022",
     checkIn: "03-23-2022",
@@ -303,7 +284,6 @@ const bookings = [
     ],
   },
   {
-    id: 20,
     guest: "Farris Beardsall",
     orderDate: "07-05-2022",
     checkIn: "03-26-2022",
@@ -319,7 +299,6 @@ const bookings = [
     ],
   },
   {
-    id: 21,
     guest: "Crissy Croisdall",
     orderDate: "09-22-2022",
     checkIn: "07-28-2022",
@@ -335,7 +314,6 @@ const bookings = [
     ],
   },
   {
-    id: 22,
     guest: "Guinna Edlington",
     orderDate: "03-25-2022",
     checkIn: "04-28-2022",
@@ -351,7 +329,6 @@ const bookings = [
     ],
   },
   {
-    id: 23,
     guest: "Evaleen Kernes",
     orderDate: "06-04-2022",
     checkIn: "09-29-2022",
@@ -367,7 +344,6 @@ const bookings = [
     ],
   },
   {
-    id: 24,
     guest: "Georgianne Lerego",
     orderDate: "05-16-2022",
     checkIn: "11-27-2022",
@@ -383,7 +359,6 @@ const bookings = [
     ],
   },
   {
-    id: 25,
     guest: "Judon Lyttle",
     orderDate: "04-22-2022",
     checkIn: "05-26-2022",
@@ -399,7 +374,6 @@ const bookings = [
     ],
   },
   {
-    id: 26,
     guest: "Eamon Yorke",
     orderDate: "12-04-2022",
     checkIn: "10-06-2022",
@@ -415,7 +389,6 @@ const bookings = [
     ],
   },
   {
-    id: 27,
     guest: "Farlie Kalb",
     orderDate: "01-13-2022",
     checkIn: "01-14-2022",
@@ -431,7 +404,6 @@ const bookings = [
     ],
   },
   {
-    id: 28,
     guest: "Kimberly Blazeby",
     orderDate: "08-11-2022",
     checkIn: "01-17-2022",
@@ -447,7 +419,6 @@ const bookings = [
     ],
   },
   {
-    id: 29,
     guest: "Bail Iacovielli",
     orderDate: "07-05-2022",
     checkIn: "2-18-2022",
@@ -463,7 +434,6 @@ const bookings = [
     ],
   },
   {
-    id: 30,
     guest: "Farris Beardsall",
     orderDate: "07-05-2022",
     checkIn: "1-14-2022",
