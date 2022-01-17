@@ -18,7 +18,8 @@ const User = mongoose.model("User", usersSchema);
 
 const usersController = {
   index: async (req, res, next) => {
-    await User.find({});
+    let users = await User.find({});
+    return res.json(users);
   },
   store: async (req, res, next) => {
     const hash = await bcrypt.hash(req.body.password, 10);
@@ -37,14 +38,16 @@ const usersController = {
     return res.json(newUser);
   },
   show: async (req, res, next) => {
-    await User.findOne({_id: req.params.id}).exec();
+    let user = await User.findOne({_id: req.params.id}).exec();
+    res.json(user);
   },
   update: async (req, res, next) => {
-    //
+    let user = await User.findByIdAndUpdate(req.params.id, req.body);
+    return res.json(user);
   },
   delete: async (req, res, next) => {
-    await User.findOneAndDelete({ _id: req.params.id});
-    console.log()
+    let user = await User.findOneAndDelete({ _id: req.params.id});
+    return res.json(user);
   },
 };
 
