@@ -3,14 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const bodyParser = require('body-parser');
+const {serverDb} = require('./.env')
 
-const UserModel = require('./model/model');
-
-mongoose.connect("mongodb://127.0.0.1:27017/miranda-db", {
+mongoose.connect(serverDb, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
