@@ -7,7 +7,9 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const {serverDb} = require('./.env')
 
-mongoose.connect(serverDb, {
+const UserModel = require('./model/model');
+
+mongoose.connect("mongodb://127.0.0.1:27017/miranda_db", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
