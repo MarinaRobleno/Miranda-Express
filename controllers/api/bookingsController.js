@@ -10,44 +10,23 @@ const bookingSchema = new Schema({
   special: String,
   bookStatus: String,
   roomNumber: Number,
-  /*roomType: String,
+  roomType: String,
   price: Number,
   offer_price: Number,
-  amenities: [String],*/
+  amenities: [String],
+  status: String,
 });
 
 const Booking = mongoose.model("Booking", bookingSchema);
 
 const bookingsController = {
   index: async (req, res, next) => {
-    /*let bookings = await Booking.find({});
-    return res.json(bookings);*/
-    Booking.aggregate([
-      {
-        $lookup: {
-          from: "rooms",
-          localField: "roomNumber",
-          foreignField: "roomNumber",
-          as: "room",
-        },
-      },
-      {
-        $unwind: "$room",
-      },
-    ])
-    .then((result)=>{
-      return res.json(result)
-    })
-    .catch((error) => {
-      console.log(error)
-    });
+    let bookings = await Booking.find({});
+    return res.json(bookings);
   },
-  
+
   store: async (req, res, next) => {
-    /*let room = json(
-      await Room.findOne({ roomNumber: req.params.roomNumber }).exec()
-    );
-    console.log(room);*/
+    let room = await Room.findOne({ roomNumber: req.body.roomNumber }).exec();
     let newBooking = new Booking({
       guest: req.body.guest,
       orderDate: req.body.orderDate,
@@ -56,10 +35,11 @@ const bookingsController = {
       special: req.body.special,
       bookStatus: req.body.bookStatus,
       roomNumber: req.body.roomNumber,
-      /*roomType: room.roomType,
+      roomType: room.roomType,
       price: room.price,
       offer_price: room.offer_price,
-      amenities: room.amenities,*/
+      amenities: room.amenities,
+      status: room.status,
     });
     await newBooking.save();
     return res.json(newBooking);
@@ -70,7 +50,15 @@ const bookingsController = {
   },
   update: async (req, res, next) => {
     let booking = await Booking.findByIdAndUpdate(req.params.id, req.body);
-    return res.json(booking);
+    let room = await Room.findOne({ roomNumber: req.body.roomNumber }).exec();
+    let updatedBooking = await Booking.findByIdAndUpdate(req.params.id, {
+      roomType: room.roomType,
+      price: room.price,
+      offer_price: room.offer_price,
+      amenities: room.amenities,
+      status: room.status,
+    });
+    return res.json(updatedBooking);
   },
   delete: async (req, res, next) => {
     let booking = await Booking.findOneAndDelete({ _id: req.params.id });
