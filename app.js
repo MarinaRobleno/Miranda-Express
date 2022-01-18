@@ -9,7 +9,7 @@ const {serverDb} = require('./.env')
 
 const UserModel = require('./model/model');
 
-mongoose.connect("mongodb://127.0.0.1:27017/miranda_db", {
+mongoose.connect(serverDb, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
