@@ -5,7 +5,7 @@ const roomSchema = new Schema({
   photo: [String],
   roomNumber: Number,
   roomType: String,
-  amenities: String,
+  amenities: [String],
   price: Number,
   offer_price: Number,
   status: String,  
@@ -45,4 +45,4 @@ const roomsController = {
   },
 };
 
-module.exports = roomsController;
+module.exports = {roomsController, Room};

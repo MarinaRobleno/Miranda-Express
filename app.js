@@ -10,7 +10,7 @@ const bodyParser = require('body-parser');
 
 const UserModel = require('./model/model');
 
-mongoose.connect("mongodb://127.0.0.1:27017/miranda-db", {
+mongoose.connect("mongodb://127.0.0.1:27017/miranda_db", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
