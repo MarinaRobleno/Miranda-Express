@@ -21,7 +21,7 @@ router.get('/room-list', (req, res) => {
 });
 
 router.get('/room-offers', (req, res) => {    
-  res.render('room-offers');
+  res.render('room-offers', {rooms: rooms});
 });
 
 router.get('/single-room', (req, res) => {    

@@ -12,7 +12,7 @@ block content
     section.room-list-section
         each room in rooms
             .room-list-card
-                img.room-list-image(src=room.photo[0])
+                img.room-list-image(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])
                 .room-icon-bar
                     i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
                     i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
@@ -23,11 +23,11 @@ block content
                     i.fa.fa-asterisk(aria-hidden='true')
                 .room-list-card-content
                     .room-list-card-information
-                        .room-list-card-title=room.roomNumber
+                        .room-list-card-title='Room Number ' + room.roomNumber
                         p.room-list-card-text=room.roomType
                     .room-list-card-booking
                         .room-list-card-price
-                            .room-list-price-number=room.price
+                            .room-list-price-number='$' + room.price/100
                             .room-list-price-night /Night
                         a.link(href='./single-room')
                             .room-list-card-booking-text Booking Now
