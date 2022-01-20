@@ -10,7 +10,9 @@ const rooms = [
     amenities: "Pork Casing",
     price: 899338,
     offer_price: 29190,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
+
   },
   {
     photo: [
@@ -22,7 +24,8 @@ const rooms = [
     amenities: "Wine - Penfolds Koonuga Hill",
     price: 200615,
     offer_price: 35367,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -35,7 +38,8 @@ const rooms = [
     amenities: "Oil - Avocado",
     price: 291857,
     offer_price: 36288,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -48,7 +52,8 @@ const rooms = [
     amenities: "Lobster - Live",
     price: 596753,
     offer_price: 27889,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -61,7 +66,8 @@ const rooms = [
     amenities: "Roe - White Fish",
     price: 909786,
     offer_price: 23398,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -74,7 +80,8 @@ const rooms = [
     amenities: "Vinegar - Red Wine",
     price: 741437,
     offer_price: 25946,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -87,7 +94,8 @@ const rooms = [
     amenities: "Bagel - Plain",
     price: 133375,
     offer_price: 32999,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -100,7 +108,8 @@ const rooms = [
     amenities: "Compound - Rum",
     price: 783278,
     offer_price: 47943,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -113,7 +122,8 @@ const rooms = [
     amenities: "Coffee Cup 12oz 5342cd",
     price: 101078,
     offer_price: 16092,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -126,7 +136,8 @@ const rooms = [
     amenities: "Dip - Tapenade",
     price: 58088,
     offer_price: 30479,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -139,7 +150,8 @@ const rooms = [
     amenities: "Pork Casing",
     price: 899338,
     offer_price: 29190,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -152,7 +164,8 @@ const rooms = [
     amenities: "Wine - Penfolds Koonuga Hill",
     price: 200615,
     offer_price: 35367,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -165,7 +178,8 @@ const rooms = [
     amenities: "Oil - Avocado",
     price: 291857,
     offer_price: 36288,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -178,7 +192,8 @@ const rooms = [
     amenities: "Lobster - Live",
     price: 596753,
     offer_price: 27889,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -191,7 +206,8 @@ const rooms = [
     amenities: "Roe - White Fish",
     price: 909786,
     offer_price: 23398,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -204,7 +220,8 @@ const rooms = [
     amenities: "Vinegar - Red Wine",
     price: 741437,
     offer_price: 25946,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -217,7 +234,8 @@ const rooms = [
     amenities: "Bagel - Plain",
     price: 133375,
     offer_price: 32999,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -230,7 +248,8 @@ const rooms = [
     amenities: "Compound - Rum",
     price: 783278,
     offer_price: 47943,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -243,7 +262,8 @@ const rooms = [
     amenities: "Coffee Cup 12oz 5342cd",
     price: 101078,
     offer_price: 16092,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -256,7 +276,8 @@ const rooms = [
     amenities: "Dip - Tapenade",
     price: 58088,
     offer_price: 30479,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -269,7 +290,8 @@ const rooms = [
     amenities: "Pork Casing",
     price: 899338,
     offer_price: 29190,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -282,7 +304,8 @@ const rooms = [
     amenities: "Wine - Penfolds Koonuga Hill",
     price: 200615,
     offer_price: 35367,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -295,7 +318,8 @@ const rooms = [
     amenities: "Oil - Avocado",
     price: 291857,
     offer_price: 36288,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -308,7 +332,8 @@ const rooms = [
     amenities: "Lobster - Live",
     price: 596753,
     offer_price: 27889,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -321,7 +346,8 @@ const rooms = [
     amenities: "Roe - White Fish",
     price: 909786,
     offer_price: 23398,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -334,7 +360,8 @@ const rooms = [
     amenities: "Vinegar - Red Wine",
     price: 741437,
     offer_price: 25946,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -347,7 +374,8 @@ const rooms = [
     amenities: "Bagel - Plain",
     price: 133375,
     offer_price: 32999,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -360,7 +388,8 @@ const rooms = [
     amenities: "Compound - Rum",
     price: 783278,
     offer_price: 47943,
-    status: 'booked'
+    status: 'booked',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -373,7 +402,8 @@ const rooms = [
     amenities: "Coffee Cup 12oz 5342cd",
     price: 101078,
     offer_price: 16092,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
   {
     photo: [
@@ -386,7 +416,8 @@ const rooms = [
     amenities: "Dip - Tapenade",
     price: 58088,
     offer_price: 30479,
-    status: 'available'
+    status: 'available',
+    description:"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
   },
 ];
 

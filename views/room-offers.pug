@@ -29,11 +29,7 @@ block content
                                 .section-header
                                 a(href='./single-room')
                                     .room-list-card-title='Room Number ' + room.roomNumber + ' - ' + room.roomType
-                                p.room-list-card-text
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                    | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                                    | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    | nisi ut aliquip ex ea commodo consequat.
+                                p.room-list-card-text=room.description
                                 button.room-offer-book-button BOOK NOW
                             .room-list-card-booking
                                 .room-list-card-price

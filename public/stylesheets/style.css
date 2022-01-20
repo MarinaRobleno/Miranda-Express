@@ -5272,7 +5272,6 @@ footer .logo-line .copy-icon:hover {
   .room-list-section .room-list-card .room-list-image {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     height: 200px;
     background-size: cover;
@@ -5349,7 +5348,7 @@ footer .logo-line .copy-icon:hover {
     flex-direction: row;
   }
   .room-offers-section .room-offers-card .room-offers-image {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
   .room-offers-section .room-offers-card .icons-and-info {
@@ -5372,6 +5371,7 @@ footer .logo-line .copy-icon:hover {
     margin: 0;
     padding: 0;
     background-color: white;
+    text-align: left;
   }
   .room-offers-section .room-offers-card .icons-and-info .room-offers-card-content .room-offers-card-information {
     display: flex;

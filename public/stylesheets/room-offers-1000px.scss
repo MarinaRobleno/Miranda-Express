@@ -9,7 +9,7 @@
             height: 305px;
             flex-direction: row;
             .room-offers-image{
-                width: 100%;
+                width: 90%;
                 height: 100%;
             }
             .icons-and-info{
@@ -31,6 +31,7 @@
                     margin: 0;
                     padding: 0;
                     background-color: white;
+                    text-align: left;
                     .room-offers-card-information{
                         display: flex;
                         flex-direction: column;
