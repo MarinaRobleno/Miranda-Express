@@ -10,75 +10,27 @@ block content
             #home-tag-contact.contact-navigator-tag Home
             #about-tag-contact.contact-navigator-tag Rooms
     section.room-list-section
-        .room-list-card
-            img.room-list-image(src='./Images/pexels-engin-akyurt-1579253 (1).jpg')
-            .room-icon-bar
-                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-coffee(aria-hidden='true')
-                i.fa.fa-cutlery(aria-hidden='true')
-                i.fa.fa-diamond(aria-hidden='true')
-                i.fa.fa-asterisk(aria-hidden='true')
-            .room-list-card-content
-                .room-list-card-information
-                    .room-list-card-title Minimal Duplex Room
-                    p.room-list-card-text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                        | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        | nisi ut aliquip ex ea commodo consequat.
-                .room-list-card-booking
-                    .room-list-card-price
-                        .room-list-price-number $345
-                        .room-list-price-night /Night
-                    .room-list-card-booking-text Booking Now
-        .room-list-card
-            img.room-list-image(src='./Images/pexels-engin-akyurt-1579253 (1).jpg')
-            .room-icon-bar
-                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-coffee(aria-hidden='true')
-                i.fa.fa-cutlery(aria-hidden='true')
-                i.fa.fa-diamond(aria-hidden='true')
-                i.fa.fa-asterisk(aria-hidden='true')
-            .room-list-card-content
-                .room-list-card-information
-                    .room-list-card-title Minimal Duplex Room
-                    p.room-list-card-text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                        | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        | nisi ut aliquip ex ea commodo consequat.
-                .room-list-card-booking
-                    .room-list-card-price
-                        .room-list-price-number $345
-                        .room-list-price-night /Night
-                    .room-list-card-booking-text Booking Now
-        .room-list-card
-            img.room-list-image(src='./Images/pexels-engin-akyurt-1579253 (1).jpg')
-            .room-icon-bar
-                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-coffee(aria-hidden='true')
-                i.fa.fa-cutlery(aria-hidden='true')
-                i.fa.fa-diamond(aria-hidden='true')
-                i.fa.fa-asterisk(aria-hidden='true')
-            .room-list-card-content
-                .room-list-card-information
-                    .room-list-card-title Minimal Duplex Room
-                    p.room-list-card-text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                        | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        | nisi ut aliquip ex ea commodo consequat.
-                .room-list-card-booking
-                    .room-list-card-price
-                        .room-list-price-number $345
-                        .room-list-price-night /Night
-                    .room-list-card-booking-text Booking Now
+        each room in rooms
+            .room-list-card
+                img.room-list-image(src=room.photo[0])
+                .room-icon-bar
+                    i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                    i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                    i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                    i.fa.fa-coffee(aria-hidden='true')
+                    i.fa.fa-cutlery(aria-hidden='true')
+                    i.fa.fa-diamond(aria-hidden='true')
+                    i.fa.fa-asterisk(aria-hidden='true')
+                .room-list-card-content
+                    .room-list-card-information
+                        .room-list-card-title=room.roomNumber
+                        p.room-list-card-text=room.roomType
+                    .room-list-card-booking
+                        .room-list-card-price
+                            .room-list-price-number=room.price
+                            .room-list-price-night /Night
+                        a.link(href='./single-room')
+                            .room-list-card-booking-text Booking Now
     section.subscribe-section
         .hotel-miranda-title
             .hotel-miranda-icon H
@@ -93,6 +45,6 @@ block content
             input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
             button.subscribe-button SUBSCRIBE
     include footer
-    script(src='js/vendor/modernizr-3.11.2.min.js')
-    script(src='js/plugins.js')
-    script(src='js/main.js')
+    script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
+    script(src='/javascripts/plugins.js')
+    script(src='/javascripts/main.js')

@@ -15,8 +15,7 @@ block content
                 input.contact-form-input.full-name(type='text' placeholder='Your full name')
                 input.contact-form-input.mail-address(type='text' placeholder='Enter email address')
                 input.contact-form-input.add-phone(type='text' placeholder='Add phone number')
-                select.contact-form-input.select-subject
-                    option(disabled='' selected='') Select Subject
+                input.contact-form-input.select-subject(type='text' placeholder='Enter Subject')
                 textarea.contact-form-input.enter-message(placeholder='Enter messages')
             .center
                 button.wide-golden-button GET FREE QUOTE
@@ -27,22 +26,21 @@ block content
                     .contact-information-text
                         .contact-information-text-title Office Address
                         .contact-information-text-description
-                            | 19/A, Cirikon City hall Tower New York, NYC
+                            | OXYGEN, Princesa 31, Madrid
                     .contact-information-count 01
                 .contact-information-card
                     i.fa.fa-phone.contact-information-icon(aria-hidden='true')
                     .contact-information-text
                         .contact-information-text-title Phone Number
                         .contact-information-text-description
-                            div +97656-8675-7864-7
-                            div +876-766-8675-765-6
+                            div +622-37-37-22
                     .contact-information-count 02
                 .contact-information-card
                     i.fa.fa-envelope-open.contact-information-icon(aria-hidden='true')
                     .contact-information-text
                         .contact-information-text-title Email Address
                         .contact-information-text-description
-                            | info@webmail.com jobs.webmail@mail.com
+                            | marinarsanisidro@gmail.com
                     .contact-information-count 03
             section.flex
                 section#map.satelite-map
@@ -75,7 +73,7 @@ block content
                         button#search-location-button.community-dropdown.search-loc(value='Search') Search
                         button#clear-location-button.community-dropdown.search-loc(value='Clear') Clear
                     #sidebar(style='display: none')
-                        h3(style='flex-grow: 0')
+                        .map-response-title(style='flex-grow: 0')
                             | Closest Miranda Hotel to my location.
                         #response
     section.subscribe-section
@@ -92,8 +90,9 @@ block content
             input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
             button.subscribe-button SUBSCRIBE
     include footer
-    script(src='js/vendor/modernizr-3.11.2.min.js')
-    script(src='js/plugins.js')
-    script(src='js/main.js')
-    script(src='js/map.js')
-    script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDDUM_cAYGbY7wKsruKQhRkWmXzrZFPc-k&callback=initMap')
+    script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
+    script(src='/javascripts/plugins.js')
+    script(src='coordinates.js')
+    script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDDUM_cAYGbY7wKsruKQhRkWmXzrZFPc-k&callback=initMap&libraries=places')
+    script(src='/javascripts/map.js')
+    script(src='/javascripts/main.js')

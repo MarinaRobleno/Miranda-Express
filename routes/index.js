@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const webController = require('../controllers/webpage')
+const webController = require('../controllers/webpage/webController')
+const rooms = require('../json/rooms')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -16,7 +17,7 @@ router.get('/contact', (req, res) => {
 });
 
 router.get('/room-list', (req, res) => {    
-  res.render('room-list');
+  res.render('room-list', {rooms: rooms});
 });
 
 router.get('/room-offers', (req, res) => {    

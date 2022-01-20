@@ -10,68 +10,83 @@ block content
             #home-tag-contact.contact-navigator-tag Home
             #about-tag-contact.contact-navigator-tag Offers
     section.room-list-section.room-offers-section
-        .room-list-card.room-offers-card
-            img.room-list-image.room-offers-image(src='./Images/pexels-engin-akyurt-1579253 (1).jpg')
-            .room-icon-bar
-                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-coffee(aria-hidden='true')
-                i.fa.fa-cutlery(aria-hidden='true')
-                i.fa.fa-diamond(aria-hidden='true')
-                i.fa.fa-asterisk(aria-hidden='true')
-            .room-list-card-content.room-offers-card-content
-                .room-list-card-information.room-offers-card-information
-                    .section-header DOUBLE BED
-                    .room-list-card-title Minimal Duplex Room
-                    p.room-list-card-text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                        | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        | nisi ut aliquip ex ea commodo consequat.
-                    button.room-offer-book-button BOOK NOW
-                .room-list-card-booking
-                    .room-list-card-price
-                        .room-list-price-number $345
-                        .room-list-price-night /Night
-                    .room-list-card-booking-text Booking Now
-                    ul.room-offers-benefits-list
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
-        .room-list-card.room-offers-card
-            img.room-list-image.room-offers-image(src='./Images/pexels-engin-akyurt-1579253 (1).jpg')
-            .room-icon-bar
-                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                i.fa.fa-coffee(aria-hidden='true')
-                i.fa.fa-cutlery(aria-hidden='true')
-                i.fa.fa-diamond(aria-hidden='true')
-                i.fa.fa-asterisk(aria-hidden='true')
-            .room-list-card-content.room-offers-card-content
-                .room-list-card-information.room-offers-card-information
-                    .section-header DOUBLE BED
-                    .room-list-card-title Minimal Duplex Room
-                    p.room-list-card-text
-                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                        | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        | nisi ut aliquip ex ea commodo consequat.
-                    button.room-offer-book-button BOOK NOW
-                .room-list-card-booking
-                    .room-list-card-price
-                        .room-list-price-number $345
-                        .room-list-price-night /Night
-                    .room-list-card-booking-text Booking Now
-                    ul.room-offers-benefits-list
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
-                        li.room-offers-benefit Air conditioner
+        section.room-list-section.room-offers-section
+            .room-list-card.room-offers-card
+                a.room-list-image.room-offers-image(href='./single-room')
+                    img.room-list-image.room-offers-image(src='./Images/pexels-engin-akyurt-1579253 (1).jpg')
+                .icons-and-info
+                    .list-room-icon-bar
+                        i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-coffee(aria-hidden='true')
+                        i.fa.fa-cutlery(aria-hidden='true')
+                        i.fa.fa-diamond(aria-hidden='true')
+                        i.fa.fa-asterisk(aria-hidden='true')
+                    .room-list-card-content.room-offers-card-content
+                        .room-list-card-information.room-offers-card-information
+                            .section-header DOUBLE BED
+                            a(href='./single-room')
+                                .room-list-card-title Minimal Duplex Room
+                            p.room-list-card-text
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                | nisi ut aliquip ex ea commodo consequat.
+                            button.room-offer-book-button BOOK NOW
+                        .room-list-card-booking
+                            .room-list-card-price
+                                .room-list-price-number.old-price $445
+                                .room-list-price-night /Night
+                            .room-list-card-price
+                                .room-list-price-number.offer $345
+                                .room-list-price-night.offer /Night
+                            a(href='./single-room')
+                                .room-list-card-booking-text Booking Now
+                            ul.room-offers-benefits-list
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
+            .room-list-card.room-offers-card
+                a.room-list-image.room-offers-image(href='./single-room')
+                    img.room-list-image.room-offers-image(src='./Images/pexels-engin-akyurt-1579253 (1).jpg')
+                .icons-and-info
+                    .list-room-icon-bar
+                        i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-coffee(aria-hidden='true')
+                        i.fa.fa-cutlery(aria-hidden='true')
+                        i.fa.fa-diamond(aria-hidden='true')
+                        i.fa.fa-asterisk(aria-hidden='true')
+                    .room-list-card-content.room-offers-card-content
+                        .room-list-card-information.room-offers-card-information
+                            .section-header DOUBLE BED
+                            a(href='./single-room')
+                                .room-list-card-title Minimal Duplex Room
+                            p.room-list-card-text
+                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                                | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                | nisi ut aliquip ex ea commodo consequat.
+                            button.room-offer-book-button BOOK NOW
+                        .room-list-card-booking
+                            .room-list-card-price
+                                .room-list-price-number.old-price $445
+                                .room-list-price-night /Night
+                            .room-list-card-price
+                                .room-list-price-number.offer $345
+                                .room-list-price-night.offer /Night
+                            a(href='./single-room')
+                                .room-list-card-booking-text Booking Now
+                            ul.room-offers-benefits-list
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
+                                li.room-offers-benefit Air conditioner
     section.popular-rooms-section
         .section-header POPULAR LIST
         .section-body Popular Rooms
@@ -111,7 +126,7 @@ block content
             input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
             button.subscribe-button SUBSCRIBE
     include footer
-    script(src='js/vendor/modernizr-3.11.2.min.js')
-    script(src='js/plugins.js')
-    script(src='js/main.js')
-    script(src='js/main.js')
+    script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
+    script(src='/javascripts/plugins.js')
+    script(src='/javascripts/main.js')
+    script(src='/javascripts/main.js')

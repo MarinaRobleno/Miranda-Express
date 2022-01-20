@@ -17,19 +17,19 @@ block content
             .about-us-video
         .services-grid
             button.service-card
-                img.service-icon(src='./Images/icon-1.png')
+                i.fa.fa-coffee.service-icon(aria-hidden='true')
                 p.service-card-text BREAKFAST
-            button.service-card-negative
-                img.service-icon(src='./Images/icon@2x.png')
-                p.service-card-text-negative AIRPORT PICKUP
+            button.service-card
+                i.fa.fa-plane.service-icon(aria-hidden='true')
+                p.service-card-text AIRPORT PICKUP
             button.service-card
                 i#luxury-icon.fa.fa-star-o.service-icon(aria-hidden='true')
                 p.service-card-text LUXURY ROOM
             button#bbq-party.service-card
-                img.service-icon(src='./Images/icon(2).png')
+                i.fa.fa-cutlery.service-icon(aria-hidden='true')
                 p.service-card-text BBQ PARTY
             button.service-card
-                img.service-icon(src='./Images/icon3.png')
+                i.fa.fa-map-marker.service-icon(aria-hidden='true')
                 p.service-card-text CITY GUIDE
     section.facilities-section
         #facilities.section-header FACILITIES
@@ -160,6 +160,6 @@ block content
             input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
             button.subscribe-button SUBSCRIBE
     include footer
-    script(src='js/vendor/modernizr-3.11.2.min.js')
-    script(src='js/plugins.js')
-    script(src='js/main.js')
+    script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
+    script(src='/javascripts/plugins.js')
+    script(src='/javascripts/main.js')

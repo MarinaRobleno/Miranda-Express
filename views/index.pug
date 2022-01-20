@@ -2,29 +2,28 @@ extends layout
 
 block content
   include nav
-  section.home-main
+  section#arrow-down-section.arrow-down-section
+    .arrow-down-external
+      i.fa.fa-arrow-down.arrow-down-internal(aria-hidden='true')
+  section.home-main.scroll-section.active
     .home-main-container
       .ultimate-header THE ULTIMATE LUXURY EXPERIENCE
       .home-main-text The Perfect Base For You
       .home-main-button-line
-        button#main-button-1.home-main-button
-          | TAKE A TOUR
-        button#main-button-2.home-main-button
-          | LEARN MORE
+        a.link(href='./about-us.html')
+          button#main-button-2.home-main-button
+            | ABOUT US
     img.full-screen-main-image(src='./Images/pexels-ricardo-ortiz-6263634.jpg')
-  section.book-panel
+  section.book-panel.scroll-section
     .check-in-line-panel
       #check-in.check-in-panel
         p CHECK IN
-        input.check-in-input(type='date')
+        input.check-in-input.flatpickr(type='text')
       #check-out.check-in-panel
         p CHECK OUT
-        input.check-in-input(type='date')
+        input.check-in-input.flatpickr(type='text')
     button.book-button Book Now
-  section.arrow-down-section
-    .arrow-down-external
-      i.fa.fa-arrow-down.arrow-down-internal(aria-hidden='true')
-  section.services-section
+  section.services-section.scroll-section
     .section-header
       .since SINCE
       .year 1994
@@ -33,116 +32,186 @@ block content
       | Moriond.
     .services-grid
       button.service-card.first-height
-        img.service-icon(src='Images/icon-1.png')
+        i.fa.fa-coffee.service-icon(aria-hidden='true')
         p.service-card-text BREAKFAST
-      button.service-card-negative.second-height
-        img.service-icon(src='Images/icon@2x.png')
-        p.service-card-text-negative AIRPORT PICKUP
+      button.service-card.second-height
+        i.fa.fa-plane.service-icon(aria-hidden='true')
+        p.service-card-text AIRPORT PICKUP
       button.service-card.third-height
         i#luxury-icon.fa.fa-star-o.service-icon(aria-hidden='true')
         p.service-card-text LUXURY ROOM
       button#bbq-party.service-card.second-height
-        img.service-icon(src='Images/icon(2).png')
+        i.fa.fa-cutlery.service-icon(aria-hidden='true')
         p.service-card-text BBQ PARTY
       button.service-card.first-height
-        img.service-icon(src='Images/icon3.png')
+        i.fa.fa-map-marker.service-icon(aria-hidden='true')
         p.service-card-text CITY GUIDE
-  section.room-type-section
-    .section-header ROOM TYPE
-    .section-body Inspired Lodging
-    //
-      <div class='room-type-nav'>
-      <button class='room-type-nav-button'>Luxury</button>
-      <button class='room-type-nav-button'>Family</button>
-      <button class='room-type-nav-button'>Double Bed</button>
-      <button class='room-type-nav-button'>Relax</button>
-      </div>
-    .room-type-grid
-      #room-type-1.room-type-grid-item
-        .room-type-grid-data
-          i.fa.fa-th.grid-icon(aria-hidden='true')
-          .room-type-number-rooms 12 ROOMS
-        .room-type-grid-title Junior Suite
-      #room-type-2.room-type-grid-item
-        .room-type-grid-data
-          i.fa.fa-th.grid-icon(aria-hidden='true')
-          .room-type-number-rooms 12 ROOMS
-        .room-type-grid-title Junior Suite
-      #room-type-3.room-type-grid-item
-        .room-type-grid-data
-          i.fa.fa-th.grid-icon(aria-hidden='true')
-          .room-type-number-rooms 03 ROOMS
-        .room-type-grid-title Luxury Home Of Fame
-      #room-type-4.room-type-grid-item
-        .room-type-grid-data
-          i.fa.fa-th.grid-icon(aria-hidden='true')
-          .room-type-number-rooms 10 ROOMS
-        .room-type-grid-title Pacific Room
-    button#view-all-button.home-main-button
-      | VIEW ALL ROOMS
-  section.call-to-action-section
-    .tour-header
-      .section-header CALL TO ACTION
-      .section-body The Thin Escape.
-      .paragraph-and-button
-        p.action-paragraph
-          | Miranda has everything for your trip & every single things.
-        button#tour-button.action-button TAKE A TOUR
-    .tour-advantages
-      .individual-advantage
-        .advantage-icon-frame
-          i.fa.fa-plane.advantage-icon(aria-hidden='true')
-        .advantage-text-container
-          .advantage-title Easy & Free Transport
-          p.advantage-paragraph
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            | nisi ut aliquip ex ea commodo consequat.
-      .individual-advantage
-        #negative-frame.advantage-icon-frame
-          i#negative-icon.fa.fa-coffee.advantage-icon(aria-hidden='true')
-        .advantage-text-container
-          .advantage-title Clean & Fresh Food
-          p.advantage-paragraph
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            | nisi ut aliquip ex ea commodo consequat.
-      .individual-advantage
-        .advantage-icon-frame
-          i.fa.fa-life-ring.advantage-icon(aria-hidden='true')
-        .advantage-text-container
-          .advantage-title Play Ground & Swiming Pool
-          p.advantage-paragraph
-            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            | nisi ut aliquip ex ea commodo consequat.
-  .border-bottom-advantages
-  section.carousel-section
+  section.room-type-section.scroll-section
+    section.room-inner-type-section
+      .section-header ROOM TYPE
+      .section-body Inspired Lodging
+      .room-type-grid
+        #room-type-1.room-type-grid-item
+          a.link(href='./single-room')
+            .room-type-grid-data
+              i.fa.fa-th.grid-icon(aria-hidden='true')
+              .room-type-number-rooms 12 ROOMS
+            .room-type-grid-title Junior Suite
+        #room-type-2.room-type-grid-item
+          a.link(href='./single-room')
+            .room-type-grid-data
+              i.fa.fa-th.grid-icon(aria-hidden='true')
+              .room-type-number-rooms 12 ROOMS
+            .room-type-grid-title Junior Suite
+        #room-type-3.room-type-grid-item
+          a.link(href='./single-room')
+            .room-type-grid-data
+              i.fa.fa-th.grid-icon(aria-hidden='true')
+              .room-type-number-rooms 03 ROOMS
+            .room-type-grid-title Luxury Home Of Fame
+        #room-type-4.room-type-grid-item
+          a.link(href='./single-room')
+            .room-type-grid-data
+              i.fa.fa-th.grid-icon(aria-hidden='true')
+              .room-type-number-rooms 10 ROOMS
+            .room-type-grid-title Pacific Room
+      a.link(href='./room-list')
+        button#view-all-button.home-main-button
+          | VIEW ALL ROOMS
+  section.scroll-section
+    section.call-to-action-section
+      i.fa.fa-paper-plane-o(aria-hidden='true')
+      .tour-header
+        .section-header EVERYTHING YOU NEED
+        .section-body The Thin Escape.
+        .paragraph-and-button
+          p.action-paragraph
+            | Miranda has everything for your trip &amp; every single things.
+      .tour-advantages
+        .individual-advantage
+          .advantage-icon-frame
+            i.fa.fa-plane.advantage-icon(aria-hidden='true')
+          .advantage-text-container
+            .advantage-title Easy &amp; Free Transport
+            p.advantage-paragraph
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              | nisi ut aliquip ex ea commodo consequat.
+        .individual-advantage
+          .advantage-icon-frame
+            i.fa.fa-coffee.advantage-icon(aria-hidden='true')
+          .advantage-text-container
+            .advantage-title Clean &amp; Fresh Food
+            p.advantage-paragraph
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              | nisi ut aliquip ex ea commodo consequat.
+        .individual-advantage
+          .advantage-icon-frame
+            i.fa.fa-life-ring.advantage-icon(aria-hidden='true')
+          .advantage-text-container
+            .advantage-title Play Ground &amp; Swiming Pool
+            p.advantage-paragraph
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              | nisi ut aliquip ex ea commodo consequat.
+    .border-bottom-advantages
+  section.carousel-section.scroll-section
     .carousel-container
-      img.carousel-image(src='')
+      #splide-1.splide
+        .splide__track
+          ul#splide__list.splide__list
+            li.splide__slide.splide_slider_1
+              img.carousel-image(src='Images/pexels-max-vakhtbovych-6394711.jpg')
+            li.splide__slide.splide_slider_1
+              img.carousel-image(src='Images/pexels-max-vakhtbovych-6434631.jpg')
+            li.splide__slide.splide_slider_1
+              img.carousel-image(src='Images/pexels-quark-studio-2507014.jpg')
+            li.splide__slide.splide_slider_1
+              img.carousel-image(src='https://media-cdn.tripadvisor.com/media/photo-s/0e/cc/fa/fc/habitacion-con-jacuzzi.jpg')
+            li.splide__slide.splide_slider_1
+              img.carousel-image(src='https://media-cdn.tripadvisor.com/media/photo-s/13/d8/ea/1b/a-room-at-the-beach.jpg')
+            li.splide__slide.splide_slider_1
+              img.carousel-image(src='https://www.hotelfariones.es/backoffice/images/1402-df7b4d7a-e54c-45df-8878-544f85a35d79.jpg')
+      #splide-2.splide.hidden
+        .splide__track
+          ul#splide__list.splide__list
+            li.splide__slide.splide_slider_2
+              img.carousel-image(src='https://cf.bstatic.com/xdata/images/hotel/max1024x768/159050057.jpg?k=a7a1ca65bb5049ed4491a498cd74e6bd616a83c2228be3169dd3c094a5092aaa&o=&hp=1')
+            li.splide__slide.splide_slider_2
+              img.carousel-image(src='https://img1.cgtrader.com/items/1983961/b4032d72de/large/modern-luxury-hotel-double-bed-room-design-3d-model-max.jpg')
+            li.splide__slide.splide_slider_2
+              img.carousel-image(src='https://media-cdn.tripadvisor.com/media/photo-s/07/42/18/62/caption.jpg')
+            li.splide__slide.splide_slider_2
+              img.carousel-image(src='https://d1dzqwexhp5ztx.cloudfront.net/imageRepo/5/0/94/472/31/IL263_Double_Suite_S.jpg')
+            li.splide__slide.splide_slider_2
+              img.carousel-image(src='https://st.hzcdn.com/simgs/pictures/bedrooms/bay-view-grand-condo-in-cancun-jerry-jacobs-design-inc-img~00a1b6550a2ad9a7_4-2596-1-a414664.jpg')
+            li.splide__slide.splide_slider_2
+              img.carousel-image(src='https://webbox.imgix.net/images/lpcsudkgpkcuocql/f2c62d1d-accb-4eec-b8fe-3648317f7baf.jpg?auto=format,compress&fit=crop&crop=entropy')
+      #splide-3.splide.hidden
+        .splide__track
+          ul#splide__list.splide__list
+            li.splide__slide.splide_slider_3
+              img.carousel-image(src='https://images.theushuaiaexperience.com/0ehZlP9AO21slr7SYTfu_aik_XI=/1800x0/smart/filters:quality(50)/ushuaia/back/files/image/44_none_img_5347.jpg')
+            li.splide__slide.splide_slider_3
+              img.carousel-image(src='https://images.theushuaiaexperience.com/ZLcAKEnQSTrXpF6fFDPHAfdN8iw=/1800x0/smart/filters:quality(50)/ushuaia/back/files/image/45_none_img_5351.jpg')
+            li.splide__slide.splide_slider_3
+              img.carousel-image(src='https://images.theushuaiaexperience.com/O0ChBT_ARZPuRPgNCRfa904LgJo=/1500x0/smart/filters:quality(50)/ushuaia/back/files/image/3_gc74zxP.jpg')
+            li.splide__slide.splide_slider_3
+              img.carousel-image(src='https://www.legadoalcazarhotel.com/wp-content/uploads/2017/07/habitacion-doble-superior-811.jpg')
+            li.splide__slide.splide_slider_3
+              img.carousel-image(src='https://images.theushuaiaexperience.com/3t46cXh2LKtZon-3JhekRr7HOdY=/1800x0/smart/filters:quality(50)/ushuaia/back/files/image/300_1105_img_4152.jpg')
+            li.splide__slide.splide_slider_3
+              img.carousel-image(src='https://www.grandhotelgardone.it/images/slide/rooms/superior-double-room/slide-superior-double-room.jpg')
+      #splide-4.splide.hidden
+        .splide__track
+          ul#splide__list.splide__list
+            li.splide__slide.splide_slider_4
+              img.carousel-image(src='https://www.the-yeatman-hotel.com/fotos/imagens_ambiente/presidential_suite_the_yeatman_porto_1369030755b8906dc7ced9.jpg')
+            li.splide__slide.splide_slider_4
+              img.carousel-image(src='https://www.hotelvistabella.com/assets/rooms/hotel-vistabella/suite-penthouse-con-vistas-al-mar/x9a4159.jpg')
+            li.splide__slide.splide_slider_4
+              img.carousel-image(src='https://photos.mandarinoriental.com/is/image/MandarinOriental/madrid-royal-suite-bedroom?wid=2880&hei=1200&fmt=jpeg,rgb&qlt=75,0&op_sharpen=0&resMode=sharp2&op_usm=0,0,0,0&iccEmbed=1&printRes=72&fit=wrap')
+            li.splide__slide.splide_slider_4
+              img.carousel-image(src='https://estaticos-cdn.elperiodico.com/clip/5219b9dd-4e7e-431f-8e68-acb88290e0a7_alta-libre-aspect-ratio_default_0.jpg')
+            li.splide__slide.splide_slider_4
+              img.carousel-image(src='https://www.sancarlosuite.com/data/jpg/sancarlo-exclusive-14962.jpg')
+            li.splide__slide.splide_slider_4
+              img.carousel-image(src='https://images.rosewoodhotels.com/is/image/rwhg/oceanfront-king-junior-suite-ofk:WIDE-LARGE-16-9')
     .carousel-detail-box
-      .carousel-detail-box-header
+      #carousel-detail-box-header.carousel-detail-box-header
         i.fa.fa-bed.carousel-detail-box-icon(aria-hidden='true')
-        .carousel-detail-box-counter 01/08
-      .carousel-detail-box-title Luxury Room
+        #carousel-detail-box-counter-1.carousel-detail-box-counter
+        #carousel-detail-box-counter-2.carousel-detail-box-counter.hidden
+        #carousel-detail-box-counter-3.carousel-detail-box-counter.hidden
+        #carousel-detail-box-counter-4.carousel-detail-box-counter.hidden
+      #carousel-detail-box-title.carousel-detail-box-title
+        | Single Bed
       p.carousel-detail-box-description
         | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         | eiusmod tempor incididunt ut labore et dolore magna.
-  section.take-a-tour-section
-    .take-a-tour-text
-      .section-header TAKE A TOUR
-      .section-body Discover Our Underground.
-      p.take-a-tour-paragraph
-        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-        | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        | minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        | aliquip ex ea commodo consequat.
-      button#view-all-button.home-main-button BOOK NOW
-    iframe#discover-video(width='100%' height='315' src='https://www.youtube.com/embed/Bu3Doe45lcU?start=25' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
-  section.testimonials-section
+      .carousel-detail-box-nav
+        #nav-room-1.carousel-detail-box-nav-number.selected 01
+        #nav-room-2.carousel-detail-box-nav-number 02
+        #nav-room-3.carousel-detail-box-nav-number 03
+        #nav-room-4.carousel-detail-box-nav-number 04
+  section.take-a-tour-section.scroll-section
+    section.inner-take-a-tour
+      .take-a-tour-text
+        .section-header TAKE A TOUR
+        .section-body Discover Our Underground.
+        p.take-a-tour-paragraph
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          | ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          | aliquip ex ea commodo consequat.
+        button#view-all-button.home-main-button
+          | BOOK NOW
+      iframe#discover-video(width='100%' height='315' src='https://www.youtube.com/embed/Bu3Doe45lcU?start=25&end=75' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+  section.testimonials-section.scroll-section
     .section-header TESTIMONIALS
     .section-body Client Feedback
     .feedback-container
@@ -159,49 +228,44 @@ block content
       .testimonials-extra-panel-title
         | Each of our nine lovely double guest rooms feature a private bath,
         | wi-fi, cable television and include full breakfast.
-      .extra-panel-button-line
-        button#main-button-1.home-main-button
-          | TAKE A TOUR
-        button#main-button-2.home-main-button
-          | PACKAGE & POLICY
-  section.blog-section
-    .section-header BLOG
-    .section-body-container
-      .section-body News Feeds
-      .blog-button-line
-        button#white-button.blog-button
-          i.fa.fa-arrow-left.blog-arrow-left(aria-hidden='true')
-        button#golden-button.blog-button
-          i.fa.fa-arrow-right.blog-arrow-right(aria-hidden='true')
-    .post-container
-      .post
-        img.post-image(src='./Images/news-feeds-photo-1.jpeg')
-        .post-data
-          .post-card-data
-            i.fa.fa-calendar.news-feeds-icon(aria-hidden='true')
-            p.post-card-text 23rd March 2019
-          .post-card-data
-            i.fa.fa-user-o.news-feeds-icon(aria-hidden='true')
-            p.post-card-text By Admin
-        .post-title
-          | Each of our 8 double rooms has its own distinct.
-        .post-description
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          | eiusmod tempor incididunt ut labore et dolore.
-      .post
-        img.post-image(src='./Images/news-feeds-photo-2.jpg')
-        .post-data
-          .post-card-data
-            i.fa.fa-calendar.news-feeds-icon(aria-hidden='true')
-            p.post-card-text 23rd March 2019
-          .post-card-data
-            i.fa.fa-user-o.news-feeds-icon(aria-hidden='true')
-            p.post-card-text By Admin
-        .post-title
-          | Each of our 8 double rooms has its own distinct.
-        .post-description
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          | eiusmod tempor incididunt ut labore et dolore.
+    section.blog-section
+      .section-header BLOG
+      .section-body-container
+        .section-body News Feeds
+        .blog-button-line
+          button#white-button.blog-button
+            i.fa.fa-arrow-left.blog-arrow-left(aria-hidden='true')
+          button#golden-button.blog-button
+            i.fa.fa-arrow-right.blog-arrow-right(aria-hidden='true')
+      .post-container
+        .post
+          img.post-image(src='./Images/news-feeds-photo-1.jpeg')
+          .post-data
+            .post-card-data
+              i.fa.fa-calendar.news-feeds-icon(aria-hidden='true')
+              p.post-card-text 23rd March 2019
+            .post-card-data
+              i.fa.fa-user-o.news-feeds-icon(aria-hidden='true')
+              p.post-card-text By Admin
+          .post-title
+            | Each of our 8 double rooms has its own distinct.
+          .post-description
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            | eiusmod tempor incididunt ut labore et dolore.
+        .post
+          img.post-image(src='./Images/news-feeds-photo-2.jpg')
+          .post-data
+            .post-card-data
+              i.fa.fa-calendar.news-feeds-icon(aria-hidden='true')
+              p.post-card-text 23rd March 2019
+            .post-card-data
+              i.fa.fa-user-o.news-feeds-icon(aria-hidden='true')
+              p.post-card-text By Admin
+          .post-title
+            | Each of our 8 double rooms has its own distinct.
+          .post-description
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            | eiusmod tempor incididunt ut labore et dolore.
   section.subscribe-section
     .hotel-miranda-title
       .hotel-miranda-icon H
@@ -216,7 +280,9 @@ block content
       input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
       button.subscribe-button SUBSCRIBE
   include footer
-  script(src='js/vendor/modernizr-3.11.2.min.js')
-  script(src='js/plugins.js')
-  script(src='js/main.js')
+  script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
+  script(src='/javascripts/plugins.js')
+  script(src='/javascripts/slider.js')
+  script(src='/javascripts/flatpickr.js')
+  script(src='/javascripts/main.js')
 
