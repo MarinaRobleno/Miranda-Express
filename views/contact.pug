@@ -66,12 +66,12 @@ block content
                         option(value='16') Rioja, La
                         option(value='17') Ceuta
                         option(value='18') Melilla
-                    button#find-near-location.community-dropdown
-                        | Find my nearest location
                     input#geolocation-input.geolocation-input(type='text' placeholder='Enter a location')
                     .geocode-buttons
                         button#search-location-button.community-dropdown.search-loc(value='Search') Search
                         button#clear-location-button.community-dropdown.search-loc(value='Clear') Clear
+                    button#find-near-location.community-dropdown
+                        | Find my nearest location
                     #sidebar(style='display: none')
                         .map-response-title(style='flex-grow: 0')
                             | Closest Miranda Hotel to my location.
@@ -92,7 +92,7 @@ block content
     include footer
     script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
     script(src='/javascripts/plugins.js')
-    script(src='coordinates.js')
+    script(src='/javascripts/coordinates.js')
     script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDDUM_cAYGbY7wKsruKQhRkWmXzrZFPc-k&callback=initMap&libraries=places')
     script(src='/javascripts/map.js')
     script(src='/javascripts/main.js')
