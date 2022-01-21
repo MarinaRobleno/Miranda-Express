@@ -15,7 +15,8 @@ const bookingSchema = new Schema({
   offer_price: Number,
   amenities: [String],
   status: String,
-  photo: [String]
+  photo: [String],
+  description: String
 });
 
 const Booking = mongoose.model("Booking", bookingSchema);
@@ -46,7 +47,8 @@ const bookingsController = {
         offer_price: room.offer_price,
         amenities: room.amenities,
         status: room.status,
-        photo: room.photo
+        photo: room.photo,
+        description: room.description
       });
       await newBooking.save();
       return res.json(newBooking);
@@ -72,7 +74,8 @@ const bookingsController = {
         offer_price: room.offer_price,
         amenities: room.amenities,
         status: room.status,
-        photo: room.photo
+        photo: room.photo,
+        description: room.description
       });
       res.send(`Updated booking ID: ${req.params.id}`);
     } catch (err) {

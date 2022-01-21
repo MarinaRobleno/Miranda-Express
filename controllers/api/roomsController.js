@@ -9,6 +9,7 @@ const roomSchema = new Schema({
   price: Number,
   offer_price: Number,
   status: String,
+  description: String
 });
 
 const Room = mongoose.model("Room", roomSchema);
@@ -32,6 +33,7 @@ const roomsController = {
         offer_price: req.body.offer_price,
         status: req.body.status,
         photo: req.body.photo,
+        description: req.body.description
       });
       await newRoom.save();
       return res.json(newRoom);

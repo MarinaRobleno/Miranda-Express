@@ -5,14 +5,8 @@ const bookings = [
     checkIn: "07-28-2022",
     checkOut: "11-03-2022",
     special: "Special request number 1",
-    roomType: "Double Bed",
-    roomNumber: 01,
+    roomNumber: 1,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Guinna Edlington",
@@ -20,13 +14,8 @@ const bookings = [
     checkIn: "04-28-2022",
     checkOut: "09-10-2022",
     special: "Special request number 2",
-    roomType: "Double Bed",
-    roomNumber: 02,
+    roomNumber: 2,
     bookStatus: "out",
-    photo: [
-      "https://st.hzcdn.com/simgs/pictures/bedrooms/cruelty-free-luxury-bedroom-dimare-design-img~7011347f07f3f5aa_9-8849-1-6e7db76.jpg",
-      "https://images.squarespace-cdn.com/content/v1/53b5ae62e4b04291a7408706/1473854326018-6O01FR1QH8SSTOIG40AU/4+budget-friendly+master+bedroom+decorating+ideas?format=1000w",
-    ],
   },
   {
     guest: "Evaleen Kernes",
@@ -34,14 +23,8 @@ const bookings = [
     checkIn: "09-29-2022",
     checkOut: "01-11-2022",
     special: "Special request number 3",
-    roomType: "Double Bed",
-    roomNumber: 03,
+    roomNumber: 3,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Georgianne Lerego",
@@ -49,14 +32,8 @@ const bookings = [
     checkIn: "11-27-2022",
     checkOut: "12-18-2022",
     special: "Special request number 4",
-    roomType: "Double Bed",
-    roomNumber: 04,
+    roomNumber: 4,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Judon Lyttle",
@@ -64,14 +41,8 @@ const bookings = [
     checkIn: "05-26-2022",
     checkOut: "10-08-2022",
     special: "Special request number 5",
-    roomType: "Double Bed",
-    roomNumber: 05,
+    roomNumber: 5,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Eamon Yorke",
@@ -79,14 +50,8 @@ const bookings = [
     checkIn: "10-06-2022",
     checkOut: "12-11-2022",
     special: "Special request number 6",
-    roomType: "Double Bed",
-    roomNumber: 06,
+    roomNumber: 6,
     bookStatus: "progress",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Farlie Kalb",
@@ -94,14 +59,8 @@ const bookings = [
     checkIn: "01-14-2022",
     checkOut: "09-08-2022",
     special: "Special request number 7",
-    roomType: "Double Bed",
-    roomNumber: 07,
+    roomNumber: 7,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Kimberly Blazeby",
@@ -109,14 +68,8 @@ const bookings = [
     checkIn: "01-17-2022",
     checkOut: "10-01-2022",
     special: "Special request number 8",
-    roomType: "Double Bed",
-    roomNumber: 08,
+    roomNumber: 8,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Bail Iacovielli",
@@ -124,14 +77,8 @@ const bookings = [
     checkIn: "03-23-2022",
     checkOut: "11-02-2022",
     special: "Special request number 9",
-    roomType: "Double Bed",
-    roomNumber: 09,
+    roomNumber: 9,
     bookStatus: "progress",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Farris Beardsall",
@@ -139,14 +86,8 @@ const bookings = [
     checkIn: "03-26-2022",
     checkOut: "08-20-2022",
     special: null,
-    roomType: "Double Bed",
     roomNumber: 10,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Crissy Croisdall",
@@ -154,14 +95,8 @@ const bookings = [
     checkIn: "07-28-2022",
     checkOut: "11-03-2022",
     special: "Special request number 1",
-    roomType: "Double Bed",
     roomNumber: 11,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Guinna Edlington",
@@ -169,14 +104,8 @@ const bookings = [
     checkIn: "04-28-2022",
     checkOut: "09-10-2022",
     special: "Special request number 2",
-    roomType: "Double Bed",
     roomNumber: 12,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Evaleen Kernes",
@@ -184,14 +113,8 @@ const bookings = [
     checkIn: "09-29-2022",
     checkOut: "01-11-2022",
     special: "Special request number 3",
-    roomType: "Double Bed",
     roomNumber: 13,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Georgianne Lerego",
@@ -199,14 +122,8 @@ const bookings = [
     checkIn: "11-27-2022",
     checkOut: "12-18-2022",
     special: "Special request number 4",
-    roomType: "Double Bed",
     roomNumber: 14,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Judon Lyttle",
@@ -214,14 +131,8 @@ const bookings = [
     checkIn: "05-26-2022",
     checkOut: "10-08-2022",
     special: "Special request number 5",
-    roomType: "Double Bed",
     roomNumber: 15,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Eamon Yorke",
@@ -229,14 +140,8 @@ const bookings = [
     checkIn: "10-06-2022",
     checkOut: "12-11-2022",
     special: "Special request number 6",
-    roomType: "Double Bed",
     roomNumber: 16,
     bookStatus: "progress",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Farlie Kalb",
@@ -244,14 +149,8 @@ const bookings = [
     checkIn: "01-14-2022",
     checkOut: "09-08-2022",
     special: "Special request number 7",
-    roomType: "Double Bed",
     roomNumber: 17,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Kimberly Blazeby",
@@ -259,14 +158,8 @@ const bookings = [
     checkIn: "01-17-2022",
     checkOut: "10-01-2022",
     special: "Special request number 8",
-    roomType: "Double Bed",
     roomNumber: 18,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Bail Iacovielli",
@@ -274,14 +167,8 @@ const bookings = [
     checkIn: "03-23-2022",
     checkOut: "11-02-2022",
     special: "Special request number 9",
-    roomType: "Double Bed",
     roomNumber: 19,
     bookStatus: "progress",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Farris Beardsall",
@@ -289,14 +176,8 @@ const bookings = [
     checkIn: "03-26-2022",
     checkOut: "08-20-2022",
     special: null,
-    roomType: "Double Bed",
     roomNumber: 20,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Crissy Croisdall",
@@ -304,14 +185,8 @@ const bookings = [
     checkIn: "07-28-2022",
     checkOut: "11-03-2022",
     special: "Special request number 1",
-    roomType: "Double Bed",
     roomNumber: 21,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Guinna Edlington",
@@ -319,14 +194,8 @@ const bookings = [
     checkIn: "04-28-2022",
     checkOut: "09-10-2022",
     special: "Special request number 2",
-    roomType: "Double Bed",
     roomNumber: 22,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Evaleen Kernes",
@@ -334,14 +203,8 @@ const bookings = [
     checkIn: "09-29-2022",
     checkOut: "01-11-2022",
     special: "Special request number 3",
-    roomType: "Double Bed",
     roomNumber: 23,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Georgianne Lerego",
@@ -349,14 +212,8 @@ const bookings = [
     checkIn: "11-27-2022",
     checkOut: "12-18-2022",
     special: "Special request number 4",
-    roomType: "Double Bed",
     roomNumber: 24,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Judon Lyttle",
@@ -364,14 +221,8 @@ const bookings = [
     checkIn: "05-26-2022",
     checkOut: "10-08-2022",
     special: "Special request number 5",
-    roomType: "Double Bed",
     roomNumber: 25,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Eamon Yorke",
@@ -379,14 +230,8 @@ const bookings = [
     checkIn: "10-06-2022",
     checkOut: "12-11-2022",
     special: "Special request number 6",
-    roomType: "Double Bed",
     roomNumber: 26,
     bookStatus: "progress",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Farlie Kalb",
@@ -394,14 +239,8 @@ const bookings = [
     checkIn: "01-14-2022",
     checkOut: "09-08-2022",
     special: "Special request number 7",
-    roomType: "Double Bed",
     roomNumber: 27,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Kimberly Blazeby",
@@ -409,14 +248,8 @@ const bookings = [
     checkIn: "01-17-2022",
     checkOut: "10-01-2022",
     special: "Special request number 8",
-    roomType: "Double Bed",
     roomNumber: 28,
     bookStatus: "in",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Bail Iacovielli",
@@ -424,14 +257,8 @@ const bookings = [
     checkIn: "2-18-2022",
     checkOut: "11-02-2022",
     special: "Special request number 9",
-    roomType: "Double Bed",
     roomNumber: 29,
     bookStatus: "progress",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
   {
     guest: "Farris Beardsall",
@@ -439,14 +266,8 @@ const bookings = [
     checkIn: "1-14-2022",
     checkOut: "08-20-2022",
     special: null,
-    roomType: "Double Bed",
     roomNumber: 30,
     bookStatus: "out",
-    photo: [
-      "https://tecnohotelnews.com/wp-content/uploads/2020/01/Room-Mate-Olivia-Suite-1.jpg",
-      "https://static01.nyt.com/images/2019/03/24/travel/24trending-shophotels1/24trending-shophotels1-superJumbo.jpg",
-      "https://s7d2.scene7.com/is/image/ritzcarlton/pnqrz-king-50668318?$XlargeViewport100pct$",
-    ],
   },
 ];
 
