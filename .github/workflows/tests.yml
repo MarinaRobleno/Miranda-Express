@@ -8,4 +8,4 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: https://miranda-express.azurewebsites.net/get
+        args: -X GET https://miranda-express.azurewebsites.net/
