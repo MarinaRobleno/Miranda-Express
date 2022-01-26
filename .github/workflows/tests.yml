@@ -1,0 +1,11 @@
+name: Github Test Curl
+
+on: push
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@master
+      with:
+        args: https://miranda-express.azurewebsites.net/get
