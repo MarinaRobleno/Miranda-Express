@@ -51,7 +51,7 @@ describe("TESTS", () => {
       "description":"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus."
     }
     await request.post("/api/rooms").send(data).set('Authorization', 'Bearer ' + authToken).expect(200).expect('Content-Type', /json/);
-  });*/
+  });
   test("UPDATE /rooms", async () => {
     let data = {
       "photo": [
@@ -71,7 +71,7 @@ describe("TESTS", () => {
   });
   test("DELETE /rooms", async () => {
     await request.delete("/api/rooms/61ec0a9e3a10151f2478a640").set('Authorization', 'Bearer ' + authToken).expect(200).expect('Content-Type', 'text/html; charset=utf-8');
-  });
+  });*/
   test("Get home", async () => {
     await supertest(app).get("/").expect(200);
   });
