@@ -9,7 +9,7 @@ const {serverDb} = require('./.env')
 
 const UserModel = require('./model/model');
 
-mongoose.connect("mongodb+srv://admin:admin@mirandacluster.kwsvf.mongodb.net/miranda_db?retryWrites=true&w=majority", {
+mongoose.connect(serverDb, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   bufferMaxEntries: 0
