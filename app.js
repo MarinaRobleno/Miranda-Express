@@ -12,6 +12,7 @@ const UserModel = require('./model/model');
 mongoose.connect(serverDb, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  bufferMaxEntries: 0
 });
 mongoose.set("useCreateIndex", true);
 const db = mongoose.connection;
