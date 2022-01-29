@@ -5,11 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const {serverDb} = require('./.env')
 
-const UserModel = require('./model/model');
-
-mongoose.connect(serverDb, {
+mongoose.connect("mongodb+srv://admin:admin@mirandacluster.kwsvf.mongodb.net/miranda_db?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   bufferMaxEntries: 0
