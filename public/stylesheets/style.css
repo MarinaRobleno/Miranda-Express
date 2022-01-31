@@ -5569,6 +5569,7 @@ footer .logo-line .copy-icon:hover {
 .check-availability-container .check-availability-form-container .check-availability-check-in-container {
   margin: 10px;
   color: #222222;
+  height: 90px;
 }
 .check-availability-container .check-availability-form-container .check-availability-check-in-container .check-in-header {
   margin-bottom: 5px;
@@ -5593,6 +5594,7 @@ footer .logo-line .copy-icon:hover {
   font-size: 10px;
   margin: 15px;
   color: #777777;
+  display: none;
 }
 
 #availability-description-extra {
@@ -5781,16 +5783,17 @@ footer .logo-line .copy-icon:hover {
     margin-right: 15px;
   }
   .main-body-content-room .left-column .single-room-section {
-    position: static;
+    position: relative;
   }
   .main-body-content-room .left-column .single-room-section .room-background {
     width: 770px;
     height: 490px;
-    margin-bottom: 55px;
+    margin: 30px 0 55px;
   }
   .main-body-content-room .left-column .single-room-section .white-background {
     display: flex;
-    position: static;
+    position: absolute;
+    z-index: 50;
     flex-direction: column;
     justify-content: center;
     background-color: white;
