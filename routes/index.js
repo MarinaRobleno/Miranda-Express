@@ -1,8 +1,6 @@
 var express = require("express");
 var router = express.Router();
-//const rooms = require("../json/rooms");
-const { db } = require("../app");
-const { roomsController, Room } = require("../controllers/api/roomsController");
+const { Room } = require("../controllers/api/roomsController");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -26,12 +24,22 @@ router.get("/room-list", async (req, res) => {
   }  
 });
 
-router.get("/room-offers", (req, res) => {
-  res.render("room-offers", { rooms: rooms });
+router.get("/room-offers", async (req, res) => {
+  try {
+    let rooms = await Room.find({});
+    return res.render("room-offers", {rooms: rooms});
+  } catch (err) {
+    console.log(err);
+  } 
 });
 
-router.get("/single-room", (req, res) => {
-  res.render("single-room");
+router.get("/single-room/:id", async (req, res) => {
+  try {
+    let room = await Room.findOne({ _id: req.params.id }).exec();
+    res.render("single-room", {room: room})
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 module.exports = router;

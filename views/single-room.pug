@@ -14,13 +14,13 @@ block content
         .left-column
             section.single-room-section
                 .white-background
-                    .section-header DOUBLE BED
+                    .section-header=room.roomType.toUpperCase()
                     .single-room-name-price
-                        .single-room-name Room 099
+                        .single-room-name='Room ' + room.roomNumber
                         .single-room-price
-                            .single-room-price-number $345
+                            .single-room-price-number=room.price/100
                             .single-room-price-night /Night
-                .room-background
+                img.room-background(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])                
                 .check-availability-container
                     .check-availability-header Check Availability
                     .check-availability-form-container
@@ -56,25 +56,25 @@ block content
                             ul.amenities-list
                                 li.amenities-individual
                                     i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                                    p.amenities-individual-name Air conditioner
+                                    p.amenities-individual-name=room.amenities
                                 li.amenities-individual
                                     i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                                    p.amenities-individual-name Air conditioner
+                                    p.amenities-individual-name=room.amenities
                                 li.amenities-individual
                                     i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                                    p.amenities-individual-name Air conditioner
+                                    p.amenities-individual-name=room.amenities
                                 li.amenities-individual
                                     i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                                    p.amenities-individual-name Air conditioner
+                                    p.amenities-individual-name=room.amenities
                                 li.amenities-individual
                                     i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                                    p.amenities-individual-name Air conditioner
+                                    p.amenities-individual-name=room.amenities
                                 li.amenities-individual
                                     i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                                    p.amenities-individual-name Air conditioner
+                                    p.amenities-individual-name=room.amenities
                                 li.amenities-individual
                                     i.fa.fa-bed.amenities-individual-icon(aria-hidden='true')
-                                    p.amenities-individual-name Air conditioner
+                                    p.amenities-individual-name=room.amenities
             section.testimonials-section
                 .section-header TESTIMONIALS
                 .section-body Client Feedback
