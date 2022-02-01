@@ -6,8 +6,9 @@ const ExtractJWT = require("passport-jwt").ExtractJwt;
 const {authSecret} = require("../.env")
 const {connectdb} = require("../db");
 const bcrypt = require("bcrypt");
+const {User} = require("../controllers/api/usersController")
 
-passport.use(
+/*passport.use(
   "signup",
   new localStrategy(
     {
@@ -24,7 +25,7 @@ passport.use(
       }
     }
   )
-);
+);*/
 
 passport.use(
   "login",
@@ -35,23 +36,24 @@ passport.use(
     },
     async (email, password, done) => {
       try {
-        //const user = await UserModel.findOne({ email });
-        const connection = await connectdb();
+        const user = await User.findOne({ mail: email });
+        /*const connection = await connectdb();
         const [usersResults, usersFields] = await connection.execute(
-          `SELECT * FROM users WHERE mail = ?`, [email])
+          `SELECT * FROM users WHERE mail = ?`, [email])*/
         
-        //if (!user)
-        if (!usersResults.length) {
+        if (!user){
+          console.log('mal user')
+        //if (!usersResults.length) {
           return done(null, false, { message: "Invalid user or password" });
         }
 
-        const validate = await bcrypt.compare(password, usersResults[0].hash);
+        const validate = await bcrypt.compare(password, user.hash);
 
         if (!validate) {
           return done(null, false, { message: "Invalid user or password" });
         }
 
-        return done(null, usersResults[0], { message: "Logged in Successfully" });
+        return done(null, user, { message: "Logged in Successfully" });
       } catch (error) {
         console.log(error)
         return done(error);

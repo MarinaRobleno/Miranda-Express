@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {roomsController} = require('../controllers/api/roomsController');
 const bookingsController = require('../controllers/api/bookingsController');
-const usersController = require('../controllers/api/usersController');
+const {usersController} = require('../controllers/api/usersController');
 const contactController = require('../controllers/api/contactController');
 
 router.get(
