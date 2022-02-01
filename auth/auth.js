@@ -1,31 +1,10 @@
 const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
-const UserModel = require("../model/model");
 const JWTstrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
 const {authSecret} = require("../.env")
-const {connectdb} = require("../db");
 const bcrypt = require("bcrypt");
 const {User} = require("../controllers/api/usersController")
-
-/*passport.use(
-  "signup",
-  new localStrategy(
-    {
-      usernameField: "email",
-      passwordField: "password",
-    },
-    async (email, password, done) => {
-      try {
-        const user = await UserModel.create({ email, password });
-
-        return done(null, user);
-      } catch (error) {
-        done(error);
-      }
-    }
-  )
-);*/
 
 passport.use(
   "login",
