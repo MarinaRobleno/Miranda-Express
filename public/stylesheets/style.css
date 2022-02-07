@@ -476,6 +476,7 @@ template {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    text-align: left;
   }
   .header .drop-down-box .drop-down-list {
     display: flex;
@@ -520,6 +521,7 @@ template {
   .header .drop-down-box .contact-and-icon-container .contact-and-icon .drop-down-contact {
     min-width: 140px;
     padding: 0;
+    padding-left: 10px;
     font-size: 17px;
     font-family: "Old Standard TT", serif;
     letter-spacing: 0px;
