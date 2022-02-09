@@ -1,7 +1,7 @@
 @media only screen and (min-width: 1000px){
     .room-list-section{
         display: grid;
-        margin: 0 20% 240px;
+        margin: 0 20% 20px;
         grid-template-columns: auto auto auto;
         grid-gap: 20px 20px;
         .room-list-card{
@@ -80,6 +80,9 @@
                 }
             }
         }
+    }
+    .pagination-section{
+        margin-bottom: 200px;
     }
     
 }

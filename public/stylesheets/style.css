@@ -5265,10 +5265,33 @@ footer .logo-line .copy-icon:hover {
   display: none;
 }
 
+.pagination-section {
+  text-align: center;
+}
+.pagination-section .pagination {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+}
+.pagination-section .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination-section .pagination a.active {
+  background-color: #BEAD8E;
+  color: white;
+}
+.pagination-section .pagination a:hover:not(.active) {
+  background-color: #BEAD8E;
+  color: white;
+}
+
 @media only screen and (min-width: 1000px) {
   .room-list-section {
     display: grid;
-    margin: 0 20% 240px;
+    margin: 0 20% 20px;
     grid-template-columns: auto auto auto;
     grid-gap: 20px 20px;
   }
@@ -5345,6 +5368,10 @@ footer .logo-line .copy-icon:hover {
     font-weight: 700;
     color: #BDBDBD;
     margin-bottom: 25px;
+  }
+
+  .pagination-section {
+    margin-bottom: 200px;
   }
 }
 @media only screen and (min-width: 1000px) {
