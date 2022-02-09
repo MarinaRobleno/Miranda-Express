@@ -37,9 +37,9 @@ block content
                 a(href=`?page=${current_page - 1}`) «
             - var i = 1;
             while i <= page_count
-                if i === current_page
+                if i == current_page
                     a.active(href=`?page=${i}`)= i++
-                else
+                else 
                     a(href=`?page=${i}`)= i++
             if current_page < page_count
                 a(href=`?page=${parseInt(current_page) + 1}`) »

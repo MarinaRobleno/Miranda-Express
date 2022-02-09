@@ -46,6 +46,18 @@ block content
                                     li.room-offers-benefit Air conditioner
                                     li.room-offers-benefit Air conditioner
                                     li.room-offers-benefit Air conditioner
+    section.pagination-section
+        .pagination
+            if current_page > 1
+                a(href=`?page=${current_page - 1}`) «
+            - var i = 1;
+            while i <= page_count
+                if i == current_page
+                    a.active(href=`?page=${i}`)= i++
+                else 
+                    a(href=`?page=${i}`)= i++
+            if current_page < page_count
+                a(href=`?page=${parseInt(current_page) + 1}`) »
     section.popular-rooms-section
         .section-header POPULAR LIST
         .section-body Popular Rooms

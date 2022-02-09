@@ -18,14 +18,14 @@ router.get("/contact", (req, res) => {
 router.get("/room-list", async (req, res) => {
   try {
     const page = req.query.page || 1;
-    const options = {
-      page: parseInt(page, 10) || 1,
-      limit: 9,
-    };
-    let rooms = await Room.paginate({}, {page: page, limit: 9}).then(
+    let rooms = await Room.paginate({}, { page: page, limit: 9 }).then(
       (results, err) => {
         if (!err) {
-          return res.render("room-list", { rooms: results.docs, page_count: results.totalPages, current_page: page });
+          return res.render("room-list", {
+            rooms: results.docs,
+            page_count: results.totalPages,
+            current_page: page,
+          });
         }
       }
     );
@@ -36,8 +36,18 @@ router.get("/room-list", async (req, res) => {
 
 router.get("/room-offers", async (req, res) => {
   try {
-    let rooms = await Room.find({});
-    return res.render("room-offers", { rooms: rooms });
+    const page = req.query.page || 1;
+    let rooms = await Room.paginate({}, { page: page, limit: 9 }).then(
+      (results, err) => {
+        if (!err) {
+          return res.render("room-offers", {
+            rooms: results.docs,
+            page_count: results.totalPages,
+            current_page: page,
+          });
+        }
+      }
+    );
   } catch (err) {
     console.log(err);
   }
