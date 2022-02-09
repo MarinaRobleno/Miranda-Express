@@ -14,13 +14,13 @@
     height: 200px;
   }
   .white-background {
-      position: absolute;
-      z-index: 2;
-      margin: 0;
-      top: 0px;
-      width: 50%;
-      padding: 3px 0 0 7px;
-      background-color: white;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    top: 0px;
+    width: 50%;
+    padding: 3px 0 0 7px;
+    background-color: white;
     .section-header {
       display: none;
     }
@@ -28,7 +28,7 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      
+
       .single-room-name {
         font-family: "Old Standard TT", sans-serif;
       }
@@ -204,24 +204,23 @@
   margin: 15px 0;
   box-shadow: 0px 14px 24px #bead8e33;
   background-color: #ffffff;
+
   .related-room-image {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
     height: 200px;
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    .room-icon-bar {
-      width: 60%;
-      display: flex;
-      justify-content: space-between;
-      margin-top: 185px;
-      padding: 10px;
-      background-color: white;
-      box-shadow: 0px 8px 16px #8a8a8a0a;
-    }
+  }
+  .room-icon-bar {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px #8a8a8a0a;
   }
   #image-1 {
     background-image: url("../Images/pexels-engin-akyurt-1579253 (1).jpg");

@@ -12,40 +12,41 @@ block content
     section.room-list-section.room-offers-section
         section.room-list-section.room-offers-section
             each room in rooms
-                .room-list-card.room-offers-card
-                    a.room-list-image.room-offers-image(href='./single-room/' + room.id)
-                        img.room-list-image.room-offers-image(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])
-                    .icons-and-info
-                        .list-room-icon-bar
-                            i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                            i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                            i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                            i.fa.fa-coffee(aria-hidden='true')
-                            i.fa.fa-cutlery(aria-hidden='true')
-                            i.fa.fa-diamond(aria-hidden='true')
-                            i.fa.fa-asterisk(aria-hidden='true')
-                        .room-list-card-content.room-offers-card-content
-                            .room-list-card-information.room-offers-card-information
-                                .section-header
-                                a(href='./single-room/' + room.id)
-                                    .room-list-card-title='Room Number ' + room.roomNumber + ' - ' + room.roomType
-                                p.room-list-card-text=room.description
-                                button.room-offer-book-button BOOK NOW
-                            .room-list-card-booking
-                                .room-list-card-price
-                                    .room-list-price-number.old-price='$' + room.price/100
-                                    .room-list-price-night /Night
-                                .room-list-card-price
-                                    .room-list-price-number.offer='$' + room.offer_price/100
-                                    .room-list-price-night.offer /Night
-                                a(href='./single-room/' + room.id)
-                                    .room-list-card-booking-text Booking Now
-                                ul.room-offers-benefits-list
-                                    li.room-offers-benefit Air conditioner
-                                    li.room-offers-benefit Air conditioner
-                                    li.room-offers-benefit Air conditioner
-                                    li.room-offers-benefit Air conditioner
-                                    li.room-offers-benefit Air conditioner
+                if room.price != room.offer_price
+                    .room-list-card.room-offers-card
+                        a.room-list-image.room-offers-image(href='./single-room/' + room.id)
+                            img.room-list-image.room-offers-image(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])
+                        .icons-and-info
+                            .list-room-icon-bar
+                                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                                i.fa.fa-coffee(aria-hidden='true')
+                                i.fa.fa-cutlery(aria-hidden='true')
+                                i.fa.fa-diamond(aria-hidden='true')
+                                i.fa.fa-asterisk(aria-hidden='true')
+                            .room-list-card-content.room-offers-card-content
+                                .room-list-card-information.room-offers-card-information
+                                    .section-header
+                                    a(href='./single-room/' + room.id)
+                                        .room-list-card-title='Room Number ' + room.roomNumber + ' - ' + room.roomType
+                                    p.room-list-card-text=room.description
+                                    button.room-offer-book-button BOOK NOW
+                                .room-list-card-booking
+                                    .room-list-card-price
+                                        .room-list-price-number.old-price='$' + room.price/100
+                                        .room-list-price-night /Night
+                                    .room-list-card-price
+                                        .room-list-price-number.offer='$' + room.offer_price/100
+                                        .room-list-price-night.offer /Night
+                                    a(href='./single-room/' + room.id)
+                                        .room-list-card-booking-text Booking Now
+                                    ul.room-offers-benefits-list
+                                        li.room-offers-benefit Air conditioner
+                                        li.room-offers-benefit Air conditioner
+                                        li.room-offers-benefit Air conditioner
+                                        li.room-offers-benefit Air conditioner
+                                        li.room-offers-benefit Air conditioner
     section.pagination-section
         .pagination
             if current_page > 1

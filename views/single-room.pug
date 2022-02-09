@@ -116,48 +116,33 @@ block content
                 #related-title-pc.section-body Related Rooms
                 .divisor
                 .related-room-list
-                    .related-room-card
-                        #image-1.related-room-image
-                            .room-icon-bar
-                                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                                i.fa.fa-coffee(aria-hidden='true')
-                                i.fa.fa-cutlery(aria-hidden='true')
-                                i.fa.fa-diamond(aria-hidden='true')
-                                i.fa.fa-asterisk(aria-hidden='true')
-                        .room-list-card-content
-                            .room-list-card-information
-                                .room-list-card-title Minimal Duplex Room
-                                p.room-list-card-text
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    | sed do eiusmod tempor.
-                            .room-list-card-booking
-                                .room-list-card-price
-                                    .room-list-price-number $345
-                                    .room-list-price-night /Night
-                                .room-list-card-booking-text Booking Now
-                    .related-room-card
-                        #image-2.related-room-image
-                            .room-icon-bar
-                                i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                                i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                                i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                                i.fa.fa-coffee(aria-hidden='true')
-                                i.fa.fa-cutlery(aria-hidden='true')
-                                i.fa.fa-diamond(aria-hidden='true')
-                                i.fa.fa-asterisk(aria-hidden='true')
-                        .room-list-card-content
-                            .room-list-card-information
-                                .room-list-card-title Minimal Duplex Room
-                                p.room-list-card-text
-                                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    | sed do eiusmod tempor.
-                            .room-list-card-booking
-                                .room-list-card-price
-                                    .room-list-price-number $345
-                                    .room-list-price-night /Night
-                                .room-list-card-booking-text Booking Now
+                    - var relatedRooms = []
+                    each relatedRoom in rooms
+                        if relatedRoom.roomType == room.roomType && relatedRoom.id != room.id
+                            - relatedRooms.push(relatedRoom)
+                    - relatedRooms = relatedRooms.slice(0,2)
+                    each related in relatedRooms
+                        if related.roomType == room.roomType && related.id != room.id
+                            .related-room-card
+                                img.related-room-image(src=related.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])
+                                .room-icon-bar
+                                    i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                                    i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                                    i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                                    i.fa.fa-coffee(aria-hidden='true')
+                                    i.fa.fa-cutlery(aria-hidden='true')
+                                    i.fa.fa-diamond(aria-hidden='true')
+                                    i.fa.fa-asterisk(aria-hidden='true')
+                                .room-list-card-content
+                                    .room-list-card-information
+                                        .room-list-card-title= 'Room ' + related.roomNumber
+                                        p.room-list-card-text=related.description
+                                    .room-list-card-booking
+                                        .room-list-card-price
+                                            .room-list-price-number='$'+related.price/100
+                                            .room-list-price-night /Night
+                                        a.link(href='./' + related.id)
+                                            .room-list-card-booking-text Booking Now
         section.check-availability-form-container
             .check-availability-form-header Check Availability
             .check-availability-form

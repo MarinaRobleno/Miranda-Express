@@ -55,8 +55,9 @@ router.get("/room-offers", async (req, res) => {
 
 router.get("/single-room/:id", async (req, res) => {
   try {
+    let rooms = await Room.find({});
     let room = await Room.findOne({ _id: req.params.id }).exec();
-    res.render("single-room", { room: room });
+    res.render("single-room", { room: room, rooms: rooms });
   } catch (err) {
     console.log(err);
   }
