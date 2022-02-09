@@ -7,8 +7,11 @@ let responseDiv;
 let response;
 let myLocation = {};
 let infoWindow;
+let infowindow;
 let place;
 let svgMarker;
+let inputText;
+let inputLatLng;
 const findNear = document.getElementById("find-near-location");
 let select = document.getElementById("dropdown");
 let selectedCommunity = {
@@ -20,6 +23,8 @@ let communityPolygon;
 function initMap() {
   const bounds = new google.maps.LatLngBounds();
   const markersArray = [];
+  const nearButton = document.getElementById("find-near-location");
+  nearButton.addEventListener("click", calculateDistance);
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 6,
     center: { lat: 40.2085, lng: -3.713 },
@@ -40,7 +45,7 @@ function initMap() {
     scale: 2,
     anchor: new google.maps.Point(15, 30),
   };
-  
+
   //DECLARE INITIAL MARKERS
   markers = locations.map((place) => {
     const marker = new google.maps.Marker({
@@ -70,7 +75,7 @@ function initMap() {
   geocoder = new google.maps.Geocoder();
 
   //INPUT LOCATION
-  const inputText = document.getElementById("geolocation-input");
+  inputText = document.getElementById("geolocation-input");
 
   const defaultBounds = {
     north: map.center.lat + 0.1,
@@ -163,17 +168,16 @@ function initMap() {
   });
 
   //SEARCH AND CLEAR LOCATION SEARCH
-  submitButton.addEventListener("click", () => {
-    geocode({ address: inputText.value });
-  });
+  submitButton.addEventListener("click", submitSearch);
   clearButton.addEventListener("click", () => {
     clear();
   });
   clear();
+}
 
-  const nearButton = document.getElementById("find-near-location");
-
-  nearButton.addEventListener("click", calculateDistance);
+function submitSearch() {
+  geocode({ address: inputText.value });
+  findNear.style.display = "block";
 }
 
 //GENERIC FUNCTION TO ITERATE AN CREATE MARKERS
@@ -341,12 +345,12 @@ function geocode(request) {
     .geocode(request)
     .then((result) => {
       const { results } = result;
-
       map.setCenter(results[0].geometry.location);
       marker.setPosition(results[0].geometry.location);
       marker.setMap(map);
       responseDiv.style.display = "block";
       response.innerText = JSON.stringify(result, null, 2);
+      myLocation.coords = marker.position;
       return results;
     })
     .catch((e) => {
