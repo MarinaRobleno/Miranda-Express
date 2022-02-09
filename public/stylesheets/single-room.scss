@@ -39,11 +39,21 @@
           font-size: 15px;
           font-weight: 700;
           color: #bead8e;
+          &.old-price {
+            font-size: 10px;
+            text-decoration: line-through;
+          }
+          &.offer {
+            color: red;
+          }
         }
         .single-room-price-night {
           font-size: 10px;
           font-weight: 700;
           color: #bead8e;
+          &.offer {
+            color: red;
+          }
         }
       }
     }

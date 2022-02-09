@@ -5572,10 +5572,20 @@ footer .logo-line .copy-icon:hover {
   font-weight: 700;
   color: #bead8e;
 }
+.single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-number.old-price {
+  font-size: 10px;
+  text-decoration: line-through;
+}
+.single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-number.offer {
+  color: red;
+}
 .single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-night {
   font-size: 10px;
   font-weight: 700;
   color: #bead8e;
+}
+.single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-night.offer {
+  color: red;
 }
 
 .check-availability-container {
@@ -5852,8 +5862,18 @@ footer .logo-line .copy-icon:hover {
   .main-body-content-room .left-column .single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-number {
     font-size: 40px;
   }
+  .main-body-content-room .left-column .single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-number.old-price {
+    font-size: 20px;
+    text-decoration: line-through;
+  }
+  .main-body-content-room .left-column .single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-number.offer {
+    color: red;
+  }
   .main-body-content-room .left-column .single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-night {
     font-size: 16px;
+  }
+  .main-body-content-room .left-column .single-room-section .white-background .single-room-name-price .single-room-price .single-room-price-night.offer {
+    color: red;
   }
   .main-body-content-room .left-column .check-availability-container .check-availability-header {
     display: none;
@@ -6010,6 +6030,11 @@ footer .logo-line .copy-icon:hover {
     padding-left: 50px;
     padding-bottom: 13px;
     font-size: 30px;
+  }
+
+  .display-column {
+    display: flex;
+    flex-direction: column;
   }
 }
 .contact-form-section {

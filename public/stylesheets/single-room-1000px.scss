@@ -8,48 +8,59 @@
       flex-direction: column;
       margin-right: 15px;
       .single-room-section {
-          position: relative;
+        position: relative;
         .room-background {
           width: 770px;
           height: 490px;
           margin: 30px 0 55px;
         }
         .white-background {
+          display: flex;
+          position: absolute;
+          z-index: 50;
+          flex-direction: column;
+          justify-content: center;
+          background-color: white;
+          width: 730px;
+          padding: 30px 0;
+          margin-bottom: -90px;
+          .section-header {
+            margin-left: 50px;
+          }
+          .single-room-name-price {
             display: flex;
-            position: absolute;
-            z-index: 50;
-            flex-direction: column;
-            justify-content: center;
-            background-color: white;
+            align-items: center;
             width: 730px;
-            padding: 30px 0;
-            margin-bottom: -90px;
-            .section-header {
-              margin-left: 50px;
+            padding: 0 0 19px;
+            margin-left: 0;
+            background-color: white;
+            .single-room-name {
+              font-size: 48px;
+              letter-spacing: -1.44px;
             }
-            .single-room-name-price {
-              display: flex;
-              align-items: center;
-              width: 730px;
-              padding: 0 0 19px;
-              margin-left: 0;
-              background-color: white;
-              .single-room-name {
-                font-size: 48px;
-                letter-spacing: -1.44px;
-              }
-              .single-room-price {
-                padding: 0;
-                margin: 0;
-                .single-room-price-number {
-                  font-size: 40px;
+            .single-room-price {
+              padding: 0;
+              margin: 0;
+
+              .single-room-price-number {
+                font-size: 40px;
+                &.old-price {
+                  font-size: 20px;
+                  text-decoration: line-through;
                 }
-                .single-room-price-night {
-                  font-size: 16px;
+                &.offer {
+                  color: red;
+                }
+              }
+              .single-room-price-night {
+                font-size: 16px;
+                &.offer {
+                  color: red;
                 }
               }
             }
           }
+        }
       }
       .check-availability-container {
         .check-availability-header {
@@ -199,7 +210,6 @@
             &:focus {
               outline: none;
             }
-            
           }
         }
       }
@@ -215,5 +225,9 @@
     padding-left: 50px;
     padding-bottom: 13px;
     font-size: 30px;
+  }
+  .display-column{
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -17,9 +17,18 @@ block content
                     .section-header=room.roomType.toUpperCase()
                     .single-room-name-price
                         .single-room-name='Room ' + room.roomNumber
-                        .single-room-price
-                            .single-room-price-number=room.price/100
-                            .single-room-price-night /Night
+                        if room.price == room.offer_price 
+                            .single-room-price
+                                .single-room-price-number=room.price/100
+                                .single-room-price-night /Night
+                        else 
+                            .display-column
+                                .single-room-price
+                                    .single-room-price-number.old-price=room.price/100
+                                    .single-room-price-night /Night
+                                .single-room-price
+                                    .single-room-price-number.offer=room.offer_price/100
+                                    .single-room-price-night.offer /Night
                 img.room-background(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])                
                 .check-availability-container
                     .check-availability-header Check Availability
