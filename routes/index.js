@@ -4,15 +4,15 @@ const { Room } = require("../controllers/api/roomsController");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+  res.render("index", { title: "home" });
 });
 
 router.get("/about-us", (req, res) => {
-  res.render("about-us");
+  res.render("about-us", { title: "about" });
 });
 
 router.get("/contact", (req, res) => {
-  res.render("contact");
+  res.render("contact", { title: "contact" });
 });
 
 router.get("/room-list", async (req, res) => {
@@ -22,6 +22,7 @@ router.get("/room-list", async (req, res) => {
       (results, err) => {
         if (!err) {
           return res.render("room-list", {
+            title: "room-list",
             rooms: results.docs,
             page_count: results.totalPages,
             current_page: page,
@@ -41,6 +42,7 @@ router.get("/room-offers", async (req, res) => {
       (results, err) => {
         if (!err) {
           return res.render("room-offers", {
+            title: "room-offers",
             rooms: results.docs,
             page_count: results.totalPages,
             current_page: page,

@@ -9,19 +9,35 @@ header.header
       i#hamburger-button.fa.fa-bars.hamburger-button(aria-hidden='true')
     #drop-down-box.drop-down-box
       ul.drop-down-list
-        li.drop-down-element
-          a.link(href='/about-us')  About Us 
+        if title == "about"
+          li.drop-down-element.navigated
+            a.link(href='/about-us')  About Us 
+        else 
+          li.drop-down-element
+            a.link(href='/about-us')  About Us 
         .space
-        li.drop-down-element
-          a.link(href='/room-list')  Rooms
+        if title == "room-list"
+          li.drop-down-element.navigated
+            a.link(href='/room-list')  Rooms
+        else
+          li.drop-down-element
+            a.link(href='/room-list')  Rooms
         .space
-        li.drop-down-element
-          a.link(href='/room-offers')  Offers 
+        if title == "room-offers"
+          li.drop-down-element.navigated
+            a.link(href='/room-offers')  Offers
+        else
+          li.drop-down-element
+            a.link(href='/room-offers')  Offers 
         .space
         li.drop-down-element  News 
         .space
-        li.drop-down-element
-          a.link(href='/contact')  Contact
+        if title == "contact"
+          li.drop-down-element.navigated
+            a.link(href='/contact')  Contact
+        else
+          li.drop-down-element
+            a.link(href='/contact')  Contact
       .contact-and-icon-container
         .contact-and-icon
           div
