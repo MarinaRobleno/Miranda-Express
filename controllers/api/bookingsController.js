@@ -92,4 +92,4 @@ const bookingsController = {
   },
 };
 
-module.exports = bookingsController;
+module.exports = {bookingsController, Booking};

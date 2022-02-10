@@ -94,7 +94,7 @@
         font-weight: 600;
         padding: 0 15px;
       }
-      #find-near-location{
+      #find-near-location {
         display: none;
       }
       .geolocation-input {
@@ -104,11 +104,11 @@
         margin-bottom: 10px;
         border: none;
         padding: 0 5px;
-        &:focus{
+        &:focus {
           outline: none;
         }
       }
-    
+
       .geocode-buttons {
         width: 100%;
         display: flex;
@@ -215,16 +215,17 @@
         grid-column-end: 3;
       }
     }
-    .center {
-      .wide-golden-button {
-        width: 258px;
-        height: 60px;
-        font-size: 16px;
-        letter-spacing: 3.2px;
-        cursor: pointer;
-      }
+
+    .wide-golden-button {
+      position: absolute;
+      left: 50%;
+      margin-left: -129px;
+      margin-top: 30px;
+      width: 258px;
+      height: 60px;
+      font-size: 16px;
+      letter-spacing: 3.2px;
+      cursor: pointer;
     }
   }
-
-
 }

@@ -2,6 +2,13 @@ var express = require("express");
 var router = express.Router();
 const { Room } = require("../controllers/api/roomsController");
 const { Contact } = require("../controllers/api/contactController");
+const { Booking } = require("../controllers/api/bookingsController");
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = mm + '-' + dd + '-' + yyyy;
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -16,7 +23,7 @@ router.get("/contact", (req, res) => {
   res.render("contact", { title: "contact" });
 });
 
-router.post("/api/contacts", async (req, res) => {
+router.post("/contact", async (req, res) => {
   try {
     const newContact = new Contact({
       customer: req.body.customer,
@@ -74,9 +81,36 @@ router.get("/room-offers", async (req, res) => {
 
 router.get("/single-room/:id", async (req, res) => {
   try {
+    selectedRoomId = req.params.id;
     let rooms = await Room.find({});
     let room = await Room.findOne({ _id: req.params.id }).exec();
     res.render("single-room", { room: room, rooms: rooms });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.post("/single-room/:id", async (req, res) => {
+  try {
+    let room = await Room.findOne({ _id: req.params.id }).exec();
+    let newBooking = new Booking({
+      guest: req.body.guest,
+      orderDate: today,
+      checkIn: req.body.checkIn,
+      checkOut: req.body.checkOut,
+      special: req.body.special,
+      bookStatus: 'in',
+      roomNumber: room.roomNumber,
+      roomType: room.roomType,
+      price: room.price,
+      offer_price: room.offer_price,
+      amenities: room.amenities,
+      status: room.status,
+      photo: room.photo,
+      description: room.description
+    });
+    await newBooking.save();
+    res.render("booked", {title: "booked"});
   } catch (err) {
     console.log(err);
   }

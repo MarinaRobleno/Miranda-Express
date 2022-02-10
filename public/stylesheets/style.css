@@ -6066,7 +6066,7 @@ footer .logo-line .copy-icon:hover {
   padding-bottom: 100px;
 }
 .contact-form-section .center {
-  margin-top: 0;
+  margin: 0 auto;
 }
 
 .contact-navigator-container {
@@ -6419,7 +6419,11 @@ footer .logo-line .copy-icon:hover {
     grid-column-start: 1;
     grid-column-end: 3;
   }
-  .contact-form-section .center .wide-golden-button {
+  .contact-form-section .wide-golden-button {
+    position: absolute;
+    left: 50%;
+    margin-left: -129px;
+    margin-top: 30px;
     width: 258px;
     height: 60px;
     font-size: 16px;

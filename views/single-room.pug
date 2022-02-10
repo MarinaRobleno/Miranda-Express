@@ -145,27 +145,27 @@ block content
                                             .room-list-card-booking-text Booking Now
         section.check-availability-form-container
             .check-availability-form-header Check Availability
-            .check-availability-form
+            form.check-availability-form(action=`/single-room/${room._id}` method='POST')
                 .form-input-container
                     p.check-label Check In
-                    input#calendar-check-in.check-availability-form-input.flatpickr(type='date')
+                    input#calendar-check-in.check-availability-form-input.flatpickr(type='date' name='checkIn')
                 .form-input-container
                     p.check-label Check Out
-                    input#calendar-check-out.check-availability-form-input.flatpickr(type='date')
+                    input#calendar-check-out.check-availability-form-input.flatpickr(type='date' name='checkOut')
                 .form-input-container
                     p.check-label Full Name
-                    input.check-availability-form-input(type='text')
+                    input.check-availability-form-input(type='text' name='guest')
                 .form-input-container
                     p.check-label Email
-                    input.check-availability-form-input(type='text')
+                    input.check-availability-form-input(type='text' name='mail')
                 .form-input-container
                     p.check-label Phone
-                    input.check-availability-form-input(type='text')
+                    input.check-availability-form-input(type='text' name='phone')
                 .form-input-container
                     p.check-label Message
-                    textarea.check-availability-form-input(type='text')
-            .center
-                button.wide-golden-button CHECK AVAILABILITY
+                    textarea.check-availability-form-input(type='text' name='special')
+                .center
+                    input.wide-golden-button(type='submit' value='CHECK AVAILABILITY')
 
     section.subscribe-section
         .hotel-miranda-title
