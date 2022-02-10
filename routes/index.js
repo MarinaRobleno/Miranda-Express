@@ -7,8 +7,12 @@ var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
-
 today = mm + '-' + dd + '-' + yyyy;
+
+function convertDateFormat(string) {
+  var info = string.split("-");
+  return info[1] + "-" + info[2] + "-" + info[0];
+}
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -96,8 +100,8 @@ router.post("/single-room/:id", async (req, res) => {
     let newBooking = new Booking({
       guest: req.body.guest,
       orderDate: today,
-      checkIn: req.body.checkIn,
-      checkOut: req.body.checkOut,
+      checkIn: convertDateFormat(req.body.checkIn),
+      checkOut: convertDateFormat(req.body.checkOut),
       special: req.body.special,
       bookStatus: 'in',
       roomNumber: room.roomNumber,
