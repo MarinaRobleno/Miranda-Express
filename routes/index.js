@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 const { Room } = require("../controllers/api/roomsController");
+const { Contact } = require("../controllers/api/contactController");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -14,6 +15,22 @@ router.get("/about-us", (req, res) => {
 router.get("/contact", (req, res) => {
   res.render("contact", { title: "contact" });
 });
+
+router.post("/api/contacts", async (req, res) => {
+  try {
+    const newContact = new Contact({
+      customer: req.body.customer,
+      mail: req.body.mail,
+      phone: req.body.phone,
+      subject: req.body.subject,
+      comment: req.body.comment,
+    });
+    await newContact.save();
+    res.render("success", {title: "success"});
+  } catch (err) {
+    console.log(err);
+  }
+})
 
 router.get("/room-list", async (req, res) => {
   try {

@@ -11,14 +11,14 @@ block content
             #about-tag-contact.contact-navigator-tag Contact
     .inverted-container
         section.contact-form-section
-            form.contact-form-container(action='/')
-                input.contact-form-input.full-name(type='text' placeholder='Your full name')
-                input.contact-form-input.mail-address(type='email' placeholder='Enter email address')
-                input.contact-form-input.add-phone(type='text' placeholder='Add phone number')
-                input.contact-form-input.select-subject(type='text' placeholder='Enter Subject')
-                textarea.contact-form-input.enter-message(placeholder='Enter messages')
-            .center
-                button.wide-golden-button(type='submit') GET FREE QUOTE
+            form.contact-form-container(action='/api/contacts' method='POST')
+                input#customer.contact-form-input.full-name(type='text' name='customer' placeholder='Your full name')
+                input#mail.contact-form-input.mail-address(type='email' name='mail' placeholder='Enter email address')
+                input#phone.contact-form-input.add-phone(type='text' name='phone' placeholder='Add phone number')
+                input#subject.contact-form-input.select-subject(type='text' name='subject' placeholder='Enter Subject')
+                textarea#comment.contact-form-input.enter-message(name='comment' placeholder='Enter messages')
+                .center
+                    input.wide-golden-button(type='submit' value='GET FREE QUOTE')
         div
             section.contact-information-section
                 .contact-information-card

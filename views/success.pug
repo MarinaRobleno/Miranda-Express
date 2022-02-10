@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    include nav
+    section#contact-main.home-main.ultimate-main
+        div
+            .ultimate-header THE ULTIMATE LUXURY
+            .home-main-text.ultimate-main-text Contact Us
+        .contact-navigator-container
+            #home-tag-contact.contact-navigator-tag Home
+            #about-tag-contact.contact-navigator-tag Contact
+    section.blog-section
+        p.subscribe-text
+            | Thanks for your message, we will review it as soon as possible
+    section.subscribe-section
+        .hotel-miranda-title
+            .hotel-miranda-icon H
+            div
+                .hotel-bold HOTEL
+                div MIRANDA
+        p.subscribe-text
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed doing
+            | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            | minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        .subscribe-form
+            input.subscribe-input(placeholder='ENTER YOUR EMAIL ADDRESS')
+            button.subscribe-button SUBSCRIBE
+    include footer
+    script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
+    script(src='/javascripts/plugins.js')
+    script(src='/javascripts/coordinates.js')
+    script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDDUM_cAYGbY7wKsruKQhRkWmXzrZFPc-k&callback=initMap&libraries=places')
+    script(src='/javascripts/map.js')
+    script(src='/javascripts/main.js')
