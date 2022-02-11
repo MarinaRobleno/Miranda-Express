@@ -15,14 +15,14 @@ block content
             | ABOUT US
     img.full-screen-main-image(src='https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
   section.book-panel.scroll-section
-    .check-in-line-panel
+    form.check-in-line-panel(action='/room-list' method='GET')
       #check-in.check-in-panel
         p CHECK IN
-        input.check-in-input.flatpickr(type='text')
+        input.check-in-input.flatpickr(type='text' name='checkIn')
       #check-out.check-in-panel
         p CHECK OUT
-        input.check-in-input.flatpickr(type='text')
-    button.book-button Book Now
+        input.check-in-input.flatpickr(type='text' name='checkOut')
+      input.book-button(type='submit' value='Book Now')
   section.services-section.scroll-section
     .section-header
       .since SINCE

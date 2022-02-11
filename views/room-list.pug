@@ -11,26 +11,49 @@ block content
             #about-tag-contact.contact-navigator-tag Rooms
     section.room-list-section
         each room in rooms
-            .room-list-card
-                img.room-list-image(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])
-                .room-icon-bar
-                    i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
-                    i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
-                    i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
-                    i.fa.fa-coffee(aria-hidden='true')
-                    i.fa.fa-cutlery(aria-hidden='true')
-                    i.fa.fa-diamond(aria-hidden='true')
-                    i.fa.fa-asterisk(aria-hidden='true')
-                .room-list-card-content
-                    .room-list-card-information
-                        .room-list-card-title='Room Number ' + room.roomNumber
-                        p.room-list-card-text=room.roomType
-                    .room-list-card-booking
-                        .room-list-card-price
-                            .room-list-price-number='$' + room.price/100
-                            .room-list-price-night /Night
-                        a.link(href='./single-room/' + room.id)
-                            .room-list-card-booking-text Booking Now
+            if page_count === 1 
+                if room.status === 'available'
+                    .room-list-card
+                        img.room-list-image(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])
+                        .room-icon-bar
+                            i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                            i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                            i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                            i.fa.fa-coffee(aria-hidden='true')
+                            i.fa.fa-cutlery(aria-hidden='true')
+                            i.fa.fa-diamond(aria-hidden='true')
+                            i.fa.fa-asterisk(aria-hidden='true')
+                        .room-list-card-content
+                            .room-list-card-information
+                                .room-list-card-title='Room Number ' + room.roomNumber
+                                p.room-list-card-text=room.roomType
+                            .room-list-card-booking
+                                .room-list-card-price
+                                    .room-list-price-number='$' + room.price/100
+                                    .room-list-price-night /Night
+                                a.link(href='./single-room/' + room.id)
+                                    .room-list-card-booking-text Booking Now
+            else
+                .room-list-card
+                    img.room-list-image(src=room.photo[Math.floor(Math.random() * (1 - 0 + 1) ) + 1])
+                    .room-icon-bar
+                        i.fa.fa-bed.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-wifi.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-car.room-icon-bar-icon(aria-hidden='true')
+                        i.fa.fa-coffee(aria-hidden='true')
+                        i.fa.fa-cutlery(aria-hidden='true')
+                        i.fa.fa-diamond(aria-hidden='true')
+                        i.fa.fa-asterisk(aria-hidden='true')
+                    .room-list-card-content
+                        .room-list-card-information
+                            .room-list-card-title='Room Number ' + room.roomNumber
+                            p.room-list-card-text=room.roomType
+                        .room-list-card-booking
+                            .room-list-card-price
+                                .room-list-price-number='$' + room.price/100
+                                .room-list-price-night /Night
+                            a.link(href='./single-room/' + room.id)
+                                .room-list-card-booking-text Booking Now
     section.pagination-section
         .pagination
             if current_page > 1

@@ -74,17 +74,18 @@
         font-size: 16px;
         padding-bottom: 0;
         padding-left: 30px;
+        margin-right: 10px;
         .check-in-input {
           width: 240px;
           padding: 5px 0;
           color: #bead8e;
         }
       }
-    }
-    .book-button {
-      font-size: 24px;
-      width: 250px;
-      height: 60px;
+      .book-button {
+        font-size: 24px;
+        width: 250px;
+        height: 60px;
+      }
     }
   }
 
@@ -359,7 +360,6 @@
         .carousel-detail-box-counter {
           font-size: 14px;
         }
-        
       }
       .carousel-detail-box-title {
         font-size: 36px;
@@ -374,7 +374,7 @@
         margin-top: 25px;
         margin-left: 40px;
       }
-      .carousel-detail-box-nav{
+      .carousel-detail-box-nav {
         margin: 20px auto;
         width: 70%;
         font-size: 16px;

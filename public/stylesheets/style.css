@@ -1165,13 +1165,14 @@ template {
     font-size: 16px;
     padding-bottom: 0;
     padding-left: 30px;
+    margin-right: 10px;
   }
   .book-panel .check-in-line-panel .check-in-panel .check-in-input {
     width: 240px;
     padding: 5px 0;
     color: #bead8e;
   }
-  .book-panel .book-button {
+  .book-panel .check-in-line-panel .book-button {
     font-size: 24px;
     width: 250px;
     height: 60px;

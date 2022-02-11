@@ -46,7 +46,8 @@ router.post("/contact", async (req, res) => {
 router.get("/room-list", async (req, res) => {
   try {
     const page = req.query.page || 1;
-    let rooms = await Room.paginate({}, { page: page, limit: 9 }).then(
+    const limit = req.query.checkIn ? 100 : 9;
+    let rooms = await Room.paginate({}, { page: page, limit: limit }).then(
       (results, err) => {
         if (!err) {
           return res.render("room-list", {
@@ -54,6 +55,8 @@ router.get("/room-list", async (req, res) => {
             rooms: results.docs,
             page_count: results.totalPages,
             current_page: page,
+            checkInDate: req.body.checkIn,
+            checkOutDate: req.body.checkOut
           });
         }
       }
