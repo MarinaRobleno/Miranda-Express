@@ -8,11 +8,12 @@ const {contactController} = require('../controllers/api/contactController');
 router.get(
     '/',
     (req, res, next) => {
-      res.json({
-        message: 'Private API route',
-        user: req.body.mail,
-        token: req.query.secret_token
-      })
+        if (req.user) {
+            res.send('Returning with some text');
+        } else {
+            // If the user property does no exist, redirect to /login
+            res.redirect('/login');
+        }
     }
   );  
 

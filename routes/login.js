@@ -17,7 +17,7 @@ router.post("/login", async (req, res, next) => {
       req.login(user, { session: false }, async (error) => {
         if (error) return next(error);
 
-        const body = { _id: user._id, email: user.email };
+        const body = { _id: user._id, email: user.mail };
         const token = jwt.sign({ user: body }, authSecret);
 
         return res.json({ token });
