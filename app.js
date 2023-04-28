@@ -38,10 +38,6 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "public")));
-app.use(passport.initialize());
-app.use(passport.session());
-
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -56,6 +52,9 @@ app.use((req, res, next) => {
 
   next();
 });
+app.use(express.static(path.join(__dirname, "public")));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
