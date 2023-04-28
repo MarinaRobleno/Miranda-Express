@@ -47,16 +47,15 @@ app.use(passport.session());
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", true);
   res.header(
     "Access-Control-Allow-Methods",
-    "GET, POST, PATCH, DELETE, OPTIONS, Content-Type, Authorization"
+    "GET, POST, PATCH, DELETE, OPTIONS"
   );
-  // res.header('Access-Control-Allow-Methods', 'Content-Type', 'Authorization');
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   );
-
   next();
 });
 
