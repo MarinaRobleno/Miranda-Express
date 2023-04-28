@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node app.js",
     "test": "jest --forceExit",
-    "dev": "nodemon -r dotenv/config ./bin/www"
+    "dev": "nodemon -r dotenv/config app.js"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",

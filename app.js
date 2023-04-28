@@ -31,7 +31,7 @@ var loginRouter = require("./routes/login");
 var app = express();
 
 // view engine setup
-app.set("views", path.join(__dirname, "views"));
+// app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.use(logger("dev"));
@@ -57,7 +57,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", indexRouter);
+// app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api", apiRouter);
 app.use("/login", loginRouter);
