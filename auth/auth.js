@@ -2,9 +2,9 @@ const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
 const JWTstrategy = require("passport-jwt").Strategy;
 const ExtractJWT = require("passport-jwt").ExtractJwt;
-const {authSecret} = require("../.env")
+const { AUTH_SECRET } = require("../settings");
 const bcrypt = require("bcrypt");
-const {User} = require("../controllers/api/usersController")
+const { User } = require("../controllers/api/usersController");
 
 passport.use(
   "login",
@@ -19,10 +19,10 @@ passport.use(
         /*const connection = await connectdb();
         const [usersResults, usersFields] = await connection.execute(
           `SELECT * FROM users WHERE mail = ?`, [email])*/
-        
-        if (!user){
-          console.log('mal user')
-        //if (!usersResults.length) {
+
+        if (!user) {
+          console.log("mal user");
+          //if (!usersResults.length) {
           return done(null, false, { message: "Invalid user or password" });
         }
 
@@ -34,7 +34,7 @@ passport.use(
 
         return done(null, user, { message: "Logged in Successfully" });
       } catch (error) {
-        console.log(error)
+        console.log(error);
         return done(error);
       }
     }
@@ -44,7 +44,7 @@ passport.use(
 passport.use(
   new JWTstrategy(
     {
-      secretOrKey: authSecret,
+      secretOrKey: AUTH_SECRET,
       jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     },
     async (token, done) => {

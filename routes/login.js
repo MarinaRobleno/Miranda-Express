@@ -1,7 +1,7 @@
 const express = require("express");
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
-const {authSecret} = require('../.env')
+const { AUTH_SECRET } = require("../settings");
 
 const router = express.Router();
 
@@ -18,7 +18,7 @@ router.post("/login", async (req, res, next) => {
         if (error) return next(error);
 
         const body = { _id: user._id, email: user.mail };
-        const token = jwt.sign({ user: body }, authSecret);
+        const token = jwt.sign({ user: body }, AUTH_SECRET);
 
         return res.json({ token });
       });
