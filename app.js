@@ -8,6 +8,8 @@ var logger = require("morgan");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const settings = require("./settings");
+const cors = require("cors");
+const port = process.env.PORT || "3000";
 
 mongoose.connect(
   "mongodb+srv://admin:admin@mirandacluster.kwsvf.mongodb.net/miranda_db?retryWrites=true&w=majority",
@@ -31,7 +33,7 @@ var loginRouter = require("./routes/login");
 var app = express();
 
 // view engine setup
-// app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.use(logger("dev"));
@@ -45,37 +47,32 @@ app.use(passport.session());
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Credentials", true);
   res.header(
     "Access-Control-Allow-Methods",
-    "GET, POST, PATCH, DELETE, OPTIONS"
+    "GET, POST, PATCH, DELETE, OPTIONS, Content-Type, Authorization"
   );
+  // res.header('Access-Control-Allow-Methods', 'Content-Type', 'Authorization');
   res.header(
     "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    "Origin, X-Requested-With, Content-Type, Accept"
   );
+
   next();
 });
 
-// app.use("/", indexRouter);
+app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api", apiRouter);
 app.use("/login", loginRouter);
 
 // catch 404 and forward to error handler
-app.use(function (req, res, next) {
-  next(createError(404));
+app.use((err, req, resp, next) => {
+  resp.status(err.status || 500);
+  resp.json({ error: err });
 });
 
-// error handler
-app.use(function (err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get("env") === "development" ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render("error");
+const server = app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
 
 module.exports = { app, db };

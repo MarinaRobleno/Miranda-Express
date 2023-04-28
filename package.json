@@ -1,7 +1,7 @@
 {
   "name": "express-pug",
   "version": "0.0.0",
-  "private": true,
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "test": "jest --forceExit",
@@ -31,7 +31,6 @@
     "passport-local": "^1.0.0",
     "pug": "2.0.0-beta11"
   },
-  "main": "app.js",
   "devDependencies": {
     "jest": "^27.4.7",
     "nodemon": "^2.0.22",
