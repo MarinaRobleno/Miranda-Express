@@ -1,11 +1,14 @@
 require("dotenv").config();
+var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
+var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
+var logger = require("morgan");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const settings = require("./settings");
 const cors = require("cors");
-const morgan = require("morgan");
 const port = process.env.PORT || "3000";
 
 mongoose.connect(
@@ -30,35 +33,33 @@ var loginRouter = require("./routes/login");
 var app = express();
 
 // view engine setup
-
-
-app.use(express.json());
-app.use(morgan("dev"));
-app.use(cors());
-app.use(express.urlencoded({ extended: false }));
-
-app.set("views", path.join(__dirname, "views"));
+// app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
+
+app.use(logger("dev"));
+app.use(express.json());
+app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Credentials", true);
   res.header(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PATCH, DELETE, OPTIONS, Content-Type, Authorization'
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, DELETE, OPTIONS"
   );
-  // res.header('Access-Control-Allow-Methods', 'Content-Type', 'Authorization');
   res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   );
-
   next();
 });
 
-app.use("/", indexRouter);
+// app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api", apiRouter);
 app.use("/login", loginRouter);
