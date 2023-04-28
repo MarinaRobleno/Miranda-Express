@@ -8,8 +8,7 @@ var logger = require("morgan");
 const mongoose = require("mongoose");
 const passport = require("passport");
 const settings = require("./settings");
-const cors = require("cors");
-const port = process.env.PORT || "3000";
+const port = settings.PORT;
 
 mongoose.connect(
   "mongodb+srv://admin:admin@mirandacluster.kwsvf.mongodb.net/miranda_db?retryWrites=true&w=majority",
@@ -33,7 +32,7 @@ var loginRouter = require("./routes/login");
 var app = express();
 
 // view engine setup
-// app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.use(logger("dev"));
