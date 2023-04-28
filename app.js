@@ -9,6 +9,7 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const settings = require("./settings");
 const cors = require("cors");
+const morgan = require("morgan");
 const port = process.env.PORT || "3000";
 
 mongoose.connect(
@@ -38,6 +39,8 @@ app.set("view engine", "pug");
 
 app.use(logger("dev"));
 app.use(express.json());
+app.use(morgan("dev"));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
