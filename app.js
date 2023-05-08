@@ -58,7 +58,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/", indexRouter);
+app.use("/miranda", indexRouter);
 app.use("/users", usersRouter);
 app.use("/api", apiRouter);
 app.use("/login", loginRouter);
