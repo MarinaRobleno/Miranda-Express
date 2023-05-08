@@ -1,10 +1,5 @@
-function execute_flatpickr() {
-  const config = {
-    dateFormat: "m-d-y",
-  };
-  flatpickr(".flatpickr", config);
-}
-
+const openButton = document.getElementById("hamburger-button");
+let dropdownContent = document.getElementById("drop-down-box");
 let selectedRoom = { selected: "singleBed" };
 let selectedRoomTitle = document.getElementById("carousel-detail-box-title");
 const navButton1 = document.getElementById("nav-room-1");
@@ -122,10 +117,6 @@ navButton1.addEventListener("click", selectSingle);
 navButton2.addEventListener("click", selectDoubleBed);
 navButton3.addEventListener("click", selectDoubleSuperior);
 navButton4.addEventListener("click", selectSuite);
-
-const openButton = document.getElementById("hamburger-button");
-let dropdownContent = document.getElementById("drop-down-box");
-
 document.addEventListener("DOMContentLoaded", function () {
   //Hamburger menu function
   function openDropdown() {
@@ -149,12 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $target.addClass("active");
   });
 
-  //Flatpickr
-  execute_flatpickr();
-
   //Splide
   execute_slider();
-
-  //map
-  initMap();
 });

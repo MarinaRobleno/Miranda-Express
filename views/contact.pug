@@ -41,41 +41,7 @@ block content
                         .contact-information-text-title Email Address
                         .contact-information-text-description
                             | marinarsanisidro@gmail.com
-                    .contact-information-count 03
-            section.flex
-                section#map.satelite-map
-                .column
-                    select#dropdown.community-dropdown
-                        option(selected='' value='-1') Select Community
-                        option(value='0') Andalucía
-                        option(value='1') Aragón
-                        option(value='2') Asturias, Principado de
-                        option(value='3') Balears, Illes
-                        option(value='4') Canarias
-                        option(value='5') Cantabria
-                        option(value='6') Castilla y León
-                        option(value='7') Castilla - La Mancha
-                        option(value='8') Cataluña / Catalunya
-                        option(value='9') Comunitat Valenciana
-                        option(value='10') Extremadura
-                        option(value='11') Galicia
-                        option(value='12') Madrid, Comunidad de
-                        option(value='13') Murcia, Región de
-                        option(value='14') Navarra, Comunidad Foral de
-                        option(value='15') País Vasco / Euskadi
-                        option(value='16') Rioja, La
-                        option(value='17') Ceuta
-                        option(value='18') Melilla
-                    input#geolocation-input.geolocation-input(type='text' placeholder='Enter a location')
-                    .geocode-buttons
-                        button#search-location-button.community-dropdown.search-loc(value='Search') Search
-                        button#clear-location-button.community-dropdown.search-loc(value='Clear') Clear
-                    button#find-near-location.community-dropdown
-                        | Find my nearest location
-                    #sidebar(style='display: none')
-                        .map-response-title(style='flex-grow: 0')
-                            | Closest Miranda Hotel to my location.
-                        #response
+                    .contact-information-count 03            
     section.subscribe-section
         .hotel-miranda-title
             .hotel-miranda-icon H
@@ -92,7 +58,4 @@ block content
     include footer
     script(src='/javascripts/vendor/modernizr-3.11.2.min.js')
     script(src='/javascripts/plugins.js')
-    script(src='/javascripts/coordinates.js')
-    script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDDUM_cAYGbY7wKsruKQhRkWmXzrZFPc-k&callback=initMap&libraries=places')
-    script(src='/javascripts/map.js')
     script(src='/javascripts/main.js')
